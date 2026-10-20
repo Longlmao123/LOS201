@@ -1,0 +1,40 @@
+digraph Lab02 {
+  graph [bgcolor="white",pad="0.38",margin="0.18",ranksep="0.70",nodesep="0.42",splines="spline",fontname="DejaVu Sans",fontsize=19,label="LAB 02 | ARM LINUX CHARACTER DEVICE ARCHITECTURE",labelloc=t,labeljust=l,fontcolor="#17324f",outputorder="edgesfirst"];
+  node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=12,color="#c9d7e4",penwidth=1.4,fillcolor="#f2f7fb",fontcolor="#20374e",margin="0.24,0.18"];
+  edge [arrowsize=0.75,color="#66839d",penwidth=1.7,fontname="DejaVu Sans",fontsize=10,fontcolor="#426078"];
+  subgraph cluster_boot {
+    label="BOOT / SYSTEM INITIALIZATION"; color="#cddbe8"; fillcolor="#f8fbfd"; style="rounded,filled"; fontname="DejaVu Sans"; fontsize=12; fontcolor="#375d78";
+    qemu [label="QEMU vexpress-a9\nLinux 5.15 + DTB + initramfs",fillcolor="#e5f0fc"];
+    init [label="BusyBox /sbin/init\n/etc/inittab -> /etc/init.d/rcS",fillcolor="#e5f0fc"];
+    load [label="mount proc/sys/devtmpfs\ninsmod lab2_driver.ko\nmknod /dev/lab2 (240:0)",fillcolor="#e5f0fc"];
+    qemu -> init -> load;
+  }
+  subgraph cluster_user {
+    label="USERSPACE | BUSYBOX"; color="#dce7ef"; fillcolor="#fafcfe"; style="rounded,filled"; fontcolor="#375d78";
+    tests [label="test_driver.sh / test_procfs.sh\nBusyBox shell",fillcolor="#edf5fa"];
+    dev [label="/dev/lab2\nread() / write()",fillcolor="#ccece6",color="#77c7b6"];
+    proc [label="/proc/lab2_info\nStatistics (seq_file)",fillcolor="#e9e3fc",color="#b9a5eb"];
+    sys [label="/sys/class/lab2_class/lab2\nbuffer_len | open_count | last_data",fillcolor="#ffe9cd",color="#ecc08b"];
+    tests -> dev;
+    tests -> proc;
+    tests -> sys;
+    {rank=same; dev; proc; sys;}
+  }
+  subgraph cluster_kernel {
+    label="KERNELSPACE | lab2_driver.ko"; color="#bcd4e6"; fillcolor="#f3f8fc"; style="rounded,filled"; fontcolor="#375d78";
+    vfs [label="VFS / file_operations\nopen, release, read, write",fillcolor="#ccece6",color="#77c7b6"];
+    pshow [label="proc_ops / seq_file\nlab2_proc_show()",fillcolor="#e9e3fc",color="#b9a5eb"];
+    sshow [label="DEVICE_ATTR_RO\nbuffer_len_show()\nopen_count_show()\nlast_data_show()",fillcolor="#ffe9cd",color="#ecc08b"];
+    state [label="SHARED DRIVER STATE\ndevice_buffer[1024]\nbuffer_len  |  open_count\nMajor 240 | Minor 0",fillcolor="#dcecfb",color="#8bb8db",penwidth=2,fontsize=14];
+    {rank=same; vfs; pshow; sshow;}
+    vfs -> state [label="data + count"];
+    pshow -> state [label="read metrics"];
+    sshow -> state [label="read attrs"];
+  }
+  load -> tests [style=dashed,label="ready",minlen=1];
+  dev -> vfs [label="system calls"];
+  proc -> pshow [label="read procfs"];
+  sys -> sshow [label="read sysfs"];
+  footer [shape=plain,fontsize=10,fontcolor="#697f92",label="Confirmed: module load + character-device tests. Procfs/sysfs manually observed; separate automated procfs log not in the uploaded archive."];
+  state -> footer [style=invis];
+}
