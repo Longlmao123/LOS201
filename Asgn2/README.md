@@ -1,16 +1,29 @@
 # LOS201 — Sensor Monitoring System / Assignment 02
 
-## Thành viên nhóm thực hiện
-
-1. Pham Tran Gia Long
-2. Vo Hoang Minh Loc
+[Về trang chính](../README.md) · [Source ứng dụng](app/) · [Driver](driver/) · [Log](logs/) · [Báo cáo PDF](bao_cao/SE201095_PhamTranGiaLong_Asgn02_BaoCao.pdf)
 
 Hệ thống giám sát nhiệt độ, độ ẩm mô phỏng trên Linux ARMv7 trong QEMU.
 Driver tạo mẫu khi ứng dụng đọc và đã đủ khoảng thời gian tối thiểu;
 đây không phải số đo từ cảm biến vật lý. Ứng dụng dùng bốn worker thread
 để đọc, xử lý, cảnh báo và ghi log.
 
+## Mục lục
+
+- [Kiến trúc](#kiến-trúc)
+- [Driver và dữ liệu mô phỏng](#driver-và-dữ-liệu-mô-phỏng)
+- [Cấu trúc](#cấu-trúc)
+- [Build trên Ubuntu HOST](#build-trên-ubuntu-host)
+- [Chạy chẩn đoán trên HOST](#chạy-chẩn-đoán-trên-host)
+- [Chạy trên QEMU ARM](#chạy-trên-qemu-arm)
+- [Kết quả thực nghiệm đã lưu](#kết-quả-thực-nghiệm-đã-lưu)
+- [Những điểm đã học và sửa](#những-điểm-đã-học-và-sửa)
+- [Phiên GDB cuối](#phiên-gdb-cuối)
+- [Báo cáo và trạng thái bài nộp](#báo-cáo-và-trạng-thái-bài-nộp)
+
 ## Kiến trúc
+
+![Kiến trúc ứng dụng và driver](docs/images/architecture.png)
+
 
 ```mermaid
 flowchart TD
@@ -30,17 +43,43 @@ Sensor đóng buffer; Processor lấy hết mẫu còn lại; Alert nhận hết
 Logger nhận hết log rồi flush và đóng file. `SIGINT`/`SIGTERM` được Main
 nhận bằng `sigtimedwait`, không xử lý mutex trong signal handler.
 
+## Driver và dữ liệu mô phỏng
+
+Driver `sms_sensor_driver.ko` đăng ký miscdevice `/dev/sms_sensor` và procfs `/proc/sms_stats`.
+
+| Giao diện | Hành vi |
+|---|---|
+| `read` | Trả CSV: timestamp millisecond, nhiệt độ và độ ẩm |
+| Miền nhiệt độ | 15,0–45,0°C, độ phân giải 0,1°C |
+| Miền độ ẩm | 30,0–90,0%, độ phân giải 0,1% |
+| `SMS_SET_INTERVAL` | Nhận interval 1–60000 ms qua IOCTL |
+| Đọc quá sớm | Trả `EAGAIN`; ứng dụng thử lại trong ngân sách thời gian giới hạn |
+| `/proc/sms_stats` | Read count, mẫu gần nhất, interval và uptime |
+
+Driver tạo mẫu khi được đọc và đã đủ interval; không có cảm biến vật lý và cũng không có producer kernel tự đẩy mẫu đều đặn. Sensor thread là phía chủ động đặt lịch đọc.
+
+| Thành phần userspace | Cơ chế |
+|---|---|
+| Sensor | `CLOCK_MONOTONIC`, absolute deadline; FIFO priority 50 hoặc OTHER |
+| Circular buffer | 64 mẫu; mutex và condition variable; khi đầy bỏ mẫu mới |
+| Processor | Rolling average 10 mẫu; kiểm tra TEMP_HIGH, HUMID_HIGH và TEMP_SPIKE |
+| Ngưỡng mặc định | Nhiệt độ >40°C, độ ẩm >80%, chênh nhiệt độ >5°C |
+| Alert | Nhận alarm qua POSIX message queue và đếm theo loại |
+| Logger | Một thread sở hữu file; flush 5 giây; rotate trên 1 MiB |
+
+![Trình tự dừng hệ thống](docs/images/state_machine.png)
+
 ## Cấu trúc
 
 | Thư mục | Nội dung |
 |---|---|
 | `driver/` | Module, header ioctl, Makefile và công cụ kiểm tra |
 | `app/` | Main, bốn worker, buffer, IPC, CLI, xuất jitter và kiểm tra |
-| `rootfs/initramfs/` | Cấu hình khởi động; rootfs đầy đủ đã được đóng trong initramfs ở `output/` |
 | `output/` | Kernel, DTB, cấu hình và initramfs |
 | `logs/` | Bản ghi thực nghiệm và dữ liệu gốc |
 | `scripts/` | Lệnh ghi phiên GDB |
-| `bao_cao/`, `demo/` | Báo cáo PDF và video khi hoàn thiện |
+| `bao_cao/` | Báo cáo PDF |
+| `docs/images/` | Sơ đồ, biểu đồ và hình minh chứng dùng trong README |
 
 ## Build trên Ubuntu HOST
 
@@ -89,7 +128,7 @@ sms_app --fifo -i 500 -d 60 -v --log /tmp/sms.log
 cat /proc/sms_stats
 ```
 
-Tham số bắt buộc: `-i`, `-t`, `-h`, `-d`, `-v`; `-d 0` chạy đến khi nhận tín hiệu.
+Các tùy chọn CLI: `-i` (interval), `-t` (ngưỡng nhiệt độ), `-h` (ngưỡng độ ẩm), `-d` (thời lượng), `-v` (verbose); `-d 0` chạy đến khi nhận tín hiệu.
 Tùy chọn thêm: `--fifo`, `--other`, `--mock`, `--device`, `--log`, `--help`.
 Để demo Ctrl+C, dùng `-d 0`; Main in thống kê sau khi join các worker.
 Chỉ thoát QEMU bằng Ctrl+A rồi X sau khi đã xuất dữ liệu cần giữ khỏi `/tmp`.
@@ -109,6 +148,10 @@ nguồn để không gán các số đo này cho một binary khác.
 | strace HOST/MOCK, 30 giây | 1609 syscall; phần lớn là chờ timer, tín hiệu, queue và futex | `logs/strace_summary.txt` |
 | perf HOST/MOCK | 59 mẫu cpu-clock; cần thận trọng vì mẫu ít | `logs/perf_report_flat.txt` |
 
+![Kết quả ARM cuối](docs/images/arm_result.png)
+
+![Kết quả Valgrind cuối](docs/images/valgrind_proof.png)
+
 ### Jitter: hai phiên QEMU DRIVER, 500 ms, mỗi phiên 510 giây
 
 Jitter là sai số thức dậy trước lần đọc thiết bị, không phải độ trễ đầu-cuối
@@ -125,6 +168,8 @@ từ lấy mẫu đến cảnh báo. P99 dùng nearest-rank; đơn vị µs.
 | (100,500] µs | 315 | 512 |
 | (500,1000] µs | 592 | 360 |
 | >1000 µs | 113 | 148 |
+
+![So sánh jitter FIFO và OTHER](docs/images/jitter_comparison.png)
 
 P99 của FIFO thấp hơn OTHER 36.66%, trong khi mean hơi cao hơn.
 Hai phiên có lần lượt 1018 và 1019 mẫu cảm biến xử lý thành công,
@@ -160,12 +205,11 @@ Phiên thực chạy được lưu tại `logs/final_review/gdb_session.txt`.
 Phiên cuối cho thấy mẫu 45°C tạo TEMP_HIGH, Alert nhận message và bộ đếm
 tăng từ 0 lên 1. GDB in đủ 5 thread và backtrace; chương trình thoát bình thường.
 
-## Báo cáo, demo và bài nộp
+## Báo cáo và trạng thái bài nộp
 
 [Báo cáo PDF 21 trang](bao_cao/SE201095_PhamTranGiaLong_Asgn02_BaoCao.pdf)
 trình bày thiết kế, đồng bộ, kết quả thực nghiệm và reflection.
-Bản repo hiện tại chưa kèm video demo.
-Video demo được bổ sung khi nhóm hoàn thiện.
+Bản repository hiện tại **chưa kèm video demo**, được ghi rõ trong `CHUA_KEM_VIDEO.txt`.
 
 Phiên ARM cuối: `uptime_ms=60030`, 119 đọc/xử lý, TEMP_HIGH=25,
 HUMID_HIGH=17, TEMP_SPIKE=77; fatal, overflow, deferred đều 0.
@@ -173,9 +217,32 @@ Valgrind cuối chạy HOST/MOCK khoảng 35 giây, nhận SIGINT, 69 mẫu,
 20 alloc/20 free, 0 byte tại exit và 0 lỗi. Memcheck không phải công cụ
 chứng minh không có data race; phần ownership và khóa được phân tích riêng.
 
-Gói nộp giữ source, Makefile, ARM app, app HOST x86_64, `.ko`, initramfs,
-log gốc, báo cáo và video hoặc đường dẫn video. Các binary ARM dùng thư viện
+Repository giữ source, Makefile, ARM app, app HOST x86_64, `.ko`, initramfs,
+log gốc và báo cáo. Các binary ARM dùng thư viện
 động đã được cài trong initramfs; không thay chúng bằng file host hoặc bản rỗng.
+
+## Kiểm tra và xử lý lỗi thường gặp
+
+| Biểu hiện | Kiểm tra |
+|---|---|
+| `Exec format error` | Dùng `file` để phân biệt binary ARM với x86_64 |
+| Không mở được `/dev/sms_sensor` | Xem `lsmod`, `dmesg`, device node và quyền; load đúng module |
+| Không tạo được POSIX message queue | Xem cấu hình `CONFIG_POSIX_MQUEUE`, mount mqueue và giới hạn queue |
+| `mlockall` hoặc FIFO thất bại | Kiểm tra quyền và giới hạn tài nguyên trong môi trường chạy |
+| Có EAGAIN retry | Đối chiếu min-spacing driver và lịch đọc; xem riêng retry, deferred và fatal |
+| Có source mới nhưng QEMU vẫn chạy bản cũ | Cài lại app/module vào rootfs và đóng gói lại initramfs |
+
+Các lệnh GDB/Valgrind dưới đây chạy trên HOST với MOCK:
+
+```bash
+make -C app host debug test
+bash scripts/run_gdb_review.sh
+valgrind --leak-check=full --show-leak-kinds=all \
+    ./app/sms_app_host --mock --other -i 500 -d 5 \
+    --log /tmp/sms_valgrind.log
+```
+
+Test buffer và Processor là regression test ở mức ứng dụng. Bài chạy ARM 60 giây kiểm tra tích hợp với kernel driver; hai loại kiểm tra bổ sung cho nhau.
 
 ## Tài liệu tham khảo
 
