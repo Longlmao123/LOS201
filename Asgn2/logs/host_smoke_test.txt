@@ -1,0 +1,56 @@
+[MAIN] MOCK diagnostics: memory lock disabled
+[MAIN] mode=MOCK policy=OTHER interval=500 ms duration=5 s log=/tmp/sms_host_smoke.log
+[SENSOR] policy=OTHER priority=0 mode=MOCK
+[ALERT][35724243] TYPE: TEMP_SPIKE VALUE: 13.7 THRESHOLD: 5.0
+[ALERT][35724743] TYPE: TEMP_HIGH VALUE: 42.4 THRESHOLD: 40.0
+[ALERT][35724743] TYPE: TEMP_SPIKE VALUE: 13.7 THRESHOLD: 5.0
+[ALERT][35725243] TYPE: TEMP_SPIKE VALUE: 16.4 THRESHOLD: 5.0
+[ALERT][35725743] TYPE: TEMP_SPIKE VALUE: 13.7 THRESHOLD: 5.0
+[ALERT][35726243] TYPE: TEMP_SPIKE VALUE: 16.4 THRESHOLD: 5.0
+[ALERT][35726743] TYPE: TEMP_SPIKE VALUE: 13.7 THRESHOLD: 5.0
+[ALERT][35727243] TYPE: TEMP_SPIKE VALUE: 16.4 THRESHOLD: 5.0
+[ALERT][35727743] TYPE: HUMID_HIGH VALUE: 83.4 THRESHOLD: 80.0
+[ALERT][35727743] TYPE: TEMP_SPIKE VALUE: 13.7 THRESHOLD: 5.0
+[ALERT][35728243] TYPE: TEMP_SPIKE VALUE: 16.4 THRESHOLD: 5.0
+[MAIN] duration reached
+[SENSOR] stopped: samples=10 skipped_periods=0
+[PROCESSOR] stopped: processed=10
+[ALERT] stopped: TEMP_HIGH=1 HUMID_HIGH=1 TEMP_SPIKE=9
+[LOGGER] stopped
+[MAIN] exit_code=0
+[SENSOR] 35723743,15.0,30.0
+[PROCESSOR] timestamp_ms=35723743 avg_temp=15.00 avg_humidity=30.00 alarms=0
+[SENSOR] 35724243,28.7,51.7
+[PROCESSOR] timestamp_ms=35724243 avg_temp=21.85 avg_humidity=40.85 alarms=1
+[SENSOR] 35724743,42.4,73.4
+[PROCESSOR] timestamp_ms=35724743 avg_temp=28.70 avg_humidity=51.70 alarms=2
+[SENSOR] 35725243,26.0,35.0
+[PROCESSOR] timestamp_ms=35725243 avg_temp=28.03 avg_humidity=47.53 alarms=1
+[SENSOR] 35725743,39.7,56.7
+[PROCESSOR] timestamp_ms=35725743 avg_temp=30.36 avg_humidity=49.36 alarms=1
+[SENSOR] 35726243,23.3,78.4
+[PROCESSOR] timestamp_ms=35726243 avg_temp=29.18 avg_humidity=54.20 alarms=1
+[SENSOR] 35726743,37.0,40.0
+[PROCESSOR] timestamp_ms=35726743 avg_temp=30.30 avg_humidity=52.17 alarms=1
+[SENSOR] 35727243,20.6,61.7
+[PROCESSOR] timestamp_ms=35727243 avg_temp=29.09 avg_humidity=53.36 alarms=1
+[SENSOR] 35727743,34.3,83.4
+[PROCESSOR] timestamp_ms=35727743 avg_temp=29.67 avg_humidity=56.70 alarms=2
+[SENSOR] 35728243,17.9,45.0
+[PROCESSOR] timestamp_ms=35728243 avg_temp=28.49 avg_humidity=55.53 alarms=1
+
+=== SMS SUMMARY ===
+mode=MOCK policy=OTHER interval_ms=500
+samples_read=10
+sensor_read_errors=0
+samples_processed=10
+total_produced=10
+total_consumed=10
+overflow_count=0
+buffer_remaining=0
+TEMP_HIGH=1
+HUMID_HIGH=1
+TEMP_SPIKE=9
+jitter_samples=10 capacity=100000
+fatal_error=0
+=== SMS END ===

@@ -1,0 +1,25 @@
+=== JITTER COMPARISON ===
+Environment: QEMU ARM, DRIVER, interval=500 ms, duration=510 s
+Measurement: wake-up lateness before device read
+Unit: microseconds; P99 method: nearest-rank
+
+Metric                                 FIFO          OTHER
+samples                                1020           1020
+min_us                                  107            147
+mean_us                             654.801        650.691
+max_us                                 1597           2598
+p99_us                                 1325           2092
+negative                                  0              0
+0_to_100_us                               0              0
+over_100_to_500_us                      315            512
+over_500_to_1000_us                     592            360
+over_1000_us                            113            148
+
+FIFO P99 reduction relative to OTHER: 36.66%
+Positive = lower P99 with FIFO; negative = higher P99 with FIFO.
+
+Histogram boundaries:
+[0,100], (100,500], (500,1000], (1000,+infinity) us.
+Negative values are counted separately.
+Observed maximum is not a guaranteed worst-case bound.
+=== JITTER ANALYSIS OK ===

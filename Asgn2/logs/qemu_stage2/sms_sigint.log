@@ -1,0 +1,178 @@
+
+[2026-10-21 15:38:36.456 +0000] LOGGER started
+
+[2026-10-21 15:38:36.457 +0000] ALERT started
+
+[2026-10-21 15:38:36.458 +0000] PROCESSOR started
+
+[2026-10-21 15:38:36.963 +0000] SAMPLE timestamp_ms=308566 temperature=43.8 humidity=37.5 average_temperature=43.80 average_humidity=37.50 window_count=1 alarms=1
+
+[2026-10-21 15:38:36.966 +0000] ALERT timestamp_ms=308566 TYPE: TEMP_HIGH VALUE: 43.8 THRESHOLD: 40.0
+
+[2026-10-21 15:38:37.464 +0000] ALERT timestamp_ms=309066 TYPE: TEMP_SPIKE VALUE: 14.4 THRESHOLD: 5.0
+
+[2026-10-21 15:38:37.466 +0000] SAMPLE timestamp_ms=309066 temperature=29.4 humidity=33.8 average_temperature=36.60 average_humidity=35.65 window_count=2 alarms=1
+
+[2026-10-21 15:38:37.964 +0000] SAMPLE timestamp_ms=309566 temperature=18.9 humidity=37.6 average_temperature=30.70 average_humidity=36.30 window_count=3 alarms=1
+
+[2026-10-21 15:38:37.966 +0000] ALERT timestamp_ms=309566 TYPE: TEMP_SPIKE VALUE: 10.5 THRESHOLD: 5.0
+
+[2026-10-21 15:38:38.463 +0000] SAMPLE timestamp_ms=310066 temperature=21.7 humidity=43.6 average_temperature=28.45 average_humidity=38.12 window_count=4 alarms=0
+
+[2026-10-21 15:38:38.965 +0000] SAMPLE timestamp_ms=310566 temperature=27.0 humidity=42.0 average_temperature=28.16 average_humidity=38.90 window_count=5 alarms=1
+
+[2026-10-21 15:38:38.965 +0000] ALERT timestamp_ms=310566 TYPE: TEMP_SPIKE VALUE: 5.3 THRESHOLD: 5.0
+
+[2026-10-21 15:38:39.463 +0000] SAMPLE timestamp_ms=311066 temperature=15.4 humidity=32.5 average_temperature=26.03 average_humidity=37.83 window_count=6 alarms=1
+
+[2026-10-21 15:38:39.465 +0000] ALERT timestamp_ms=311066 TYPE: TEMP_SPIKE VALUE: 11.6 THRESHOLD: 5.0
+
+[2026-10-21 15:38:39.964 +0000] SAMPLE timestamp_ms=311566 temperature=43.1 humidity=76.3 average_temperature=28.47 average_humidity=43.33 window_count=7 alarms=2
+
+[2026-10-21 15:38:39.965 +0000] ALERT timestamp_ms=311566 TYPE: TEMP_HIGH VALUE: 43.1 THRESHOLD: 40.0
+
+[2026-10-21 15:38:39.965 +0000] ALERT timestamp_ms=311566 TYPE: TEMP_SPIKE VALUE: 27.7 THRESHOLD: 5.0
+
+[2026-10-21 15:38:40.464 +0000] SAMPLE timestamp_ms=312066 temperature=27.9 humidity=46.3 average_temperature=28.40 average_humidity=43.70 window_count=8 alarms=1
+
+[2026-10-21 15:38:40.465 +0000] ALERT timestamp_ms=312066 TYPE: TEMP_SPIKE VALUE: 15.2 THRESHOLD: 5.0
+
+[2026-10-21 15:38:40.965 +0000] SAMPLE timestamp_ms=312566 temperature=39.7 humidity=83.1 average_temperature=29.66 average_humidity=48.08 window_count=9 alarms=2
+
+[2026-10-21 15:38:40.967 +0000] ALERT timestamp_ms=312566 TYPE: HUMID_HIGH VALUE: 83.1 THRESHOLD: 80.0
+
+[2026-10-21 15:38:40.968 +0000] ALERT timestamp_ms=312566 TYPE: TEMP_SPIKE VALUE: 11.8 THRESHOLD: 5.0
+
+[2026-10-21 15:38:41.465 +0000] SAMPLE timestamp_ms=313067 temperature=18.0 humidity=42.2 average_temperature=28.49 average_humidity=47.49 window_count=10 alarms=1
+
+[2026-10-21 15:38:41.466 +0000] ALERT timestamp_ms=313067 TYPE: TEMP_SPIKE VALUE: 21.7 THRESHOLD: 5.0
+
+[2026-10-21 15:38:41.966 +0000] SAMPLE timestamp_ms=313568 temperature=43.8 humidity=52.4 average_temperature=28.49 average_humidity=48.98 window_count=10 alarms=2
+
+[2026-10-21 15:38:41.966 +0000] ALERT timestamp_ms=313568 TYPE: TEMP_HIGH VALUE: 43.8 THRESHOLD: 40.0
+
+[2026-10-21 15:38:41.966 +0000] ALERT timestamp_ms=313568 TYPE: TEMP_SPIKE VALUE: 25.8 THRESHOLD: 5.0
+
+[2026-10-21 15:38:42.465 +0000] SAMPLE timestamp_ms=314068 temperature=29.5 humidity=62.2 average_temperature=28.50 average_humidity=51.82 window_count=10 alarms=1
+
+[2026-10-21 15:38:42.467 +0000] ALERT timestamp_ms=314068 TYPE: TEMP_SPIKE VALUE: 14.3 THRESHOLD: 5.0
+
+[2026-10-21 15:38:42.966 +0000] SAMPLE timestamp_ms=314568 temperature=41.1 humidity=36.3 average_temperature=30.72 average_humidity=51.69 window_count=10 alarms=2
+
+[2026-10-21 15:38:42.966 +0000] ALERT timestamp_ms=314568 TYPE: TEMP_HIGH VALUE: 41.1 THRESHOLD: 40.0
+
+[2026-10-21 15:38:42.967 +0000] ALERT timestamp_ms=314568 TYPE: TEMP_SPIKE VALUE: 11.6 THRESHOLD: 5.0
+
+[2026-10-21 15:38:43.466 +0000] SAMPLE timestamp_ms=315068 temperature=24.9 humidity=67.9 average_temperature=31.04 average_humidity=54.12 window_count=10 alarms=1
+
+[2026-10-21 15:38:43.466 +0000] ALERT timestamp_ms=315068 TYPE: TEMP_SPIKE VALUE: 16.2 THRESHOLD: 5.0
+
+[2026-10-21 15:38:43.966 +0000] SAMPLE timestamp_ms=315568 temperature=17.0 humidity=48.5 average_temperature=30.04 average_humidity=54.77 window_count=10 alarms=1
+
+[2026-10-21 15:38:43.966 +0000] ALERT timestamp_ms=315568 TYPE: TEMP_SPIKE VALUE: 7.9 THRESHOLD: 5.0
+
+[2026-10-21 15:38:44.466 +0000] SAMPLE timestamp_ms=316068 temperature=27.6 humidity=79.6 average_temperature=31.26 average_humidity=59.48 window_count=10 alarms=1
+
+[2026-10-21 15:38:44.466 +0000] ALERT timestamp_ms=316068 TYPE: TEMP_SPIKE VALUE: 10.6 THRESHOLD: 5.0
+
+[2026-10-21 15:38:44.967 +0000] SAMPLE timestamp_ms=316569 temperature=35.1 humidity=37.5 average_temperature=30.46 average_humidity=55.60 window_count=10 alarms=1
+
+[2026-10-21 15:38:44.968 +0000] ALERT timestamp_ms=316569 TYPE: TEMP_SPIKE VALUE: 7.5 THRESHOLD: 5.0
+
+[2026-10-21 15:38:45.467 +0000] SAMPLE timestamp_ms=317070 temperature=31.4 humidity=33.6 average_temperature=30.81 average_humidity=54.33 window_count=10 alarms=0
+
+[2026-10-21 15:38:45.970 +0000] SAMPLE timestamp_ms=317571 temperature=45.0 humidity=89.2 average_temperature=31.34 average_humidity=54.94 window_count=10 alarms=3
+
+[2026-10-21 15:38:45.970 +0000] ALERT timestamp_ms=317571 TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+
+[2026-10-21 15:38:45.971 +0000] ALERT timestamp_ms=317571 TYPE: HUMID_HIGH VALUE: 89.2 THRESHOLD: 80.0
+
+[2026-10-21 15:38:45.971 +0000] ALERT timestamp_ms=317571 TYPE: TEMP_SPIKE VALUE: 13.6 THRESHOLD: 5.0
+
+[2026-10-21 15:38:46.468 +0000] SAMPLE timestamp_ms=318071 temperature=17.6 humidity=75.5 average_temperature=31.30 average_humidity=58.27 window_count=10 alarms=1
+
+[2026-10-21 15:38:46.469 +0000] ALERT timestamp_ms=318071 TYPE: TEMP_SPIKE VALUE: 27.4 THRESHOLD: 5.0
+
+[2026-10-21 15:38:46.969 +0000] SAMPLE timestamp_ms=318572 temperature=17.0 humidity=64.5 average_temperature=28.62 average_humidity=59.48 window_count=10 alarms=0
+
+[2026-10-21 15:38:47.470 +0000] SAMPLE timestamp_ms=319072 temperature=36.7 humidity=73.4 average_temperature=29.34 average_humidity=60.60 window_count=10 alarms=1
+
+[2026-10-21 15:38:47.471 +0000] ALERT timestamp_ms=319072 TYPE: TEMP_SPIKE VALUE: 19.7 THRESHOLD: 5.0
+
+[2026-10-21 15:38:47.970 +0000] SAMPLE timestamp_ms=319573 temperature=26.0 humidity=51.1 average_temperature=27.83 average_humidity=62.08 window_count=10 alarms=1
+
+[2026-10-21 15:38:47.971 +0000] ALERT timestamp_ms=319573 TYPE: TEMP_SPIKE VALUE: 10.7 THRESHOLD: 5.0
+
+[2026-10-21 15:38:48.470 +0000] SAMPLE timestamp_ms=320073 temperature=43.5 humidity=48.7 average_temperature=29.69 average_humidity=60.16 window_count=10 alarms=2
+
+[2026-10-21 15:38:48.471 +0000] ALERT timestamp_ms=320073 TYPE: TEMP_HIGH VALUE: 43.5 THRESHOLD: 40.0
+
+[2026-10-21 15:38:48.472 +0000] ALERT timestamp_ms=320073 TYPE: TEMP_SPIKE VALUE: 17.5 THRESHOLD: 5.0
+
+[2026-10-21 15:38:48.972 +0000] SAMPLE timestamp_ms=320574 temperature=36.5 humidity=75.7 average_temperature=31.64 average_humidity=62.88 window_count=10 alarms=1
+
+[2026-10-21 15:38:48.972 +0000] ALERT timestamp_ms=320574 TYPE: TEMP_SPIKE VALUE: 7.0 THRESHOLD: 5.0
+
+[2026-10-21 15:38:49.472 +0000] SAMPLE timestamp_ms=321074 temperature=24.7 humidity=67.3 average_temperature=31.35 average_humidity=61.65 window_count=10 alarms=1
+
+[2026-10-21 15:38:49.472 +0000] ALERT timestamp_ms=321074 TYPE: TEMP_SPIKE VALUE: 11.8 THRESHOLD: 5.0
+
+[2026-10-21 15:38:49.973 +0000] SAMPLE timestamp_ms=321574 temperature=30.5 humidity=52.9 average_temperature=30.89 average_humidity=63.19 window_count=10 alarms=1
+
+[2026-10-21 15:38:49.973 +0000] ALERT timestamp_ms=321574 TYPE: TEMP_SPIKE VALUE: 5.8 THRESHOLD: 5.0
+
+[2026-10-21 15:38:50.472 +0000] SAMPLE timestamp_ms=322074 temperature=40.8 humidity=66.3 average_temperature=31.83 average_humidity=66.46 window_count=10 alarms=2
+
+[2026-10-21 15:38:50.472 +0000] ALERT timestamp_ms=322074 TYPE: TEMP_HIGH VALUE: 40.8 THRESHOLD: 40.0
+
+[2026-10-21 15:38:50.474 +0000] ALERT timestamp_ms=322074 TYPE: TEMP_SPIKE VALUE: 10.3 THRESHOLD: 5.0
+
+[2026-10-21 15:38:50.972 +0000] SAMPLE timestamp_ms=322575 temperature=23.2 humidity=76.1 average_temperature=29.65 average_humidity=65.15 window_count=10 alarms=1
+
+[2026-10-21 15:38:50.973 +0000] ALERT timestamp_ms=322575 TYPE: TEMP_SPIKE VALUE: 17.6 THRESHOLD: 5.0
+
+[2026-10-21 15:38:51.473 +0000] SAMPLE timestamp_ms=323076 temperature=23.0 humidity=56.3 average_temperature=30.19 average_humidity=63.23 window_count=10 alarms=0
+
+[2026-10-21 15:38:51.973 +0000] SAMPLE timestamp_ms=323577 temperature=34.1 humidity=87.1 average_temperature=31.90 average_humidity=65.49 window_count=10 alarms=2
+
+[2026-10-21 15:38:51.973 +0000] ALERT timestamp_ms=323577 TYPE: HUMID_HIGH VALUE: 87.1 THRESHOLD: 80.0
+
+[2026-10-21 15:38:51.973 +0000] ALERT timestamp_ms=323577 TYPE: TEMP_SPIKE VALUE: 11.1 THRESHOLD: 5.0
+
+[2026-10-21 15:38:52.475 +0000] SAMPLE timestamp_ms=324077 temperature=24.4 humidity=88.1 average_temperature=30.67 average_humidity=66.96 window_count=10 alarms=2
+
+[2026-10-21 15:38:52.476 +0000] ALERT timestamp_ms=324077 TYPE: HUMID_HIGH VALUE: 88.1 THRESHOLD: 80.0
+
+[2026-10-21 15:38:52.477 +0000] ALERT timestamp_ms=324077 TYPE: TEMP_SPIKE VALUE: 9.7 THRESHOLD: 5.0
+
+[2026-10-21 15:38:52.975 +0000] SAMPLE timestamp_ms=324577 temperature=37.5 humidity=82.4 average_temperature=31.82 average_humidity=70.09 window_count=10 alarms=2
+
+[2026-10-21 15:38:52.976 +0000] ALERT timestamp_ms=324577 TYPE: HUMID_HIGH VALUE: 82.4 THRESHOLD: 80.0
+
+[2026-10-21 15:38:52.976 +0000] ALERT timestamp_ms=324577 TYPE: TEMP_SPIKE VALUE: 13.1 THRESHOLD: 5.0
+
+[2026-10-21 15:38:53.475 +0000] SAMPLE timestamp_ms=325078 temperature=36.3 humidity=79.4 average_temperature=31.10 average_humidity=73.16 window_count=10 alarms=0
+
+[2026-10-21 15:38:53.975 +0000] SAMPLE timestamp_ms=325578 temperature=19.7 humidity=73.2 average_temperature=29.42 average_humidity=72.91 window_count=10 alarms=1
+
+[2026-10-21 15:38:53.977 +0000] ALERT timestamp_ms=325578 TYPE: TEMP_SPIKE VALUE: 16.6 THRESHOLD: 5.0
+
+[2026-10-21 15:38:54.476 +0000] SAMPLE timestamp_ms=326079 temperature=30.4 humidity=54.2 average_temperature=29.99 average_humidity=71.60 window_count=10 alarms=1
+
+[2026-10-21 15:38:54.477 +0000] ALERT timestamp_ms=326079 TYPE: TEMP_SPIKE VALUE: 10.7 THRESHOLD: 5.0
+
+[2026-10-21 15:38:54.978 +0000] SAMPLE timestamp_ms=326580 temperature=43.3 humidity=84.1 average_temperature=31.27 average_humidity=74.72 window_count=10 alarms=3
+
+[2026-10-21 15:38:54.980 +0000] ALERT timestamp_ms=326580 TYPE: TEMP_HIGH VALUE: 43.3 THRESHOLD: 40.0
+
+[2026-10-21 15:38:54.981 +0000] ALERT timestamp_ms=326580 TYPE: HUMID_HIGH VALUE: 84.1 THRESHOLD: 80.0
+
+[2026-10-21 15:38:54.982 +0000] ALERT timestamp_ms=326580 TYPE: TEMP_SPIKE VALUE: 12.9 THRESHOLD: 5.0
+
+[2026-10-21 15:38:55.463 +0000] PROCESSOR stopped: processed=37
+
+[2026-10-21 15:38:55.466 +0000] ALERT stopped: TEMP_HIGH=8 HUMID_HIGH=6 TEMP_SPIKE=31
+
+[2026-10-21 15:38:55.467 +0000] LOGGER stopped
+
+

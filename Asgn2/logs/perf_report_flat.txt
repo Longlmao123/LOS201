@@ -1,0 +1,54 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 59  of event 'cpu-clock'
+# Event count (approx.): 59059059
+#
+# Overhead  Shared Object      Symbol                                 IPC   [IPC Coverage]
+# ........  .................  .....................................  ....................
+#
+    11.86%  libc.so.6          [.] __syscall_cancel_arch_end          -      -            
+     8.47%  [kernel.kallsyms]  [k] _raw_spin_unlock_irqrestore        -      -            
+     6.78%  [kernel.kallsyms]  [k] finish_task_switch.isra.0          -      -            
+     5.08%  [kernel.kallsyms]  [k] get_timespec64                     -      -            
+     5.08%  libc.so.6          [.] __syscall_cancel                   -      -            
+     3.39%  [kernel.kallsyms]  [k] schedule_hrtimeout_range_clock     -      -            
+     3.39%  libc.so.6          [.] __errno_location                   -      -            
+     3.39%  libc.so.6          [.] __vfscanf_internal                 -      -            
+     3.39%  libc.so.6          [.] clock_nanosleep@GLIBC_2.2.5        -      -            
+     1.69%  [kernel.kallsyms]  [k] __kmalloc_node_noprof              -      -            
+     1.69%  [kernel.kallsyms]  [k] __x64_sys_clock_nanosleep          -      -            
+     1.69%  [kernel.kallsyms]  [k] _copy_from_user                    -      -            
+     1.69%  [kernel.kallsyms]  [k] _raw_spin_unlock_irq               -      -            
+     1.69%  [kernel.kallsyms]  [k] common_nsleep_timens               -      -            
+     1.69%  [kernel.kallsyms]  [k] do_sigtimedwait.isra.0             -      -            
+     1.69%  [kernel.kallsyms]  [k] drain_obj_stock                    -      -            
+     1.69%  [kernel.kallsyms]  [k] ext4_do_update_inode.isra.0        -      -            
+     1.69%  [kernel.kallsyms]  [k] futex_do_wait                      -      -            
+     1.69%  [kernel.kallsyms]  [k] generic_encode_ino32_fh            -      -            
+     1.69%  [kernel.kallsyms]  [k] hrtimer_nanosleep                  -      -            
+     1.69%  [kernel.kallsyms]  [k] jbd2_journal_dirty_metadata        -      -            
+     1.69%  [kernel.kallsyms]  [k] kfree                              -      -            
+     1.69%  [kernel.kallsyms]  [k] lockref_get_not_zero               -      -            
+     1.69%  [kernel.kallsyms]  [k] mas_walk                           -      -            
+     1.69%  [kernel.kallsyms]  [k] mod_memcg_state                    -      -            
+     1.69%  [kernel.kallsyms]  [k] msg_get                            -      -            
+     1.69%  [kernel.kallsyms]  [k] wq_sleep                           -      -            
+     1.69%  [kernel.kallsyms]  [k] x64_sys_call                       -      -            
+     1.69%  libc.so.6          [.] __GI___nptl_deallocate_stack       -      -            
+     1.69%  libc.so.6          [.] __internal_syscall_cancel          -      -            
+     1.69%  libc.so.6          [.] __printf_buffer                    -      -            
+     1.69%  libc.so.6          [.] __strchrnul_avx2                   -      -            
+     1.69%  libc.so.6          [.] __syscall_cancel_arch              -      -            
+     1.69%  libc.so.6          [.] __tzfile_compute                   -      -            
+     1.69%  libc.so.6          [.] _itoa_word                         -      -            
+     1.69%  libc.so.6          [.] pthread_mutex_lock@@GLIBC_2.2.5    -      -            
+     1.69%  libc.so.6          [.] pthread_mutex_unlock@@GLIBC_2.2.5  -      -            
+     1.69%  sms_app_host       [.] main                               -      -            
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

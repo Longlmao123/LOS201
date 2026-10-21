@@ -1,0 +1,1851 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 111  of event 'cpu/cycles/P'
+# Event count (approx.): 113663885
+#
+# Children      Self  Command      Shared Object         Symbol                            
+# ........  ........  ...........  ....................  ..................................
+#
+    62.12%    54.17%  perf_target  libm.so.6             [.] __ieee754_log_fma
+            |          
+            |--7.95%--__ieee754_log_fma
+            |          
+            |--1.02%--0x40d6f64000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.02%--0x40eff14000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.01%--0x40e1b26000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.01%--0x40f72b0000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.01%--0x40f332b000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.00%--0x40bcb00000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.99%--0x40eefac000000000
+            |          heavy_compute
+            |          
+            |--0.99%--0x40f70d5000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.99%--0x40e8a9a000000000
+            |          heavy_compute
+            |          
+            |--0.99%--0x40f7667000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.98%--0x40e9f98000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.97%--0x40f4259000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.97%--0x40d2bb8000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.97%--0x40f7e59000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.97%--0x40f1fa7000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.97%--0x40d5694000000000
+            |          heavy_compute
+            |          
+            |--0.96%--0x40f652c000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.96%--0x40daadc000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.96%--0x40f25ce000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.96%--0x40e4e76000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.95%--0x40ebe68000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.95%--0x40f0601000000000
+            |          heavy_compute
+            |          
+            |--0.95%--0x40f5c1d000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.95%--0x40f6b3a000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.94%--0x40d2000000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.94%--0x4076100000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.94%--0x40ea6dc000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.94%--0x40ed98c000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.94%--0x40f08d7000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.94%--0x40d465c000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.94%--0x40cb998000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.94%--0x40f3eab000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.94%--0x40db5e8000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.94%--0x40f04e8000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.94%--0x40d7d88000000000
+            |          heavy_compute
+            |          
+            |--0.94%--0x40f1501000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.94%--0x40d11ec000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.94%--0x40ef5d0000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.94%--0x40c6cc0000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.93%--0x40ec8f8000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.93%--0x40e97f8000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.93%--0x40e0f3a000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.93%--0x40f867b000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.93%--0x40e6e36000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.93%--0x40f5a30000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.93%--0x40e41ce000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.93%--0x40f6ef5000000000
+            |          heavy_compute
+            |          
+            |--0.93%--0x40b7aa0000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.93%--0x40f6015000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.93%--0x40f200c000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.92%--0x40f5be6000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.90%--0x40e3694000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.88%--0x40e69ca000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.87%--0x40b1ff0000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.79%--0x40ee1ca000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.75%--0x40d0894000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.65%--0x40e0f46000000000
+            |          __ieee754_log_fma
+            |          
+             --0.61%--0x40b0460000000000
+                       __ieee754_log_fma
+
+    24.33%    18.56%  perf_target  perf_target           [.] heavy_compute
+            |          
+            |--5.77%--heavy_compute
+            |          
+            |--1.02%--0x40bda90000000000
+            |          heavy_compute
+            |          
+            |--1.00%--0x40ef87e000000000
+            |          heavy_compute
+            |          
+            |--0.98%--0x40f2b5d000000000
+            |          heavy_compute
+            |          
+            |--0.97%--0x40ef396000000000
+            |          heavy_compute
+            |          
+            |--0.97%--0x40e4c90000000000
+            |          heavy_compute
+            |          
+            |--0.95%--0x40eac36000000000
+            |          log@plt
+            |          
+            |--0.95%--0x40c53b8000000000
+            |          heavy_compute
+            |          
+            |--0.94%--0x40e6cc6000000000
+            |          heavy_compute
+            |          
+            |--0.94%--0x40f58ff000000000
+            |          heavy_compute
+            |          
+            |--0.94%--0x40e0ebe000000000
+            |          heavy_compute
+            |          
+            |--0.94%--0x40f22ba000000000
+            |          heavy_compute
+            |          
+            |--0.94%--0x40c91b0000000000
+            |          heavy_compute
+            |          
+            |--0.93%--0x40b4d30000000000
+            |          heavy_compute
+            |          
+            |--0.93%--0x40e38dc000000000
+            |          heavy_compute
+            |          
+            |--0.92%--0x40e2534000000000
+            |          heavy_compute
+            |          
+            |--0.91%--0x40e2b00000000000
+            |          log@plt
+            |          
+            |--0.90%--0x40f5496000000000
+            |          heavy_compute
+            |          
+            |--0.89%--0x40f6c26000000000
+            |          heavy_compute
+            |          
+            |--0.82%--0x40bfb50000000000
+            |          heavy_compute
+            |          
+             --0.71%--0x40f21d0000000000
+                       heavy_compute
+
+    14.58%     7.95%  perf_target  libm.so.6             [.] __log_finite@GLIBC_2.15@plt
+            |          
+            |--6.64%--__log_finite@GLIBC_2.15@plt
+            |          
+            |--1.02%--0x40f0104000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.02%--0x40e8556000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.02%--0x40f6fce000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.01%--0x40d5040000000000
+            |          __ieee754_log_fma
+            |          
+            |--1.00%--0x40dad0c000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.98%--0x40c0700000000000
+            |          __ieee754_log_fma
+            |          
+            |--0.96%--0x40e6756000000000
+            |          __ieee754_log_fma
+            |          
+             --0.94%--0x40ef8da000000000
+                       __ieee754_log_fma
+
+    10.36%    10.36%  perf_target  libm.so.6             [.] log@@GLIBC_2.29
+            |          
+            |--0.98%--0x40e2bf2000000000
+            |          __log_finite@GLIBC_2.15@plt
+            |          
+            |--0.98%--0x40df834000000000
+            |          __log (inlined)
+            |          
+            |--0.96%--0x40dbb40000000000
+            |          __log_finite@GLIBC_2.15@plt
+            |          
+            |--0.96%--0x40f1b04000000000
+            |          __log (inlined)
+            |          
+            |--0.96%--0x407e300000000000
+            |          __log_finite@GLIBC_2.15@plt
+            |          
+            |--0.96%--0x40c4ef8000000000
+            |          __log_finite@GLIBC_2.15@plt
+            |          
+            |--0.95%--0x40c0090000000000
+            |          __log (inlined)
+            |          
+            |--0.95%--0x40e3bf8000000000
+            |          __log_finite@GLIBC_2.15@plt
+            |          
+            |--0.92%--0x40e4ef0000000000
+            |          __log_finite@GLIBC_2.15@plt
+            |          
+            |--0.92%--0x40f6161000000000
+            |          __log_finite@GLIBC_2.15@plt
+            |          
+             --0.84%--0x40eaf3a000000000
+                       __log (inlined)
+
+     6.58%     0.00%  perf_target  libm.so.6             [.] __log (inlined)
+            |
+            ---__log (inlined)
+
+     4.73%     2.86%  perf_target  perf_target           [.] log@plt
+            |          
+            |--1.87%--log@plt
+            |          
+            |--0.97%--0x40f5584000000000
+            |          __log (inlined)
+            |          
+            |--0.95%--0x40e6bfc000000000
+            |          __log (inlined)
+            |          
+             --0.94%--0x40bb220000000000
+                       __log (inlined)
+
+     2.91%     0.00%  perf_target  [unknown]             [k] 0x000064cfeeaf3600
+            |
+            ---0x64cfeeaf3600
+               io_intensive
+               ___fprintf_chk (inlined)
+               __vfprintf_internal
+               __printf_buffer
+               |          
+               |--0.97%--__printf_buffer_write
+               |          __printf_buffer_flush
+               |          __printf_buffer_has_failed (inlined)
+               |          __printf_buffer_flush_to_file
+               |          _IO_new_file_overflow (inlined)
+               |          _IO_new_do_write (inlined)
+               |          new_do_write (inlined)
+               |          _IO_new_file_write (inlined)
+               |          __libc_write (inlined)
+               |          __syscall_cancel
+               |          __internal_syscall_cancel (inlined)
+               |          entry_SYSCALL_64_after_hwframe
+               |          do_syscall_64
+               |          x64_sys_call
+               |          __x64_sys_write
+               |          ksys_write
+               |          vfs_write
+               |          shmem_file_write_iter
+               |          generic_perform_write
+               |          shmem_write_begin
+               |          shmem_get_folio_gfp
+               |          shmem_alloc_and_add_folio
+               |          shmem_alloc_folio
+               |          folio_alloc_mpol_noprof
+               |          alloc_pages_mpol
+               |          __alloc_frozen_pages_noprof
+               |          get_page_from_freelist
+               |          post_alloc_hook
+               |          kernel_init_pages
+               |          
+               |--0.97%--__memmove_evex_unaligned_erms
+               |          
+                --0.96%--__find_specmb (inlined)
+
+     2.91%     0.00%  perf_target  perf_target           [.] io_intensive
+            |
+            ---io_intensive
+               ___fprintf_chk (inlined)
+               __vfprintf_internal
+               __printf_buffer
+               |          
+               |--0.97%--__printf_buffer_write
+               |          __printf_buffer_flush
+               |          __printf_buffer_has_failed (inlined)
+               |          __printf_buffer_flush_to_file
+               |          _IO_new_file_overflow (inlined)
+               |          _IO_new_do_write (inlined)
+               |          new_do_write (inlined)
+               |          _IO_new_file_write (inlined)
+               |          __libc_write (inlined)
+               |          __syscall_cancel
+               |          __internal_syscall_cancel (inlined)
+               |          entry_SYSCALL_64_after_hwframe
+               |          do_syscall_64
+               |          x64_sys_call
+               |          __x64_sys_write
+               |          ksys_write
+               |          vfs_write
+               |          shmem_file_write_iter
+               |          generic_perform_write
+               |          shmem_write_begin
+               |          shmem_get_folio_gfp
+               |          shmem_alloc_and_add_folio
+               |          shmem_alloc_folio
+               |          folio_alloc_mpol_noprof
+               |          alloc_pages_mpol
+               |          __alloc_frozen_pages_noprof
+               |          get_page_from_freelist
+               |          post_alloc_hook
+               |          kernel_init_pages
+               |          
+               |--0.97%--__memmove_evex_unaligned_erms
+               |          
+                --0.96%--__find_specmb (inlined)
+
+     2.91%     0.00%  perf_target  libc.so.6             [.] ___fprintf_chk (inlined)
+            |
+            ---___fprintf_chk (inlined)
+               __vfprintf_internal
+               __printf_buffer
+               |          
+               |--0.97%--__printf_buffer_write
+               |          __printf_buffer_flush
+               |          __printf_buffer_has_failed (inlined)
+               |          __printf_buffer_flush_to_file
+               |          _IO_new_file_overflow (inlined)
+               |          _IO_new_do_write (inlined)
+               |          new_do_write (inlined)
+               |          _IO_new_file_write (inlined)
+               |          __libc_write (inlined)
+               |          __syscall_cancel
+               |          __internal_syscall_cancel (inlined)
+               |          entry_SYSCALL_64_after_hwframe
+               |          do_syscall_64
+               |          x64_sys_call
+               |          __x64_sys_write
+               |          ksys_write
+               |          vfs_write
+               |          shmem_file_write_iter
+               |          generic_perform_write
+               |          shmem_write_begin
+               |          shmem_get_folio_gfp
+               |          shmem_alloc_and_add_folio
+               |          shmem_alloc_folio
+               |          folio_alloc_mpol_noprof
+               |          alloc_pages_mpol
+               |          __alloc_frozen_pages_noprof
+               |          get_page_from_freelist
+               |          post_alloc_hook
+               |          kernel_init_pages
+               |          
+               |--0.97%--__memmove_evex_unaligned_erms
+               |          
+                --0.96%--__find_specmb (inlined)
+
+     2.91%     0.00%  perf_target  libc.so.6             [.] __vfprintf_internal
+            |
+            ---__vfprintf_internal
+               __printf_buffer
+               |          
+               |--0.97%--__printf_buffer_write
+               |          __printf_buffer_flush
+               |          __printf_buffer_has_failed (inlined)
+               |          __printf_buffer_flush_to_file
+               |          _IO_new_file_overflow (inlined)
+               |          _IO_new_do_write (inlined)
+               |          new_do_write (inlined)
+               |          _IO_new_file_write (inlined)
+               |          __libc_write (inlined)
+               |          __syscall_cancel
+               |          __internal_syscall_cancel (inlined)
+               |          entry_SYSCALL_64_after_hwframe
+               |          do_syscall_64
+               |          x64_sys_call
+               |          __x64_sys_write
+               |          ksys_write
+               |          vfs_write
+               |          shmem_file_write_iter
+               |          generic_perform_write
+               |          shmem_write_begin
+               |          shmem_get_folio_gfp
+               |          shmem_alloc_and_add_folio
+               |          shmem_alloc_folio
+               |          folio_alloc_mpol_noprof
+               |          alloc_pages_mpol
+               |          __alloc_frozen_pages_noprof
+               |          get_page_from_freelist
+               |          post_alloc_hook
+               |          kernel_init_pages
+               |          
+               |--0.97%--__memmove_evex_unaligned_erms
+               |          
+                --0.96%--__find_specmb (inlined)
+
+     2.91%     0.96%  perf_target  libc.so.6             [.] __printf_buffer
+            |          
+            |--1.94%--__printf_buffer
+            |          |          
+            |          |--0.97%--__printf_buffer_write
+            |          |          __printf_buffer_flush
+            |          |          __printf_buffer_has_failed (inlined)
+            |          |          __printf_buffer_flush_to_file
+            |          |          _IO_new_file_overflow (inlined)
+            |          |          _IO_new_do_write (inlined)
+            |          |          new_do_write (inlined)
+            |          |          _IO_new_file_write (inlined)
+            |          |          __libc_write (inlined)
+            |          |          __syscall_cancel
+            |          |          __internal_syscall_cancel (inlined)
+            |          |          entry_SYSCALL_64_after_hwframe
+            |          |          do_syscall_64
+            |          |          x64_sys_call
+            |          |          __x64_sys_write
+            |          |          ksys_write
+            |          |          vfs_write
+            |          |          shmem_file_write_iter
+            |          |          generic_perform_write
+            |          |          shmem_write_begin
+            |          |          shmem_get_folio_gfp
+            |          |          shmem_alloc_and_add_folio
+            |          |          shmem_alloc_folio
+            |          |          folio_alloc_mpol_noprof
+            |          |          alloc_pages_mpol
+            |          |          __alloc_frozen_pages_noprof
+            |          |          get_page_from_freelist
+            |          |          post_alloc_hook
+            |          |          kernel_init_pages
+            |          |          
+            |           --0.97%--__memmove_evex_unaligned_erms
+            |          
+             --0.96%--0x64cfeeaf3600
+                       io_intensive
+                       ___fprintf_chk (inlined)
+                       __vfprintf_internal
+                       __printf_buffer
+                       __find_specmb (inlined)
+
+     1.42%     0.00%  perf_target  [kernel.kallsyms]     [.] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               |          
+                --1.19%--x64_sys_call
+                          |          
+                           --0.97%--__x64_sys_write
+                                     ksys_write
+                                     vfs_write
+                                     shmem_file_write_iter
+                                     generic_perform_write
+                                     shmem_write_begin
+                                     shmem_get_folio_gfp
+                                     shmem_alloc_and_add_folio
+                                     shmem_alloc_folio
+                                     folio_alloc_mpol_noprof
+                                     alloc_pages_mpol
+                                     __alloc_frozen_pages_noprof
+                                     get_page_from_freelist
+                                     post_alloc_hook
+                                     kernel_init_pages
+
+     1.42%     0.00%  perf_target  [kernel.kallsyms]     [.] do_syscall_64
+            |
+            ---do_syscall_64
+               |          
+                --1.19%--x64_sys_call
+                          |          
+                           --0.97%--__x64_sys_write
+                                     ksys_write
+                                     vfs_write
+                                     shmem_file_write_iter
+                                     generic_perform_write
+                                     shmem_write_begin
+                                     shmem_get_folio_gfp
+                                     shmem_alloc_and_add_folio
+                                     shmem_alloc_folio
+                                     folio_alloc_mpol_noprof
+                                     alloc_pages_mpol
+                                     __alloc_frozen_pages_noprof
+                                     get_page_from_freelist
+                                     post_alloc_hook
+                                     kernel_init_pages
+
+     1.27%     0.11%  perf_target  [kernel.kallsyms]     [k] do_user_addr_fault
+            |          
+             --1.16%--do_user_addr_fault
+                       handle_mm_fault
+                       __handle_mm_fault
+                       handle_pte_fault
+                       |          
+                        --1.05%--do_anonymous_page
+                                  |          
+                                   --0.56%--_raw_spin_lock
+
+     1.27%     0.00%  perf_target  [kernel.kallsyms]     [.] asm_exc_page_fault
+            |
+            ---asm_exc_page_fault
+               exc_page_fault
+               do_user_addr_fault
+               |          
+                --1.16%--handle_mm_fault
+                          __handle_mm_fault
+                          handle_pte_fault
+                          |          
+                           --1.05%--do_anonymous_page
+                                     |          
+                                      --0.56%--_raw_spin_lock
+
+     1.27%     0.00%  perf_target  [kernel.kallsyms]     [.] exc_page_fault
+            |
+            ---exc_page_fault
+               do_user_addr_fault
+               |          
+                --1.16%--handle_mm_fault
+                          __handle_mm_fault
+                          handle_pte_fault
+                          |          
+                           --1.05%--do_anonymous_page
+                                     |          
+                                      --0.56%--_raw_spin_lock
+
+     1.19%     0.00%  perf_target  [kernel.kallsyms]     [.] x64_sys_call
+            |
+            ---x64_sys_call
+               |          
+                --0.97%--__x64_sys_write
+                          ksys_write
+                          vfs_write
+                          shmem_file_write_iter
+                          generic_perform_write
+                          shmem_write_begin
+                          shmem_get_folio_gfp
+                          shmem_alloc_and_add_folio
+                          shmem_alloc_folio
+                          folio_alloc_mpol_noprof
+                          alloc_pages_mpol
+                          __alloc_frozen_pages_noprof
+                          get_page_from_freelist
+                          post_alloc_hook
+                          kernel_init_pages
+
+     1.16%     0.00%  perf_target  [kernel.kallsyms]     [.] handle_mm_fault
+            |
+            ---handle_mm_fault
+               __handle_mm_fault
+               handle_pte_fault
+               |          
+                --1.05%--do_anonymous_page
+                          |          
+                           --0.56%--_raw_spin_lock
+
+     1.16%     0.00%  perf_target  [kernel.kallsyms]     [.] __handle_mm_fault
+            |
+            ---__handle_mm_fault
+               handle_pte_fault
+               |          
+                --1.05%--do_anonymous_page
+                          |          
+                           --0.56%--_raw_spin_lock
+
+     1.16%     0.00%  perf_target  [kernel.kallsyms]     [.] handle_pte_fault
+            |
+            ---handle_pte_fault
+               |          
+                --1.05%--do_anonymous_page
+                          |          
+                           --0.56%--_raw_spin_lock
+
+     1.05%     0.00%  perf_target  [unknown]             [k] 0x0000000300000002
+            |
+            ---0x300000002
+               main
+               asm_exc_page_fault
+               exc_page_fault
+               do_user_addr_fault
+               handle_mm_fault
+               __handle_mm_fault
+               handle_pte_fault
+               do_anonymous_page
+               |          
+                --0.56%--_raw_spin_lock
+
+     1.05%     0.00%  perf_target  perf_target           [.] main
+            |
+            ---main
+               asm_exc_page_fault
+               exc_page_fault
+               do_user_addr_fault
+               handle_mm_fault
+               __handle_mm_fault
+               handle_pte_fault
+               do_anonymous_page
+               |          
+                --0.56%--_raw_spin_lock
+
+     1.05%     0.00%  perf_target  [kernel.kallsyms]     [.] do_anonymous_page
+            |
+            ---do_anonymous_page
+               |          
+                --0.56%--_raw_spin_lock
+
+     1.02%     0.00%  perf_target  [unknown]             [.] 0x40f0104000000000
+            |
+            ---0x40f0104000000000
+               __ieee754_log_fma
+
+     1.02%     0.00%  perf_target  [unknown]             [.] 0x40e8556000000000
+            |
+            ---0x40e8556000000000
+               __ieee754_log_fma
+
+     1.02%     0.00%  perf_target  [unknown]             [.] 0x40d6f64000000000
+            |
+            ---0x40d6f64000000000
+               __ieee754_log_fma
+
+     1.02%     0.00%  perf_target  [unknown]             [.] 0x40bda90000000000
+            |
+            ---0x40bda90000000000
+               heavy_compute
+
+     1.02%     0.00%  perf_target  [unknown]             [.] 0x40f6fce000000000
+            |
+            ---0x40f6fce000000000
+               __ieee754_log_fma
+
+     1.02%     0.00%  perf_target  [unknown]             [.] 0x40eff14000000000
+            |
+            ---0x40eff14000000000
+               __ieee754_log_fma
+
+     1.01%     0.00%  perf_target  [unknown]             [.] 0x40e1b26000000000
+            |
+            ---0x40e1b26000000000
+               __ieee754_log_fma
+
+     1.01%     0.00%  perf_target  [unknown]             [.] 0x40f72b0000000000
+            |
+            ---0x40f72b0000000000
+               __ieee754_log_fma
+
+     1.01%     0.00%  perf_target  [unknown]             [.] 0x40d5040000000000
+            |
+            ---0x40d5040000000000
+               __ieee754_log_fma
+
+     1.01%     0.00%  perf_target  [unknown]             [.] 0x40f332b000000000
+            |
+            ---0x40f332b000000000
+               __ieee754_log_fma
+
+     1.00%     0.00%  perf_target  [unknown]             [.] 0x40ef87e000000000
+            |
+            ---0x40ef87e000000000
+               heavy_compute
+
+     1.00%     0.00%  perf_target  [unknown]             [.] 0x40dad0c000000000
+            |
+            ---0x40dad0c000000000
+               __ieee754_log_fma
+
+     1.00%     0.00%  perf_target  [unknown]             [.] 0x40bcb00000000000
+            |
+            ---0x40bcb00000000000
+               __ieee754_log_fma
+
+     0.99%     0.00%  perf_target  [unknown]             [.] 0x40eefac000000000
+            |
+            ---0x40eefac000000000
+               heavy_compute
+
+     0.99%     0.00%  perf_target  [unknown]             [.] 0x40f70d5000000000
+            |
+            ---0x40f70d5000000000
+               __ieee754_log_fma
+
+     0.99%     0.00%  perf_target  [unknown]             [.] 0x40e8a9a000000000
+            |
+            ---0x40e8a9a000000000
+               heavy_compute
+
+     0.99%     0.00%  perf_target  [unknown]             [.] 0x40f7667000000000
+            |
+            ---0x40f7667000000000
+               __ieee754_log_fma
+
+     0.98%     0.00%  perf_target  [unknown]             [.] 0x40e2bf2000000000
+            |
+            ---0x40e2bf2000000000
+               __log_finite@GLIBC_2.15@plt
+
+     0.98%     0.00%  perf_target  [unknown]             [.] 0x40c0700000000000
+            |
+            ---0x40c0700000000000
+               __ieee754_log_fma
+
+     0.98%     0.00%  perf_target  [unknown]             [.] 0x40e9f98000000000
+            |
+            ---0x40e9f98000000000
+               __ieee754_log_fma
+
+     0.98%     0.00%  perf_target  [unknown]             [.] 0x40f2b5d000000000
+            |
+            ---0x40f2b5d000000000
+               heavy_compute
+
+     0.98%     0.00%  perf_target  [unknown]             [.] 0x40df834000000000
+            |
+            ---0x40df834000000000
+               __log (inlined)
+
+     0.97%     0.97%  perf_target  [kernel.kallsyms]     [k] kernel_init_pages
+            |
+            ---0x64cfeeaf3600
+               io_intensive
+               ___fprintf_chk (inlined)
+               __vfprintf_internal
+               __printf_buffer
+               __printf_buffer_write
+               __printf_buffer_flush
+               __printf_buffer_has_failed (inlined)
+               __printf_buffer_flush_to_file
+               _IO_new_file_overflow (inlined)
+               _IO_new_do_write (inlined)
+               new_do_write (inlined)
+               _IO_new_file_write (inlined)
+               __libc_write (inlined)
+               __syscall_cancel
+               __internal_syscall_cancel (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               shmem_file_write_iter
+               generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  libc.so.6             [.] __printf_buffer_write
+            |
+            ---__printf_buffer_write
+               __printf_buffer_flush
+               __printf_buffer_has_failed (inlined)
+               __printf_buffer_flush_to_file
+               _IO_new_file_overflow (inlined)
+               _IO_new_do_write (inlined)
+               new_do_write (inlined)
+               _IO_new_file_write (inlined)
+               __libc_write (inlined)
+               __syscall_cancel
+               __internal_syscall_cancel (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               shmem_file_write_iter
+               generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  libc.so.6             [.] __printf_buffer_flush
+            |
+            ---__printf_buffer_flush
+               __printf_buffer_has_failed (inlined)
+               __printf_buffer_flush_to_file
+               _IO_new_file_overflow (inlined)
+               _IO_new_do_write (inlined)
+               new_do_write (inlined)
+               _IO_new_file_write (inlined)
+               __libc_write (inlined)
+               __syscall_cancel
+               __internal_syscall_cancel (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               shmem_file_write_iter
+               generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  libc.so.6             [.] __printf_buffer_has_failed (inlined)
+            |
+            ---__printf_buffer_has_failed (inlined)
+               __printf_buffer_flush_to_file
+               _IO_new_file_overflow (inlined)
+               _IO_new_do_write (inlined)
+               new_do_write (inlined)
+               _IO_new_file_write (inlined)
+               __libc_write (inlined)
+               __syscall_cancel
+               __internal_syscall_cancel (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               shmem_file_write_iter
+               generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  libc.so.6             [.] __printf_buffer_flush_to_file
+            |
+            ---__printf_buffer_flush_to_file
+               _IO_new_file_overflow (inlined)
+               _IO_new_do_write (inlined)
+               new_do_write (inlined)
+               _IO_new_file_write (inlined)
+               __libc_write (inlined)
+               __syscall_cancel
+               __internal_syscall_cancel (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               shmem_file_write_iter
+               generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  libc.so.6             [.] _IO_new_file_overflow (inlined)
+            |
+            ---_IO_new_file_overflow (inlined)
+               _IO_new_do_write (inlined)
+               new_do_write (inlined)
+               _IO_new_file_write (inlined)
+               __libc_write (inlined)
+               __syscall_cancel
+               __internal_syscall_cancel (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               shmem_file_write_iter
+               generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  libc.so.6             [.] _IO_new_do_write (inlined)
+            |
+            ---_IO_new_do_write (inlined)
+               new_do_write (inlined)
+               _IO_new_file_write (inlined)
+               __libc_write (inlined)
+               __syscall_cancel
+               __internal_syscall_cancel (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               shmem_file_write_iter
+               generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  libc.so.6             [.] new_do_write (inlined)
+            |
+            ---new_do_write (inlined)
+               _IO_new_file_write (inlined)
+               __libc_write (inlined)
+               __syscall_cancel
+               __internal_syscall_cancel (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               shmem_file_write_iter
+               generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  libc.so.6             [.] _IO_new_file_write (inlined)
+            |
+            ---_IO_new_file_write (inlined)
+               __libc_write (inlined)
+               __syscall_cancel
+               __internal_syscall_cancel (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               shmem_file_write_iter
+               generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  libc.so.6             [.] __libc_write (inlined)
+            |
+            ---__libc_write (inlined)
+               __syscall_cancel
+               __internal_syscall_cancel (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               shmem_file_write_iter
+               generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  libc.so.6             [.] __syscall_cancel
+            |
+            ---__syscall_cancel
+               __internal_syscall_cancel (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               shmem_file_write_iter
+               generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  libc.so.6             [.] __internal_syscall_cancel (inlined)
+            |
+            ---__internal_syscall_cancel (inlined)
+               entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+               __x64_sys_write
+               ksys_write
+               vfs_write
+               shmem_file_write_iter
+               generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  [kernel.kallsyms]     [.] __x64_sys_write
+            |
+            ---__x64_sys_write
+               ksys_write
+               vfs_write
+               shmem_file_write_iter
+               generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  [kernel.kallsyms]     [.] ksys_write
+            |
+            ---ksys_write
+               vfs_write
+               shmem_file_write_iter
+               generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  [kernel.kallsyms]     [.] vfs_write
+            |
+            ---vfs_write
+               shmem_file_write_iter
+               generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  [kernel.kallsyms]     [.] shmem_file_write_iter
+            |
+            ---shmem_file_write_iter
+               generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  [kernel.kallsyms]     [.] generic_perform_write
+            |
+            ---generic_perform_write
+               shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  [kernel.kallsyms]     [.] shmem_write_begin
+            |
+            ---shmem_write_begin
+               shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  [kernel.kallsyms]     [.] shmem_get_folio_gfp
+            |
+            ---shmem_get_folio_gfp
+               shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  [kernel.kallsyms]     [.] shmem_alloc_and_add_folio
+            |
+            ---shmem_alloc_and_add_folio
+               shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  [kernel.kallsyms]     [.] shmem_alloc_folio
+            |
+            ---shmem_alloc_folio
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  [kernel.kallsyms]     [.] folio_alloc_mpol_noprof
+            |
+            ---folio_alloc_mpol_noprof
+               alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  [kernel.kallsyms]     [.] alloc_pages_mpol
+            |
+            ---alloc_pages_mpol
+               __alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  [kernel.kallsyms]     [.] __alloc_frozen_pages_noprof
+            |
+            ---__alloc_frozen_pages_noprof
+               get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  [kernel.kallsyms]     [.] get_page_from_freelist
+            |
+            ---get_page_from_freelist
+               post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  [kernel.kallsyms]     [.] post_alloc_hook
+            |
+            ---post_alloc_hook
+               kernel_init_pages
+
+     0.97%     0.00%  perf_target  [unknown]             [.] 0x40ef396000000000
+            |
+            ---0x40ef396000000000
+               heavy_compute
+
+     0.97%     0.00%  perf_target  [unknown]             [.] 0x40f4259000000000
+            |
+            ---0x40f4259000000000
+               __ieee754_log_fma
+
+     0.97%     0.00%  perf_target  [unknown]             [.] 0x40f5584000000000
+            |
+            ---0x40f5584000000000
+               __log (inlined)
+
+     0.97%     0.00%  perf_target  [unknown]             [.] 0x40d2bb8000000000
+            |
+            ---0x40d2bb8000000000
+               __ieee754_log_fma
+
+     0.97%     0.00%  perf_target  [unknown]             [.] 0x40f7e59000000000
+            |
+            ---0x40f7e59000000000
+               __ieee754_log_fma
+
+     0.97%     0.97%  perf_target  libc.so.6             [.] __memmove_evex_unaligned_erms
+            |
+            ---0x64cfeeaf3600
+               io_intensive
+               ___fprintf_chk (inlined)
+               __vfprintf_internal
+               __printf_buffer
+               __memmove_evex_unaligned_erms
+
+     0.97%     0.00%  perf_target  [unknown]             [.] 0x40e4c90000000000
+            |
+            ---0x40e4c90000000000
+               heavy_compute
+
+     0.97%     0.00%  perf_target  [unknown]             [.] 0x40f1fa7000000000
+            |
+            ---0x40f1fa7000000000
+               __ieee754_log_fma
+
+     0.97%     0.00%  perf_target  [unknown]             [.] 0x40d5694000000000
+            |
+            ---0x40d5694000000000
+               heavy_compute
+
+     0.96%     0.00%  perf_target  [unknown]             [.] 0x40f652c000000000
+            |
+            ---0x40f652c000000000
+               __ieee754_log_fma
+
+     0.96%     0.00%  perf_target  [unknown]             [.] 0x40daadc000000000
+            |
+            ---0x40daadc000000000
+               __ieee754_log_fma
+
+     0.96%     0.00%  perf_target  libc.so.6             [.] __find_specmb (inlined)
+            |
+            ---__find_specmb (inlined)
+
+     0.96%     0.96%  perf_target  ld-linux-x86-64.so.2  [.] _dl_call_fini
+            |
+            ---_start
+               __libc_start_main_impl (inlined)
+               call_init (inlined)
+               __libc_start_call_main
+               0x7bd41f2486be
+               __run_exit_handlers
+               _dl_fini
+               _dl_call_fini
+
+     0.96%     0.00%  perf_target  perf_target           [.] _start
+            |
+            ---_start
+               __libc_start_main_impl (inlined)
+               call_init (inlined)
+               __libc_start_call_main
+               0x7bd41f2486be
+               __run_exit_handlers
+               _dl_fini
+               _dl_call_fini
+
+     0.96%     0.00%  perf_target  libc.so.6             [.] __libc_start_main_impl (inlined)
+            |
+            ---__libc_start_main_impl (inlined)
+               call_init (inlined)
+               __libc_start_call_main
+               0x7bd41f2486be
+               __run_exit_handlers
+               _dl_fini
+               _dl_call_fini
+
+     0.96%     0.00%  perf_target  libc.so.6             [.] call_init (inlined)
+            |
+            ---call_init (inlined)
+               __libc_start_call_main
+               0x7bd41f2486be
+               __run_exit_handlers
+               _dl_fini
+               _dl_call_fini
+
+     0.96%     0.00%  perf_target  libc.so.6             [.] __libc_start_call_main
+            |
+            ---__libc_start_call_main
+               0x7bd41f2486be
+               __run_exit_handlers
+               _dl_fini
+               _dl_call_fini
+
+     0.96%     0.00%  perf_target  libc.so.6             [.] 0x00007bd41f2486be
+            |
+            ---0x7bd41f2486be
+               __run_exit_handlers
+               _dl_fini
+               _dl_call_fini
+
+     0.96%     0.00%  perf_target  libc.so.6             [.] __run_exit_handlers
+            |
+            ---__run_exit_handlers
+               _dl_fini
+               _dl_call_fini
+
+     0.96%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_fini
+            |
+            ---_dl_fini
+               _dl_call_fini
+
+     0.96%     0.00%  perf_target  [unknown]             [.] 0x40dbb40000000000
+            |
+            ---0x40dbb40000000000
+               __log_finite@GLIBC_2.15@plt
+
+     0.96%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_start_user
+            |
+            ---_dl_start_user
+               _dl_start
+               _dl_start_final (inlined)
+               _dl_sysdep_start
+               |          
+                --0.74%--dl_main
+
+     0.96%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_start
+            |
+            ---_dl_start
+               _dl_start_final (inlined)
+               _dl_sysdep_start
+               |          
+                --0.74%--dl_main
+
+     0.96%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_start_final (inlined)
+            |
+            ---_dl_start_final (inlined)
+               _dl_sysdep_start
+               |          
+                --0.74%--dl_main
+
+     0.96%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] _dl_sysdep_start
+            |
+            ---_dl_sysdep_start
+               |          
+                --0.74%--dl_main
+
+     0.96%     0.00%  perf_target  [unknown]             [.] 0x40e6756000000000
+            |
+            ---0x40e6756000000000
+               __ieee754_log_fma
+
+     0.96%     0.00%  perf_target  [unknown]             [.] 0x40f25ce000000000
+            |
+            ---0x40f25ce000000000
+               __ieee754_log_fma
+
+     0.96%     0.00%  perf_target  [unknown]             [.] 0x40f1b04000000000
+            |
+            ---0x40f1b04000000000
+               __log (inlined)
+
+     0.96%     0.00%  perf_target  [unknown]             [.] 0x40e4e76000000000
+            |
+            ---0x40e4e76000000000
+               __ieee754_log_fma
+
+     0.96%     0.00%  perf_target  [unknown]             [.] 0x407e300000000000
+            |
+            ---0x407e300000000000
+               __log_finite@GLIBC_2.15@plt
+
+     0.96%     0.00%  perf_target  [unknown]             [.] 0x40c4ef8000000000
+            |
+            ---0x40c4ef8000000000
+               __log_finite@GLIBC_2.15@plt
+
+     0.95%     0.00%  perf_target  [unknown]             [.] 0x40eac36000000000
+            |
+            ---0x40eac36000000000
+               log@plt
+
+     0.95%     0.00%  perf_target  [unknown]             [.] 0x40ebe68000000000
+            |
+            ---0x40ebe68000000000
+               __ieee754_log_fma
+
+     0.95%     0.00%  perf_target  [unknown]             [.] 0x40f0601000000000
+            |
+            ---0x40f0601000000000
+               heavy_compute
+
+     0.95%     0.00%  perf_target  [unknown]             [.] 0x40c0090000000000
+            |
+            ---0x40c0090000000000
+               __log (inlined)
+
+     0.95%     0.00%  perf_target  [unknown]             [.] 0x40e6bfc000000000
+            |
+            ---0x40e6bfc000000000
+               __log (inlined)
+
+     0.95%     0.00%  perf_target  [unknown]             [.] 0x40f5c1d000000000
+            |
+            ---0x40f5c1d000000000
+               __ieee754_log_fma
+
+     0.95%     0.00%  perf_target  [unknown]             [.] 0x40e3bf8000000000
+            |
+            ---0x40e3bf8000000000
+               __log_finite@GLIBC_2.15@plt
+
+     0.95%     0.00%  perf_target  [unknown]             [.] 0x40f6b3a000000000
+            |
+            ---0x40f6b3a000000000
+               __ieee754_log_fma
+
+     0.95%     0.00%  perf_target  [unknown]             [.] 0x40c53b8000000000
+            |
+            ---0x40c53b8000000000
+               heavy_compute
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40d2000000000000
+            |
+            ---0x40d2000000000000
+               __ieee754_log_fma
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40e6cc6000000000
+            |
+            ---0x40e6cc6000000000
+               heavy_compute
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x4076100000000000
+            |
+            ---0x4076100000000000
+               __ieee754_log_fma
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40ea6dc000000000
+            |
+            ---0x40ea6dc000000000
+               __ieee754_log_fma
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40f58ff000000000
+            |
+            ---0x40f58ff000000000
+               heavy_compute
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40bb220000000000
+            |
+            ---0x40bb220000000000
+               __log (inlined)
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40ed98c000000000
+            |
+            ---0x40ed98c000000000
+               __ieee754_log_fma
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40ef8da000000000
+            |
+            ---0x40ef8da000000000
+               __ieee754_log_fma
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40f08d7000000000
+            |
+            ---0x40f08d7000000000
+               __ieee754_log_fma
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40d465c000000000
+            |
+            ---0x40d465c000000000
+               __ieee754_log_fma
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40cb998000000000
+            |
+            ---0x40cb998000000000
+               __ieee754_log_fma
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40f3eab000000000
+            |
+            ---0x40f3eab000000000
+               __ieee754_log_fma
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40e0ebe000000000
+            |
+            ---0x40e0ebe000000000
+               heavy_compute
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40f22ba000000000
+            |
+            ---0x40f22ba000000000
+               heavy_compute
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40db5e8000000000
+            |
+            ---0x40db5e8000000000
+               __ieee754_log_fma
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40c91b0000000000
+            |
+            ---0x40c91b0000000000
+               heavy_compute
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40f04e8000000000
+            |
+            ---0x40f04e8000000000
+               __ieee754_log_fma
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40d7d88000000000
+            |
+            ---0x40d7d88000000000
+               heavy_compute
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40f1501000000000
+            |
+            ---0x40f1501000000000
+               __ieee754_log_fma
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40d11ec000000000
+            |
+            ---0x40d11ec000000000
+               __ieee754_log_fma
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40ef5d0000000000
+            |
+            ---0x40ef5d0000000000
+               __ieee754_log_fma
+
+     0.94%     0.00%  perf_target  [unknown]             [.] 0x40c6cc0000000000
+            |
+            ---0x40c6cc0000000000
+               __ieee754_log_fma
+
+     0.93%     0.00%  perf_target  [unknown]             [.] 0x40ec8f8000000000
+            |
+            ---0x40ec8f8000000000
+               __ieee754_log_fma
+
+     0.93%     0.00%  perf_target  [unknown]             [.] 0x40b4d30000000000
+            |
+            ---0x40b4d30000000000
+               heavy_compute
+
+     0.93%     0.00%  perf_target  [unknown]             [.] 0x40e97f8000000000
+            |
+            ---0x40e97f8000000000
+               __ieee754_log_fma
+
+     0.93%     0.00%  perf_target  [unknown]             [.] 0x40e0f3a000000000
+            |
+            ---0x40e0f3a000000000
+               __ieee754_log_fma
+
+     0.93%     0.00%  perf_target  [unknown]             [.] 0x40f867b000000000
+            |
+            ---0x40f867b000000000
+               __ieee754_log_fma
+
+     0.93%     0.00%  perf_target  [unknown]             [.] 0x40e6e36000000000
+            |
+            ---0x40e6e36000000000
+               __ieee754_log_fma
+
+     0.93%     0.00%  perf_target  [unknown]             [.] 0x40f5a30000000000
+            |
+            ---0x40f5a30000000000
+               __ieee754_log_fma
+
+     0.93%     0.00%  perf_target  [unknown]             [.] 0x40e41ce000000000
+            |
+            ---0x40e41ce000000000
+               __ieee754_log_fma
+
+     0.93%     0.00%  perf_target  [unknown]             [.] 0x40f6ef5000000000
+            |
+            ---0x40f6ef5000000000
+               heavy_compute
+
+     0.93%     0.00%  perf_target  [unknown]             [.] 0x40e38dc000000000
+            |
+            ---0x40e38dc000000000
+               heavy_compute
+
+     0.93%     0.00%  perf_target  [unknown]             [.] 0x40b7aa0000000000
+            |
+            ---0x40b7aa0000000000
+               __ieee754_log_fma
+
+     0.93%     0.00%  perf_target  [unknown]             [.] 0x40f6015000000000
+            |
+            ---0x40f6015000000000
+               __ieee754_log_fma
+
+     0.93%     0.00%  perf_target  [unknown]             [.] 0x40f200c000000000
+            |
+            ---0x40f200c000000000
+               __ieee754_log_fma
+
+     0.92%     0.00%  perf_target  [unknown]             [.] 0x40e2534000000000
+            |
+            ---0x40e2534000000000
+               heavy_compute
+
+     0.92%     0.00%  perf_target  [unknown]             [.] 0x40f5be6000000000
+            |
+            ---0x40f5be6000000000
+               __ieee754_log_fma
+
+     0.92%     0.00%  perf_target  [unknown]             [.] 0x40e4ef0000000000
+            |
+            ---0x40e4ef0000000000
+               __log_finite@GLIBC_2.15@plt
+
+     0.92%     0.00%  perf_target  [unknown]             [.] 0x40f6161000000000
+            |
+            ---0x40f6161000000000
+               __log_finite@GLIBC_2.15@plt
+
+     0.91%     0.00%  perf_target  [unknown]             [.] 0x40e2b00000000000
+            |
+            ---0x40e2b00000000000
+               log@plt
+
+     0.90%     0.00%  perf_target  [unknown]             [.] 0x40f5496000000000
+            |
+            ---0x40f5496000000000
+               heavy_compute
+
+     0.90%     0.00%  perf_target  [unknown]             [.] 0x40e3694000000000
+            |
+            ---0x40e3694000000000
+               __ieee754_log_fma
+
+     0.89%     0.00%  perf_target  [unknown]             [.] 0x40f6c26000000000
+            |
+            ---0x40f6c26000000000
+               heavy_compute
+
+     0.88%     0.00%  perf_target  [unknown]             [.] 0x40e69ca000000000
+            |
+            ---0x40e69ca000000000
+               __ieee754_log_fma
+
+     0.87%     0.00%  perf_target  [unknown]             [.] 0x40b1ff0000000000
+            |
+            ---0x40b1ff0000000000
+               __ieee754_log_fma
+
+     0.84%     0.00%  perf_target  [unknown]             [.] 0x40eaf3a000000000
+            |
+            ---0x40eaf3a000000000
+               __log (inlined)
+
+     0.82%     0.00%  perf_target  [unknown]             [.] 0x40bfb50000000000
+            |
+            ---0x40bfb50000000000
+               heavy_compute
+
+     0.79%     0.00%  perf_target  [unknown]             [.] 0x40ee1ca000000000
+            |
+            ---0x40ee1ca000000000
+               __ieee754_log_fma
+
+     0.75%     0.00%  perf_target  [unknown]             [.] 0x40d0894000000000
+            |
+            ---0x40d0894000000000
+               __ieee754_log_fma
+
+     0.74%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] dl_main
+            |
+            ---dl_main
+
+     0.71%     0.00%  perf_target  [unknown]             [.] 0x40f21d0000000000
+            |
+            ---0x40f21d0000000000
+               heavy_compute
+
+     0.65%     0.00%  perf_target  [unknown]             [.] 0x40e0f46000000000
+            |
+            ---0x40e0f46000000000
+               __ieee754_log_fma
+
+     0.61%     0.00%  perf_target  [unknown]             [.] 0x40b0460000000000
+            |
+            ---0x40b0460000000000
+               __ieee754_log_fma
+
+     0.56%     0.56%  perf_target  [kernel.kallsyms]     [k] _raw_spin_lock
+            |
+            ---0x300000002
+               main
+               asm_exc_page_fault
+               exc_page_fault
+               do_user_addr_fault
+               handle_mm_fault
+               __handle_mm_fault
+               handle_pte_fault
+               do_anonymous_page
+               _raw_spin_lock
+
+     0.49%     0.49%  perf_target  [kernel.kallsyms]     [k] __rcu_read_unlock
+     0.49%     0.00%  perf_target  [kernel.kallsyms]     [.] alloc_anon_folio
+     0.49%     0.00%  perf_target  [kernel.kallsyms]     [.] __mem_cgroup_charge
+     0.41%     0.41%  perf_target  [vdso]                [.] __vdso_getrandom
+     0.41%     0.00%  perf_target  libc.so.6             [.] __libc_early_init
+     0.32%     0.32%  perf_target  ld-linux-x86-64.so.2  [.] _dl_map_object_deps
+     0.32%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] rtld_timer_accum (inlined)
+     0.32%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] rtld_timer_stop (inlined)
+     0.22%     0.22%  perf_target  [kernel.kallsyms]     [k] __x64_sys_access
+     0.22%     0.00%  perf_target  ld-linux-x86-64.so.2  [.] __access (inlined)
+     0.22%     0.00%  perf_target  [unknown]             [k] 0x00007e3b46af7f0b
+     0.22%     0.00%  perf_target  [kernel.kallsyms]     [.] __x64_sys_execve
+     0.22%     0.00%  perf_target  [kernel.kallsyms]     [.] do_execveat_common.isra.0
+     0.22%     0.00%  perf_target  [kernel.kallsyms]     [.] bprm_execve
+     0.22%     0.00%  perf_target  [kernel.kallsyms]     [.] bprm_execve.part.0
+     0.22%     0.00%  perf_target  [kernel.kallsyms]     [.] exec_binprm
+     0.22%     0.00%  perf_target  [kernel.kallsyms]     [.] load_elf_binary
+     0.22%     0.00%  perf_target  [kernel.kallsyms]     [.] rep_stos_alternative
+     0.11%     0.11%  perf_target  [kernel.kallsyms]     [k] up_write
+     0.11%     0.00%  perf_target  [kernel.kallsyms]     [.] load_elf_interp.isra.0
+     0.11%     0.00%  perf_target  [kernel.kallsyms]     [.] do_fault
+     0.11%     0.00%  perf_target  [kernel.kallsyms]     [.] __vmf_anon_prepare
+     0.11%     0.00%  perf_target  [kernel.kallsyms]     [.] __anon_vma_prepare
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

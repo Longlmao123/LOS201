@@ -1,0 +1,9 @@
+
+# Build intermediates
+*.o
+*.cmd
+*.mod
+*.mod.c
+Module.symvers
+modules.order
+__pycache__/

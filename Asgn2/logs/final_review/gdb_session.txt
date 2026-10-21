@@ -1,0 +1,145 @@
+Breakpoint 1 at 0x5d74: file processor_thread.c, line 38.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/x86_64-linux-gnu/libthread_db.so.1".
+[MAIN] MOCK diagnostics: memory lock disabled
+[MAIN] mode=MOCK policy=OTHER interval=500 ms duration=3 s log=/home/long/assignment02/logs/final_review/gdb_sms.log
+[New Thread 0x7ffff7e7b6c0 (LWP 78883)]
+[New Thread 0x7ffff7b3b6c0 (LWP 78884)]
+[New Thread 0x7ffff7afa6c0 (LWP 78885)]
+[New Thread 0x7ffff7ab96c0 (LWP 78886)]
+[SENSOR] policy=OTHER priority=0 mode=MOCK
+[Switching to Thread 0x7ffff7afa6c0 (LWP 78885)]
+
+Thread 4 "sms_app_debug" hit Breakpoint 1, processor_analyze (state=0x7ffff7af9dc0, sample=0x7ffff7af9d50, config=0x7fffffffda60, result=0x7ffff7af9d60) at processor_thread.c:38
+38	    memset(result, 0, sizeof(*result));
+
+=== GDB SCENARIO B: INJECT 45 C ===
+$1 = {
+  timestamp_ms = 47509356,
+  temperature = 15,
+  humidity = 30
+}
+41	    if (state->count == SMS_ROLLING_WINDOW) {
+processor_thread_main (arg=0x7fffffffda60) at processor_thread.c:126
+126	        ctx->samples_processed++;
+$2 = {
+  average_temperature = 45,
+  average_humidity = 30,
+  alarms = {{
+      type = ALARM_TEMP_HIGH,
+      timestamp_ms = 47509356,
+      value = 45,
+      threshold = 40
+    }, {
+      type = ALARM_STOP,
+      timestamp_ms = 0,
+      value = 0,
+      threshold = 0
+    }, {
+      type = ALARM_STOP,
+      timestamp_ms = 0,
+      value = 0,
+      threshold = 0
+    }},
+  alarm_count = 1
+}
+$3 = 1
+$4 = 1
+$5 = 0
+  Id   Target Id                                         Frame 
+  1    Thread 0x7ffff7e7c740 (LWP 78880) "sms_app_debug" __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+  2    Thread 0x7ffff7e7b6c0 (LWP 78883) "sms_app_debug" __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+  3    Thread 0x7ffff7b3b6c0 (LWP 78884) "sms_app_debug" __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+* 4    Thread 0x7ffff7afa6c0 (LWP 78885) "sms_app_debug" processor_thread_main (arg=0x7fffffffda60) at processor_thread.c:126
+  5    Thread 0x7ffff7ab96c0 (LWP 78886) "sms_app_debug" __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+
+Thread 5 (Thread 0x7ffff7ab96c0 (LWP 78886) "sms_app_debug"):
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+#1  0x00007ffff7ca030c in __internal_syscall_cancel (a1=<optimized out>, a2=<optimized out>, a3=<optimized out>, a4=<optimized out>, a5=a5@entry=0, a6=a6@entry=0, nr=230) at ./nptl/cancellation.c:49
+#2  0x00007ffff7cf5af2 in __GI___clock_nanosleep (clock_id=<optimized out>, flags=<optimized out>, req=<optimized out>, rem=<optimized out>) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:48
+#3  0x00005555555590a4 in sensor_wait_until (ctx=0x7fffffffda60, deadline=0x7ffff7ab8e20) at sensor_thread.c:199
+#4  0x00005555555594ab in sensor_thread_main (arg=0x7fffffffda60) at sensor_thread.c:288
+#5  0x00007ffff7ca3dfa in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:454
+#6  0x00007ffff7d375cc in __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 4 (Thread 0x7ffff7afa6c0 (LWP 78885) "sms_app_debug"):
+#0  processor_thread_main (arg=0x7fffffffda60) at processor_thread.c:126
+#1  0x00007ffff7ca3dfa in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:454
+#2  0x00007ffff7d375cc in __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 3 (Thread 0x7ffff7b3b6c0 (LWP 78884) "sms_app_debug"):
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+#1  0x00007ffff7ca039c in __internal_syscall_cancel (a1=<optimized out>, a2=<optimized out>, a3=<optimized out>, a4=<optimized out>, a5=<optimized out>, a6=0, nr=243) at ./nptl/cancellation.c:49
+#2  __syscall_cancel (a1=<optimized out>, a2=<optimized out>, a3=<optimized out>, a4=<optimized out>, a5=<optimized out>, a6=a6@entry=0, nr=243) at ./nptl/cancellation.c:75
+#3  0x00007ffff7caff3c in ___mq_timedreceive_time64 (mqdes=<optimized out>, msg_ptr=<optimized out>, msg_len=<optimized out>, msg_prio=<optimized out>, abs_timeout=<optimized out>) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:35
+#4  0x000055555555a5c3 in alert_thread_main (arg=0x7fffffffda60) at alert_thread.c:74
+#5  0x00007ffff7ca3dfa in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:454
+#6  0x00007ffff7d375cc in __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 2 (Thread 0x7ffff7e7b6c0 (LWP 78883) "sms_app_debug"):
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+#1  0x00007ffff7ca039c in __internal_syscall_cancel (a1=<optimized out>, a2=<optimized out>, a3=<optimized out>, a4=<optimized out>, a5=<optimized out>, a6=0, nr=243) at ./nptl/cancellation.c:49
+#2  __syscall_cancel (a1=<optimized out>, a2=<optimized out>, a3=<optimized out>, a4=<optimized out>, a5=<optimized out>, a6=a6@entry=0, nr=243) at ./nptl/cancellation.c:75
+#3  0x00007ffff7caff3c in ___mq_timedreceive_time64 (mqdes=<optimized out>, msg_ptr=<optimized out>, msg_len=<optimized out>, msg_prio=<optimized out>, abs_timeout=<optimized out>) at ../sysdeps/unix/sysv/linux/mq_timedreceive.c:35
+#4  0x000055555555ada6 in logger_thread_main (arg=0x7fffffffda60) at logger_thread.c:157
+#5  0x00007ffff7ca3dfa in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:454
+#6  0x00007ffff7d375cc in __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 1 (Thread 0x7ffff7e7c740 (LWP 78880) "sms_app_debug"):
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+#1  0x00007ffff7ca039c in __internal_syscall_cancel (a1=<optimized out>, a2=0, a3=<optimized out>, a4=8, a5=0, a6=0, nr=128) at ./nptl/cancellation.c:49
+#2  __syscall_cancel (a1=<optimized out>, a2=a2@entry=0, a3=<optimized out>, a4=a4@entry=8, a5=a5@entry=0, a6=a6@entry=0, nr=128) at ./nptl/cancellation.c:75
+#3  0x00007ffff7c46875 in __GI___sigtimedwait (set=<optimized out>, info=0x0, timeout=<optimized out>) at ../sysdeps/unix/sysv/linux/sigtimedwait.c:31
+#4  0x0000555555556ae0 in wait_for_stop (ctx=0x7fffffffda60, signals=0x7fffffffd8d0, started=0x7fffffffd800) at sms_app.c:86
+#5  0x00005555555575b9 in main (argc=9, argv=0x7fffffffdcd8) at sms_app.c:298
+Breakpoint 2 at 0x55555555a469: file alert_thread.c, line 35.
+[ALERT][47509356] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+[Switching to Thread 0x7ffff7b3b6c0 (LWP 78884)]
+
+Thread 3 "sms_app_debug" hit Breakpoint 2, alert_count (ctx=0x7fffffffda60, type=ALARM_TEMP_HIGH) at alert_thread.c:35
+35	    switch (type) {
+
+=== ALERT RECEIVED TEMP_HIGH ===
+$6 = ALARM_TEMP_HIGH
+$7 = 0
+alert_thread_main (arg=0x7fffffffda60) at alert_thread.c:130
+130	                (double)message.threshold) < 0)
+$8 = 1
+[ALERT][47509856] TYPE: TEMP_SPIKE VALUE: 16.3 THRESHOLD: 5.0
+[ALERT][47510356] TYPE: TEMP_HIGH VALUE: 42.4 THRESHOLD: 40.0
+[ALERT][47510356] TYPE: TEMP_SPIKE VALUE: 13.7 THRESHOLD: 5.0
+[ALERT][47510856] TYPE: TEMP_SPIKE VALUE: 16.4 THRESHOLD: 5.0
+[ALERT][47511356] TYPE: TEMP_SPIKE VALUE: 13.7 THRESHOLD: 5.0
+[ALERT][47511856] TYPE: TEMP_SPIKE VALUE: 16.4 THRESHOLD: 5.0
+[MAIN] duration reached
+[SENSOR] stopped: samples=6 skipped_periods=0
+[PROCESSOR] stopped: processed=6
+[ALERT] stopped: TEMP_HIGH=2 HUMID_HIGH=0 TEMP_SPIKE=5
+[Thread 0x7ffff7ab96c0 (LWP 78886) exited]
+[Thread 0x7ffff7afa6c0 (LWP 78885) exited]
+[Thread 0x7ffff7b3b6c0 (LWP 78884) exited]
+[LOGGER] stopped
+[Thread 0x7ffff7e7b6c0 (LWP 78883) exited]
+[JITTER] mode=MOCK policy=OTHER interval_ms=500 samples=6 file=/home/long/assignment02/logs/final_review/gdb_sms.log.jitter.csv
+[MAIN] exit_code=0
+
+=== SMS SUMMARY ===
+mode=MOCK policy=OTHER interval_ms=500
+uptime_ms=3103
+samples_read=6
+sensor_read_errors=0
+sensor_eagain_retries=0
+sensor_interrupted_reads=0
+sensor_deferred_samples=0
+samples_processed=6
+total_produced=6
+total_consumed=6
+overflow_count=0
+buffer_remaining=0
+TEMP_HIGH=2
+HUMID_HIGH=0
+TEMP_SPIKE=5
+jitter_samples=6 capacity=100000
+fatal_error=0
+=== SMS END ===
+[Inferior 1 (process 78880) exited normally]

@@ -1,0 +1,4 @@
+
+SIGINT_EXIT_CODE=0
+
+

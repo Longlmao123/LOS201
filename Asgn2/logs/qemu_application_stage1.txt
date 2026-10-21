@@ -1,0 +1,1125 @@
+Script started on 2026-10-21 22:12:51+07:00 [COMMAND="qemu-system-arm -M vexpress-a9 -cpu cortex-a9 -m 512M -smp 2 -nographic -kernel /home/long/assignment02/output/zImage -dtb /home/long/assignment02/output/vexpress-v2p-ca9.dtb -initrd /home/long/assignment02/output/initramfs_asgn2.cpio.gz -append 'console=ttyAMA0,115200 rdinit=/sbin/init mem=512M'" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="97" LINES="50"]
+Booting Linux on physical CPU 0x0
+Linux version 5.15.0 (long@long-ASUS-TUF-Gaming-F15-FX507ZC4-FX507ZC4) (arm-none-linux-gnueabihf-gcc (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 13.2.1 20231009, GNU ld (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 2.41.0.20231009) #2 SMP Wed Oct 21 16:42:43 +07 2026
+CPU: ARMv7 Processor [410fc090] revision 0 (ARMv7), cr=10c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+OF: fdt: Machine model: V2P-CA9
+Memory policy: Data cache writealloc
+Reserved memory: created DMA memory pool at 0x4c000000, size 8 MiB
+OF: reserved mem: initialized node vram@4c000000, compatible id shared-dma-pool
+cma: Reserved 16 MiB at 0x7f000000
+Zone ranges:
+  Normal   [mem 0x0000000060000000-0x000000007fffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000060000000-0x000000007fffffff]
+Initmem setup node 0 [mem 0x0000000060000000-0x000000007fffffff]
+percpu: Embedded 15 pages/cpu s30412 r8192 d22836 u61440
+Built 1 zonelists, mobility grouping on.  Total pages: 130048
+Kernel command line: console=ttyAMA0,115200 rdinit=/sbin/init mem=512M
+printk: log_buf_len individual max cpu contribution: 4096 bytes
+printk: log_buf_len total cpu_extra contributions: 12288 bytes
+printk: log_buf_len min size: 16384 bytes
+printk: log_buf_len: 32768 bytes
+printk: early log buf free: 14896(90%)
+Dentry cache hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Inode-cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+Memory: 482368K/524288K available (8192K kernel code, 594K rwdata, 1768K rodata, 1024K init, 150K bss, 25536K reserved, 16384K cma-reserved)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+trace event string verifier disabled
+rcu: Hierarchical RCU implementation.
+rcu: 	RCU event tracing is enabled.
+rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C: platform modifies aux control register: 0x02020000 -> 0x02420000
+L2C: DT/platform modifies aux control register: 0x02020000 -> 0x02420000
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 dynamic clock gating disabled, standby mode disabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c8, AUX_CTRL 0x46420001
+random: get_random_bytes called from start_kernel+0x4fc/0x6b0 with crng_init=0
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+clocksource: arm,sp804: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+Failed to initialize '/bus@40000000/motherboard-bus@40000000/iofpga@7,00000000/timer@12000': -22
+smp_twd: clock not found -2
+Console: colour dummy device 80x30
+Calibrating local timer... 95.78MHz.
+Calibrating delay loop... 1961.16 BogoMIPS (lpj=9805824)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+CPU: Testing write buffer coherency: ok
+CPU0: Spectre v2: using BPIALL workaround
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x60100000 - 0x60100060
+rcu: Hierarchical SRCU implementation.
+smp: Bringing up secondary CPUs ...
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU1: Spectre v2: using BPIALL workaround
+CPU2: failed to boot: -38
+CPU3: failed to boot: -38
+smp: Brought up 1 node, 2 CPUs
+SMP: Total of 2 processors activated (3941.99 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 0
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+NET: Registered PF_NETLINK/PF_ROUTE protocol family
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor ladder
+hw-breakpoint: debug architecture 0x4 unsupported.
+Serial: AMBA PL011 UART driver
+irq: type mismatch, failed to map hwirq-75 for interrupt-controller@1e001000!
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource arm,sp804
+NET: Registered PF_INET protocol family
+IP idents hash table entries: 8192 (order: 4, 65536 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes, linear)
+TCP established hash table entries: 4096 (order: 2, 16384 bytes, linear)
+TCP bind hash table entries: 4096 (order: 3, 32768 bytes, linear)
+TCP: Hash tables configured (established 4096 bind 4096)
+UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+NET: Registered PF_UNIX/PF_LOCAL protocol family
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Unpacking initramfs...
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+workingset: timestamp_bits=30 max_order=17 bucket_order=0
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+9p: Installing v9fs 9p2000 file system support
+io scheduler mq-deadline registered
+io scheduler kyber registered
+sii902x 0-0060: supply iovcc not found, using dummy regulator
+sii902x 0-0060: supply cvcc12 not found, using dummy regulator
+Freeing initrd memory: 8512K
+physmap-flash 40000000.flash: physmap platform flash device: [mem 0x40000000-0x43ffffff]
+40000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+physmap-flash 40000000.flash: physmap platform flash device: [mem 0x44000000-0x47ffffff]
+40000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+Concatenating MTD devices:
+(0): "40000000.flash"
+(1): "40000000.flash"
+into device "40000000.flash"
+physmap-flash 48000000.psram: physmap platform flash device: [mem 0x48000000-0x49ffffff]
+libphy: Fixed MDIO Bus: probed
+libphy: smsc911x-mdio: probed
+smsc911x 4e000000.ethernet eth0: MAC Address: 52:54:00:12:34:56
+isp1760 4f000000.usb: isp1760 bus width: 32, oc: digital
+isp1760 4f000000.usb: NXP ISP1760 USB Host Controller
+isp1760 4f000000.usb: new USB bus registered, assigned bus number 1
+isp1760 4f000000.usb: Scratch test failed. 0x00000000
+isp1760 4f000000.usb: can't setup: -19
+isp1760 4f000000.usb: USB bus 1 deregistered
+usbcore: registered new interface driver usb-storage
+ledtrig-cpu: registered to indicate activity on CPUs
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+NET: Registered PF_PACKET protocol family
+9pnet: Installing 9P2000 support
+Registering SWP/SWPB emulation handler
+aaci-pl041 10004000.aaci: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+aaci-pl041 10004000.aaci: FIFO 512 entries
+mmci-pl18x 10005000.mmci: Got CD GPIO
+mmci-pl18x 10005000.mmci: Got WP GPIO
+mmci-pl18x 10005000.mmci: mmc0: PL181 manf 41 rev0 at 0x10005000 irq 33,34 (pio)
+10009000.uart: ttyAMA0 at MMIO 0x10009000 (irq = 37, base_baud = 0) is a PL011 rev1
+printk: console [ttyAMA0] enabled
+1000a000.uart: ttyAMA1 at MMIO 0x1000a000 (irq = 38, base_baud = 0) is a PL011 rev1
+1000b000.uart: ttyAMA2 at MMIO 0x1000b000 (irq = 39, base_baud = 0) is a PL011 rev1
+1000c000.uart: ttyAMA3 at MMIO 0x1000c000 (irq = 40, base_baud = 0) is a PL011 rev1
+rtc-pl031 10017000.rtc: registered as rtc0
+rtc-pl031 10017000.rtc: setting system clock to 2026-10-21T15:12:54 UTC (1792595574)
+amba 10020000.clcd: Fixing up cyclic dependency with 0-0039
+drm-clcd-pl111 10020000.clcd: DVI muxed to daughterboard 1 (core tile) CLCD
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+sii902x 0-0039: supply iovcc not found, using dummy regulator
+sii902x 0-0039: supply cvcc12 not found, using dummy regulator
+i2c i2c-0: Added multiplexed i2c bus 2
+drm-clcd-pl111 1001f000.clcd: assigned reserved memory node vram@4c000000
+drm-clcd-pl111 1001f000.clcd: using device-specific reserved memory
+drm-clcd-pl111 1001f000.clcd: core tile graphics present
+drm-clcd-pl111 1001f000.clcd: this device will be deactivated
+drm-clcd-pl111 1001f000.clcd: Versatile Express init failed - -19
+drm-clcd-pl111 10020000.clcd: DVI muxed to daughterboard 1 (core tile) CLCD
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+drm-clcd-pl111 10020000.clcd: found bridge on endpoint 0
+drm-clcd-pl111 10020000.clcd: Using non-panel bridge
+[drm] Initialized pl111 1.0.0 20170317 for 10020000.clcd on minor 0
+input: AT Raw Set 2 keyboard as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10006000.kmi/serio0/input/input0
+Console: switching to colour frame buffer device 128x48
+drm-clcd-pl111 10020000.clcd: [drm] fb0: pl111 frame buffer device
+ALSA device list:
+  #0: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+Freeing unused kernel image (initmem) memory: 1024K
+Run /sbin/init as init process
+[ ASGN-02 ] Starting initialization
+[ ASGN-02 ] Initialization complete
+[ ASGN-02 ] Drivers will be loaded by test scripts
+
+Please press Enter to activate this console. input: ImExPS/2 Generic Explorer Mouse as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10007000.kmi/serio1/input/input2
+random: fast init done
+
+/ # export TZ=ICT-7
+/ # sms_app --help
+Usage: sms_app [options]
+  -i MS          Sampling interval, default 500
+  -t VALUE       Temperature threshold, default 40
+  -h VALUE       Humidity threshold, default 80
+  -d SEC         Duration, default 60; 0 = unlimited
+  -v             Verbose output
+  --fifo         Sensor SCHED_FIFO priority 50 (default)
+  --other        Sensor SCHED_OTHER priority 0
+  --mock         Simulated input for host diagnostics
+  --device PATH  Device path, default /dev/sms_sensor
+  --log PATH     Log path, default /tmp/sms.log
+  --help         Show this help
+/ # 
+/ # insmod /lib/modules/$(uname -r)/sms_sensor_driver.ko
+sms_sensor_driver: loading out-of-tree module taints kernel.
+sms_sensor: device and procfs registered
+/ # 
+/ # ls -l /dev/sms_sensor
+crw-------    1 root     0          10, 125 Oct 21 22:13 [1;35m/dev/sms_sensor[m
+/ # cat /proc/sms_stats
+read_count=0
+has_sample=0
+last_temperature=0.0
+last_humidity=0.0
+interval_ms=100
+uptime_seconds=0
+/ # 
+/ # ulimit -l unlimited
+/ # 
+/ # sms_app --fifo -i 500 -d 5 -v
+[MAIN] mlockall OK
+[MAIN] mode=DRIVER policy=FIFO interval=500 ms duration=5 s log=/tmp/sms.log
+[SENSOR] policy=FIFO priority=50 mode=DRIVER
+sms_sensor: interval set to 500 ms
+
+[SENSOR] 28779,31.5,49.9
+[PROCESSOR] timestamp_ms=28779 avg_temp=31.50 avg_humidity=49.90 alarms=0
+[SENSOR] 29280,42.4,44.5
+[PROCESSOR] timestamp_ms=29280 avg_temp=36.95 avg_humidity=47.20 alarms=2
+[ALERT][29280] TYPE: TEMP_HIGH VALUE: 42.4 THRESHOLD: 40.0
+[ALERT][29280] TYPE: TEMP_SPIKE VALUE: 10.9 THRESHOLD: 5.0
+[SENSOR] 29781,17.4,68.3
+[PROCESSOR] timestamp_ms=29781 avg_temp=30.43 avg_humidity=54.23 alarms=1
+[ALERT][29781] TYPE: TEMP_SPIKE VALUE: 25.0 THRESHOLD: 5.0
+[SENSOR] 30282,27.3,68.6
+[PROCESSOR] timestamp_ms=30282 avg_temp=29.65 avg_humidity=57.83 alarms=1
+[ALERT][30282] TYPE: TEMP_SPIKE VALUE: 9.9 THRESHOLD: 5.0
+[SENSOR] 30782,39.5,83.1
+[PROCESSOR] timestamp_ms=30782 avg_temp=31.62 avg_humidity=62.88 alarms=2
+[ALERT][30782] TYPE: HUMID_HIGH VALUE: 83.1 THRESHOLD: 80.0
+[ALERT][30782] TYPE: TEMP_SPIKE VALUE: 12.2 THRESHOLD: 5.0
+[SENSOR] 31282,17.8,70.5
+[PROCESSOR] timestamp_ms=31282 avg_temp=29.32 avg_humidity=64.15 alarms=1
+[ALERT][31282] TYPE: TEMP_SPIKE VALUE: 21.7 THRESHOLD: 5.0
+[SENSOR] 31782,44.9,43.9
+[PROCESSOR] timestamp_ms=31782 avg_temp=31.54 avg_humidity=61.26 alarms=2
+[ALERT][31782] TYPE: TEMP_HIGH VALUE: 44.9 THRESHOLD: 40.0
+[ALERT][31782] TYPE: TEMP_SPIKE VALUE: 27.1 THRESHOLD: 5.0
+[SENSOR] 32283,41.1,83.2
+[PROCESSOR] timestamp_ms=32283 avg_temp=32.74 avg_humidity=64.00 alarms=2
+[ALERT][32283] TYPE: TEMP_HIGH VALUE: 41.1 THRESHOLD: 40.0
+[ALERT][32283] TYPE: HUMID_HIGH VALUE: 83.2 THRESHOLD: 80.0
+[SENSOR] 32784,41.6,44.3
+[PROCESSOR] timestamp_ms=32784 avg_temp=33.72 avg_humidity=61.81 alarms=1
+[ALERT][32784] TYPE: TEMP_HIGH VALUE: 41.6 THRESHOLD: 40.0
+[SENSOR] 33284,26.9,30.5
+[PROCESSOR] timestamp_ms=33284 avg_temp=33.04 avg_humidity=58.68 alarms=1
+[ALERT][33284] TYPE: TEMP_SPIKE VALUE: 14.7 THRESHOLD: 5.0
+[MAIN] duration reached
+[SENSOR] stopped: samples=10 skipped_periods=0
+[PROCESSOR] stopped: processed=10
+[ALERT] stopped: TEMP_HIGH=4 HUMID_HIGH=2 TEMP_SPIKE=7
+[LOGGER] stopped
+
+=== SMS SUMMARY ===
+mode=DRIVER policy=FIFO interval_ms=500
+samples_read=10
+sensor_read_errors=26
+samples_processed=10
+total_produced=10
+total_consumed=10
+overflow_count=0
+buffer_remaining=0
+TEMP_HIGH=4
+HUMID_HIGH=2
+TEMP_SPIKE=7
+jitter_samples=10 capacity=100000
+fatal_error=0
+=== SMS END ===
+[MAIN] exit_code=0
+/ # app_result=$?
+/ # 
+/ # echo "APP_EXIT_CODE=$app_result"
+APP_EXIT_CODE=0
+/ # cat /proc/sms_stats
+read_count=10
+has_sample=1
+last_temperature=26.9
+last_humidity=30.5
+interval_ms=500
+uptime_seconds=20
+/ # tail -n 8 /tmp/sms.log
+[2026-10-21 22:13:23.614 +0700] ALERT timestamp_ms=32283 TYPE: HUMID_HIGH VALUE: 83.2 THRESHOLD: 80.0
+[2026-10-21 22:13:24.112 +0700] SAMPLE timestamp_ms=32784 temperature=41.6 humidity=44.3 average_temperature=33.72 average_humidity=61.81 window_count=9 alarms=1
+[2026-10-21 22:13:24.113 +0700] ALERT timestamp_ms=32784 TYPE: TEMP_HIGH VALUE: 41.6 THRESHOLD: 40.0
+[2026-10-21 22:13:24.612 +0700] SAMPLE timestamp_ms=33284 temperature=26.9 humidity=30.5 average_temperature=33.04 average_humidity=58.68 window_count=10 alarms=1
+[2026-10-21 22:13:24.614 +0700] ALERT timestamp_ms=33284 TYPE: TEMP_SPIKE VALUE: 14.7 THRESHOLD: 5.0
+[2026-10-21 22:13:24.718 +0700] PROCESSOR stopped: processed=10
+[2026-10-21 22:13:24.719 +0700] ALERT stopped: TEMP_HIGH=4 HUMID_HIGH=2 TEMP_SPIKE=7
+[2026-10-21 22:13:24.720 +0700] LOGGER stopped
+/ # (
+sms_60s_output.txt 2>&1 &
+app_pid=$!
+
+echo "APP_PID=$app_pid"
+
+elapsed=0
+
+for delay in 5 25 25; do
+    sleep "$delay"
+    elapsed=$((elapsed + delay))
+
+    echo "=== MEMORY AT ${elapsed}s ==="
+
+    if [ ! -r "/proc/$app_pid/status" ]; then
+        echo "APP EXITED EARLY"
+        break
+    fi
+
+    grep -E '^(Name|Pid|VmSize|VmRSS|VmLck|Threads):' \
+        "/proc/$app_pid/status" \
+        | tee "/tmp/sms_memory_${elapsed}s.txt"
+
+    echo "=== DRIVER AT ${elapsed}s ==="
+
+    cat /proc/sms_stats \
+        | tee "/tmp/sms_stats_${elapsed}s.txt"
+
+    if [ "$elapsed" -eq 5 ]; then
+        cat "/proc/$app_pid/maps" > /tmp/sms_maps_5s.txt
+    fi
+done
+
+wait "$app_pid"
+app_result=$?
+
+echo "APP_EXIT_CODE=$app_result"
+
+echo "=== APPLICATION RESULT ==="
+tail -n 25 /tmp/sms_60s_output.txt
+
+echo "=== DRIVER AFTER RUN ==="
+cat /proc/sms_stats | tee /tmp/sms_stats_after.txt
+
+echo "=== LOG END ==="
+tail -n 5 /tmp/sms_60s.log
+)> rmmod sms_sensor_driver || exit 1
+> insmod /lib/modules/$(uname -r)/sms_sensor_driver.ko || exit 1
+> 
+> echo "=== DRIVER BEFORE RUN ==="
+> cat /proc/sms_stats | tee /tmp/sms_stats_before.txt
+> 
+> sms_app --fifo -i 500 -d 60 \
+>     --log /tmp/sms_60s.log \
+>     > /tmp/sms_60s_output.txt 2>&1 &
+> app_pid=$!
+> 
+> echo "APP_PID=$app_pid"
+> 
+> elapsed=0
+> 
+> for delay in 5 25 25; do
+>     sleep "$delay"
+>     elapsed=$((elapsed + delay))
+> 
+>     echo "=== MEMORY AT ${elapsed}s ==="
+> 
+>     if [ ! -r "/proc/$app_pid/status" ]; then
+>         echo "APP EXITED EARLY"
+>         break
+>     fi
+> 
+>     grep -E '^(Name|Pid|VmSize|VmRSS|VmLck|Threads):' \
+>         "/proc/$app_pid/status" \
+>         | tee "/tmp/sms_memory_${elapsed}s.txt"
+> 
+>     echo "=== DRIVER AT ${elapsed}s ==="
+> 
+>     cat /proc/sms_stats \
+>         | tee "/tmp/sms_stats_${elapsed}s.txt"
+> 
+>     if [ "$elapsed" -eq 5 ]; then
+>         cat "/proc/$app_pid/maps" > /tmp/sms_maps_5s.txt
+>     fi
+> done
+> 
+> wait "$app_pid"
+> app_result=$?
+> 
+> echo "APP_EXIT_CODE=$app_result"
+> 
+> echo "=== APPLICATION RESULT ==="
+> tail -n 25 /tmp/sms_60s_output.txt
+> 
+> echo "=== DRIVER AFTER RUN ==="
+> cat /proc/sms_stats | tee /tmp/sms_stats_after.txt
+> 
+> echo "=== LOG END ==="
+> tail -n 5 /tmp/sms_60s.log
+> )
+sms_sensor: device and procfs unregistered
+sms_sensor: device and procfs registered
+=== DRIVER BEFORE RUN ===
+read_count=0
+has_sample=0
+last_temperature=0.0
+last_humidity=0.0
+interval_ms=100
+uptime_seconds=0
+APP_PID=81
+sms_sensor: interval set to 500 ms
+=== MEMORY AT 5s ===
+Name:	sms_app
+Pid:	81
+VmSize:	    4632 kB
+VmLck:	    4620 kB
+VmRSS:	    3480 kB
+Threads:	5
+=== DRIVER AT 5s ===
+read_count=10
+has_sample=1
+last_temperature=22.7
+last_humidity=35.2
+interval_ms=500
+uptime_seconds=5
+
+=== MEMORY AT 30s ===
+Name:	sms_app
+Pid:	81
+VmSize:	    4632 kB
+VmLck:	    4620 kB
+VmRSS:	    3480 kB
+Threads:	5
+=== DRIVER AT 30s ===
+read_count=59
+has_sample=1
+last_temperature=30.9
+last_humidity=55.3
+interval_ms=500
+uptime_seconds=30
+=== MEMORY AT 55s ===
+Name:	sms_app
+Pid:	81
+VmSize:	    4632 kB
+VmLck:	    4620 kB
+VmRSS:	    3480 kB
+Threads:	5
+=== DRIVER AT 55s ===
+read_count=108
+has_sample=1
+last_temperature=40.9
+last_humidity=49.8
+interval_ms=500
+uptime_seconds=55
+APP_EXIT_CODE=0
+=== APPLICATION RESULT ===
+[ALERT][203400] TYPE: TEMP_SPIKE VALUE: 12.1 THRESHOLD: 5.0
+[ALERT][203900] TYPE: TEMP_HIGH VALUE: 41.0 THRESHOLD: 40.0
+[ALERT][203900] TYPE: TEMP_SPIKE VALUE: 17.2 THRESHOLD: 5.0
+[MAIN] duration reached
+[SENSOR] stopped: samples=118 skipped_periods=0
+[PROCESSOR] stopped: processed=118
+[ALERT] stopped: TEMP_HIGH=16 HUMID_HIGH=25 TEMP_SPIKE=77
+[LOGGER] stopped
+[MAIN] exit_code=0
+
+=== SMS SUMMARY ===
+mode=DRIVER policy=FIFO interval_ms=500
+samples_read=118
+sensor_read_errors=313
+samples_processed=118
+total_produced=118
+total_consumed=118
+overflow_count=0
+buffer_remaining=0
+TEMP_HIGH=16
+HUMID_HIGH=25
+TEMP_SPIKE=77
+jitter_samples=120 capacity=100000
+fatal_error=0
+=== SMS END ===
+=== DRIVER AFTER RUN ===
+read_count=118
+has_sample=1
+last_temperature=41.0
+last_humidity=78.3
+interval_ms=500
+uptime_seconds=61
+=== LOG END ===
+[2026-10-21 22:16:15.229 +0700] ALERT timestamp_ms=203900 TYPE: TEMP_HIGH VALUE: 41.0 THRESHOLD: 40.0
+[2026-10-21 22:16:15.229 +0700] ALERT timestamp_ms=203900 TYPE: TEMP_SPIKE VALUE: 17.2 THRESHOLD: 5.0
+[2026-10-21 22:16:15.330 +0700] PROCESSOR stopped: processed=118
+[2026-10-21 22:16:15.332 +0700] ALERT stopped: TEMP_HIGH=16 HUMID_HIGH=25 TEMP_SPIKE=77
+[2026-10-21 22:16:15.332 +0700] LOGGER stopped
+/ # 
+/ # for name in \
+>     sms_60s_output.txt \
+>     sms_60s.log \
+>     sms_memory_5s.txt \
+>     sms_memory_30s.txt \
+>     sms_memory_55s.txt \
+>     sms_stats_before.txt \
+>     sms_stats_5s.txt \
+>     sms_stats_30s.txt \
+>     sms_stats_55s.txt \
+>     sms_stats_after.txt \
+>     sms_maps_5s.txt
+> do
+>     if [ -f "/tmp/$name" ]; then
+>         printf '\n=== EXPORT BEGIN %s ===\n' "$name"
+>         cat "/tmp/$name"
+>         printf '\n=== EXPORT END %s ===\n' "$name"
+>     else
+>         echo "MISSING FILE: $name"
+>     fi
+> done
+
+=== EXPORT BEGIN sms_60s_output.txt ===
+[MAIN] mlockall OK
+[MAIN] mode=DRIVER policy=FIFO interval=500 ms duration=60 s log=/tmp/sms_60s.log
+[SENSOR] policy=FIFO priority=50 mode=DRIVER
+[ALERT][144397] TYPE: HUMID_HIGH VALUE: 83.5 THRESHOLD: 80.0
+[ALERT][144897] TYPE: TEMP_HIGH VALUE: 41.9 THRESHOLD: 40.0
+[ALERT][144897] TYPE: TEMP_SPIKE VALUE: 11.9 THRESHOLD: 5.0
+[ALERT][145397] TYPE: TEMP_HIGH VALUE: 41.8 THRESHOLD: 40.0
+[ALERT][145899] TYPE: TEMP_SPIKE VALUE: 17.7 THRESHOLD: 5.0
+[ALERT][146900] TYPE: TEMP_SPIKE VALUE: 11.2 THRESHOLD: 5.0
+[ALERT][147901] TYPE: HUMID_HIGH VALUE: 86.6 THRESHOLD: 80.0
+[ALERT][147901] TYPE: TEMP_SPIKE VALUE: 5.3 THRESHOLD: 5.0
+[ALERT][148402] TYPE: TEMP_SPIKE VALUE: 6.4 THRESHOLD: 5.0
+[ALERT][148902] TYPE: TEMP_SPIKE VALUE: 7.0 THRESHOLD: 5.0
+[ALERT][149902] TYPE: HUMID_HIGH VALUE: 84.8 THRESHOLD: 80.0
+[ALERT][150903] TYPE: HUMID_HIGH VALUE: 85.3 THRESHOLD: 80.0
+[ALERT][151403] TYPE: HUMID_HIGH VALUE: 84.0 THRESHOLD: 80.0
+[ALERT][151403] TYPE: TEMP_SPIKE VALUE: 10.0 THRESHOLD: 5.0
+[ALERT][152403] TYPE: TEMP_HIGH VALUE: 43.2 THRESHOLD: 40.0
+[ALERT][152403] TYPE: TEMP_SPIKE VALUE: 10.6 THRESHOLD: 5.0
+[ALERT][153403] TYPE: HUMID_HIGH VALUE: 81.8 THRESHOLD: 80.0
+[ALERT][153403] TYPE: TEMP_SPIKE VALUE: 8.7 THRESHOLD: 5.0
+[ALERT][154905] TYPE: HUMID_HIGH VALUE: 89.4 THRESHOLD: 80.0
+[ALERT][154905] TYPE: TEMP_SPIKE VALUE: 10.2 THRESHOLD: 5.0
+[ALERT][155405] TYPE: HUMID_HIGH VALUE: 82.6 THRESHOLD: 80.0
+[ALERT][155906] TYPE: TEMP_HIGH VALUE: 41.8 THRESHOLD: 40.0
+[ALERT][155906] TYPE: TEMP_SPIKE VALUE: 14.4 THRESHOLD: 5.0
+[ALERT][156406] TYPE: TEMP_SPIKE VALUE: 16.0 THRESHOLD: 5.0
+[ALERT][157406] TYPE: TEMP_SPIKE VALUE: 7.0 THRESHOLD: 5.0
+[ALERT][157907] TYPE: TEMP_HIGH VALUE: 44.2 THRESHOLD: 40.0
+[ALERT][157907] TYPE: TEMP_SPIKE VALUE: 23.5 THRESHOLD: 5.0
+[ALERT][158408] TYPE: HUMID_HIGH VALUE: 90.0 THRESHOLD: 80.0
+[ALERT][158408] TYPE: TEMP_SPIKE VALUE: 20.2 THRESHOLD: 5.0
+[ALERT][158908] TYPE: HUMID_HIGH VALUE: 89.5 THRESHOLD: 80.0
+[SENSOR] sample deferred, errno=11
+[ALERT][160396] TYPE: HUMID_HIGH VALUE: 85.6 THRESHOLD: 80.0
+[ALERT][160896] TYPE: TEMP_HIGH VALUE: 40.2 THRESHOLD: 40.0
+[ALERT][160896] TYPE: TEMP_SPIKE VALUE: 25.2 THRESHOLD: 5.0
+[ALERT][161396] TYPE: HUMID_HIGH VALUE: 83.3 THRESHOLD: 80.0
+[ALERT][161396] TYPE: TEMP_SPIKE VALUE: 6.6 THRESHOLD: 5.0
+[ALERT][161896] TYPE: TEMP_HIGH VALUE: 41.3 THRESHOLD: 40.0
+[ALERT][161896] TYPE: TEMP_SPIKE VALUE: 7.7 THRESHOLD: 5.0
+[ALERT][162396] TYPE: TEMP_SPIKE VALUE: 10.8 THRESHOLD: 5.0
+[ALERT][162896] TYPE: TEMP_HIGH VALUE: 41.0 THRESHOLD: 40.0
+[ALERT][162896] TYPE: TEMP_SPIKE VALUE: 10.5 THRESHOLD: 5.0
+[ALERT][163396] TYPE: TEMP_SPIKE VALUE: 18.6 THRESHOLD: 5.0
+[ALERT][163897] TYPE: HUMID_HIGH VALUE: 83.0 THRESHOLD: 80.0
+[ALERT][164397] TYPE: TEMP_SPIKE VALUE: 9.1 THRESHOLD: 5.0
+[ALERT][164897] TYPE: TEMP_SPIKE VALUE: 17.9 THRESHOLD: 5.0
+[ALERT][165398] TYPE: TEMP_SPIKE VALUE: 16.2 THRESHOLD: 5.0
+[ALERT][166399] TYPE: TEMP_HIGH VALUE: 43.8 THRESHOLD: 40.0
+[ALERT][166399] TYPE: TEMP_SPIKE VALUE: 16.7 THRESHOLD: 5.0
+[ALERT][166899] TYPE: TEMP_HIGH VALUE: 42.8 THRESHOLD: 40.0
+[ALERT][167399] TYPE: TEMP_SPIKE VALUE: 25.6 THRESHOLD: 5.0
+[ALERT][167899] TYPE: TEMP_SPIKE VALUE: 16.4 THRESHOLD: 5.0
+[ALERT][168400] TYPE: TEMP_SPIKE VALUE: 16.2 THRESHOLD: 5.0
+[ALERT][169400] TYPE: TEMP_SPIKE VALUE: 8.7 THRESHOLD: 5.0
+[ALERT][169900] TYPE: TEMP_SPIKE VALUE: 7.1 THRESHOLD: 5.0
+[ALERT][170400] TYPE: HUMID_HIGH VALUE: 87.8 THRESHOLD: 80.0
+[ALERT][170400] TYPE: TEMP_SPIKE VALUE: 15.0 THRESHOLD: 5.0
+[ALERT][170900] TYPE: TEMP_HIGH VALUE: 41.8 THRESHOLD: 40.0
+[ALERT][170900] TYPE: TEMP_SPIKE VALUE: 24.5 THRESHOLD: 5.0
+[ALERT][171400] TYPE: HUMID_HIGH VALUE: 86.7 THRESHOLD: 80.0
+[ALERT][171400] TYPE: TEMP_SPIKE VALUE: 20.4 THRESHOLD: 5.0
+[ALERT][171901] TYPE: TEMP_SPIKE VALUE: 14.1 THRESHOLD: 5.0
+[ALERT][172401] TYPE: TEMP_SPIKE VALUE: 18.9 THRESHOLD: 5.0
+[ALERT][172901] TYPE: HUMID_HIGH VALUE: 83.6 THRESHOLD: 80.0
+[ALERT][172901] TYPE: TEMP_SPIKE VALUE: 22.6 THRESHOLD: 5.0
+[ALERT][173401] TYPE: TEMP_SPIKE VALUE: 9.3 THRESHOLD: 5.0
+[ALERT][174403] TYPE: TEMP_SPIKE VALUE: 10.7 THRESHOLD: 5.0
+[ALERT][174903] TYPE: TEMP_SPIKE VALUE: 16.8 THRESHOLD: 5.0
+[ALERT][175903] TYPE: TEMP_SPIKE VALUE: 10.4 THRESHOLD: 5.0
+[ALERT][176403] TYPE: TEMP_SPIKE VALUE: 7.3 THRESHOLD: 5.0
+[ALERT][176903] TYPE: TEMP_SPIKE VALUE: 17.5 THRESHOLD: 5.0
+[ALERT][177903] TYPE: TEMP_SPIKE VALUE: 13.2 THRESHOLD: 5.0
+[ALERT][178403] TYPE: HUMID_HIGH VALUE: 88.6 THRESHOLD: 80.0
+[ALERT][178403] TYPE: TEMP_SPIKE VALUE: 6.2 THRESHOLD: 5.0
+[ALERT][178904] TYPE: HUMID_HIGH VALUE: 82.5 THRESHOLD: 80.0
+[ALERT][178904] TYPE: TEMP_SPIKE VALUE: 11.0 THRESHOLD: 5.0
+[ALERT][179405] TYPE: TEMP_HIGH VALUE: 43.4 THRESHOLD: 40.0
+[ALERT][179405] TYPE: TEMP_SPIKE VALUE: 26.7 THRESHOLD: 5.0
+[ALERT][179905] TYPE: TEMP_SPIKE VALUE: 5.6 THRESHOLD: 5.0
+[ALERT][180405] TYPE: TEMP_SPIKE VALUE: 9.1 THRESHOLD: 5.0
+[ALERT][181406] TYPE: HUMID_HIGH VALUE: 82.6 THRESHOLD: 80.0
+[ALERT][182907] TYPE: TEMP_SPIKE VALUE: 6.3 THRESHOLD: 5.0
+[ALERT][183909] TYPE: TEMP_SPIKE VALUE: 10.6 THRESHOLD: 5.0
+[SENSOR] sample deferred, errno=11
+[ALERT][184896] TYPE: HUMID_HIGH VALUE: 89.2 THRESHOLD: 80.0
+[ALERT][184896] TYPE: TEMP_SPIKE VALUE: 20.8 THRESHOLD: 5.0
+[ALERT][187396] TYPE: TEMP_SPIKE VALUE: 9.6 THRESHOLD: 5.0
+[ALERT][187896] TYPE: TEMP_SPIKE VALUE: 10.2 THRESHOLD: 5.0
+[ALERT][189896] TYPE: TEMP_SPIKE VALUE: 19.2 THRESHOLD: 5.0
+[ALERT][190896] TYPE: TEMP_SPIKE VALUE: 16.6 THRESHOLD: 5.0
+[ALERT][191396] TYPE: TEMP_SPIKE VALUE: 13.2 THRESHOLD: 5.0
+[ALERT][191896] TYPE: HUMID_HIGH VALUE: 83.2 THRESHOLD: 80.0
+[ALERT][191896] TYPE: TEMP_SPIKE VALUE: 6.8 THRESHOLD: 5.0
+[ALERT][192396] TYPE: TEMP_SPIKE VALUE: 7.3 THRESHOLD: 5.0
+[ALERT][192896] TYPE: TEMP_SPIKE VALUE: 20.0 THRESHOLD: 5.0
+[ALERT][193396] TYPE: TEMP_SPIKE VALUE: 20.4 THRESHOLD: 5.0
+[ALERT][193896] TYPE: TEMP_SPIKE VALUE: 13.9 THRESHOLD: 5.0
+[ALERT][194396] TYPE: TEMP_HIGH VALUE: 43.5 THRESHOLD: 40.0
+[ALERT][194396] TYPE: TEMP_SPIKE VALUE: 18.8 THRESHOLD: 5.0
+[ALERT][194896] TYPE: TEMP_SPIKE VALUE: 12.0 THRESHOLD: 5.0
+[ALERT][195396] TYPE: TEMP_SPIKE VALUE: 16.5 THRESHOLD: 5.0
+[ALERT][195896] TYPE: TEMP_HIGH VALUE: 42.3 THRESHOLD: 40.0
+[ALERT][195896] TYPE: TEMP_SPIKE VALUE: 27.3 THRESHOLD: 5.0
+[ALERT][196396] TYPE: TEMP_SPIKE VALUE: 21.8 THRESHOLD: 5.0
+[ALERT][196896] TYPE: TEMP_SPIKE VALUE: 12.5 THRESHOLD: 5.0
+[ALERT][197396] TYPE: HUMID_HIGH VALUE: 88.2 THRESHOLD: 80.0
+[ALERT][197896] TYPE: HUMID_HIGH VALUE: 86.4 THRESHOLD: 80.0
+[ALERT][197896] TYPE: TEMP_SPIKE VALUE: 5.5 THRESHOLD: 5.0
+[ALERT][198396] TYPE: TEMP_SPIKE VALUE: 10.3 THRESHOLD: 5.0
+[ALERT][198896] TYPE: TEMP_HIGH VALUE: 40.9 THRESHOLD: 40.0
+[ALERT][198896] TYPE: TEMP_SPIKE VALUE: 14.3 THRESHOLD: 5.0
+[ALERT][199396] TYPE: TEMP_SPIKE VALUE: 12.3 THRESHOLD: 5.0
+[ALERT][199896] TYPE: HUMID_HIGH VALUE: 80.9 THRESHOLD: 80.0
+[ALERT][200396] TYPE: TEMP_SPIKE VALUE: 14.3 THRESHOLD: 5.0
+[ALERT][200896] TYPE: HUMID_HIGH VALUE: 80.1 THRESHOLD: 80.0
+[ALERT][201397] TYPE: TEMP_SPIKE VALUE: 8.1 THRESHOLD: 5.0
+[ALERT][201898] TYPE: TEMP_SPIKE VALUE: 8.1 THRESHOLD: 5.0
+[ALERT][202399] TYPE: TEMP_SPIKE VALUE: 7.0 THRESHOLD: 5.0
+[ALERT][203400] TYPE: TEMP_SPIKE VALUE: 12.1 THRESHOLD: 5.0
+[ALERT][203900] TYPE: TEMP_HIGH VALUE: 41.0 THRESHOLD: 40.0
+[ALERT][203900] TYPE: TEMP_SPIKE VALUE: 17.2 THRESHOLD: 5.0
+[MAIN] duration reached
+[SENSOR] stopped: samples=118 skipped_periods=0
+[PROCESSOR] stopped: processed=118
+[ALERT] stopped: TEMP_HIGH=16 HUMID_HIGH=25 TEMP_SPIKE=77
+[LOGGER] stopped
+[MAIN] exit_code=0
+
+=== SMS SUMMARY ===
+mode=DRIVER policy=FIFO interval_ms=500
+samples_read=118
+sensor_read_errors=313
+samples_processed=118
+total_produced=118
+total_consumed=118
+overflow_count=0
+buffer_remaining=0
+TEMP_HIGH=16
+HUMID_HIGH=25
+TEMP_SPIKE=77
+jitter_samples=120 capacity=100000
+fatal_error=0
+=== SMS END ===
+
+=== EXPORT END sms_60s_output.txt ===
+
+=== EXPORT BEGIN sms_60s.log ===
+[2026-10-21 22:15:15.220 +0700] LOGGER started
+[2026-10-21 22:15:15.220 +0700] ALERT started
+[2026-10-21 22:15:15.221 +0700] PROCESSOR started
+[2026-10-21 22:15:15.727 +0700] SAMPLE timestamp_ms=144397 temperature=30.0 humidity=83.5 average_temperature=30.00 average_humidity=83.50 window_count=1 alarms=1
+[2026-10-21 22:15:15.727 +0700] ALERT timestamp_ms=144397 TYPE: HUMID_HIGH VALUE: 83.5 THRESHOLD: 80.0
+[2026-10-21 22:15:16.226 +0700] SAMPLE timestamp_ms=144897 temperature=41.9 humidity=43.2 average_temperature=35.95 average_humidity=63.35 window_count=2 alarms=2
+[2026-10-21 22:15:16.227 +0700] ALERT timestamp_ms=144897 TYPE: TEMP_HIGH VALUE: 41.9 THRESHOLD: 40.0
+[2026-10-21 22:15:16.227 +0700] ALERT timestamp_ms=144897 TYPE: TEMP_SPIKE VALUE: 11.9 THRESHOLD: 5.0
+[2026-10-21 22:15:16.725 +0700] SAMPLE timestamp_ms=145397 temperature=41.8 humidity=34.4 average_temperature=37.90 average_humidity=53.70 window_count=3 alarms=1
+[2026-10-21 22:15:16.726 +0700] ALERT timestamp_ms=145397 TYPE: TEMP_HIGH VALUE: 41.8 THRESHOLD: 40.0
+[2026-10-21 22:15:17.227 +0700] SAMPLE timestamp_ms=145899 temperature=24.1 humidity=30.7 average_temperature=34.45 average_humidity=47.95 window_count=4 alarms=1
+[2026-10-21 22:15:17.227 +0700] ALERT timestamp_ms=145899 TYPE: TEMP_SPIKE VALUE: 17.7 THRESHOLD: 5.0
+[2026-10-21 22:15:17.727 +0700] SAMPLE timestamp_ms=146400 temperature=20.7 humidity=74.1 average_temperature=31.70 average_humidity=53.18 window_count=5 alarms=0
+[2026-10-21 22:15:18.228 +0700] SAMPLE timestamp_ms=146900 temperature=31.9 humidity=31.4 average_temperature=31.73 average_humidity=49.55 window_count=6 alarms=1
+[2026-10-21 22:15:18.228 +0700] ALERT timestamp_ms=146900 TYPE: TEMP_SPIKE VALUE: 11.2 THRESHOLD: 5.0
+[2026-10-21 22:15:18.727 +0700] SAMPLE timestamp_ms=147400 temperature=30.8 humidity=30.4 average_temperature=31.60 average_humidity=46.81 window_count=7 alarms=0
+[2026-10-21 22:15:19.228 +0700] SAMPLE timestamp_ms=147901 temperature=36.1 humidity=86.6 average_temperature=32.16 average_humidity=51.79 window_count=8 alarms=2
+[2026-10-21 22:15:19.229 +0700] ALERT timestamp_ms=147901 TYPE: HUMID_HIGH VALUE: 86.6 THRESHOLD: 80.0
+[2026-10-21 22:15:19.230 +0700] ALERT timestamp_ms=147901 TYPE: TEMP_SPIKE VALUE: 5.3 THRESHOLD: 5.0
+[2026-10-21 22:15:19.729 +0700] SAMPLE timestamp_ms=148402 temperature=29.7 humidity=69.7 average_temperature=31.89 average_humidity=53.78 window_count=9 alarms=1
+[2026-10-21 22:15:19.730 +0700] ALERT timestamp_ms=148402 TYPE: TEMP_SPIKE VALUE: 6.4 THRESHOLD: 5.0
+[2026-10-21 22:15:20.228 +0700] SAMPLE timestamp_ms=148902 temperature=22.7 humidity=35.2 average_temperature=30.97 average_humidity=51.92 window_count=10 alarms=1
+[2026-10-21 22:15:20.229 +0700] ALERT timestamp_ms=148902 TYPE: TEMP_SPIKE VALUE: 7.0 THRESHOLD: 5.0
+[2026-10-21 22:15:20.730 +0700] SAMPLE timestamp_ms=149402 temperature=20.7 humidity=51.5 average_temperature=30.04 average_humidity=48.72 window_count=10 alarms=0
+[2026-10-21 22:15:21.230 +0700] SAMPLE timestamp_ms=149902 temperature=23.9 humidity=84.8 average_temperature=28.24 average_humidity=52.88 window_count=10 alarms=1
+[2026-10-21 22:15:21.230 +0700] ALERT timestamp_ms=149902 TYPE: HUMID_HIGH VALUE: 84.8 THRESHOLD: 80.0
+[2026-10-21 22:15:21.729 +0700] SAMPLE timestamp_ms=150402 temperature=20.8 humidity=72.0 average_temperature=26.14 average_humidity=56.64 window_count=10 alarms=0
+[2026-10-21 22:15:22.231 +0700] SAMPLE timestamp_ms=150903 temperature=18.0 humidity=85.3 average_temperature=25.53 average_humidity=62.10 window_count=10 alarms=1
+[2026-10-21 22:15:22.232 +0700] ALERT timestamp_ms=150903 TYPE: HUMID_HIGH VALUE: 85.3 THRESHOLD: 80.0
+[2026-10-21 22:15:22.730 +0700] SAMPLE timestamp_ms=151403 temperature=28.0 humidity=84.0 average_temperature=26.26 average_humidity=63.09 window_count=10 alarms=2
+[2026-10-21 22:15:22.731 +0700] ALERT timestamp_ms=151403 TYPE: HUMID_HIGH VALUE: 84.0 THRESHOLD: 80.0
+[2026-10-21 22:15:22.732 +0700] ALERT timestamp_ms=151403 TYPE: TEMP_SPIKE VALUE: 10.0 THRESHOLD: 5.0
+[2026-10-21 22:15:23.230 +0700] SAMPLE timestamp_ms=151903 temperature=32.6 humidity=42.1 average_temperature=26.33 average_humidity=64.16 window_count=10 alarms=0
+[2026-10-21 22:15:23.731 +0700] SAMPLE timestamp_ms=152403 temperature=43.2 humidity=55.7 average_temperature=27.57 average_humidity=66.69 window_count=10 alarms=2
+[2026-10-21 22:15:23.731 +0700] ALERT timestamp_ms=152403 TYPE: TEMP_HIGH VALUE: 43.2 THRESHOLD: 40.0
+[2026-10-21 22:15:23.732 +0700] ALERT timestamp_ms=152403 TYPE: TEMP_SPIKE VALUE: 10.6 THRESHOLD: 5.0
+[2026-10-21 22:15:24.230 +0700] SAMPLE timestamp_ms=152903 temperature=38.8 humidity=33.5 average_temperature=27.84 average_humidity=61.38 window_count=10 alarms=0
+[2026-10-21 22:15:24.731 +0700] SAMPLE timestamp_ms=153403 temperature=30.1 humidity=81.8 average_temperature=27.88 average_humidity=62.59 window_count=10 alarms=2
+[2026-10-21 22:15:24.731 +0700] ALERT timestamp_ms=153403 TYPE: HUMID_HIGH VALUE: 81.8 THRESHOLD: 80.0
+[2026-10-21 22:15:24.732 +0700] ALERT timestamp_ms=153403 TYPE: TEMP_SPIKE VALUE: 8.7 THRESHOLD: 5.0
+[2026-10-21 22:15:25.230 +0700] SAMPLE timestamp_ms=153903 temperature=33.4 humidity=32.5 average_temperature=28.95 average_humidity=62.32 window_count=10 alarms=0
+[2026-10-21 22:15:25.731 +0700] SAMPLE timestamp_ms=154404 temperature=32.8 humidity=71.7 average_temperature=30.16 average_humidity=64.34 window_count=10 alarms=0
+[2026-10-21 22:15:26.233 +0700] SAMPLE timestamp_ms=154905 temperature=22.6 humidity=89.4 average_temperature=30.03 average_humidity=64.80 window_count=10 alarms=2
+[2026-10-21 22:15:26.233 +0700] ALERT timestamp_ms=154905 TYPE: HUMID_HIGH VALUE: 89.4 THRESHOLD: 80.0
+[2026-10-21 22:15:26.234 +0700] ALERT timestamp_ms=154905 TYPE: TEMP_SPIKE VALUE: 10.2 THRESHOLD: 5.0
+[2026-10-21 22:15:26.733 +0700] SAMPLE timestamp_ms=155405 temperature=27.4 humidity=82.6 average_temperature=30.69 average_humidity=65.86 window_count=10 alarms=1
+[2026-10-21 22:15:26.733 +0700] ALERT timestamp_ms=155405 TYPE: HUMID_HIGH VALUE: 82.6 THRESHOLD: 80.0
+[2026-10-21 22:15:27.233 +0700] SAMPLE timestamp_ms=155906 temperature=41.8 humidity=67.6 average_temperature=33.07 average_humidity=64.09 window_count=10 alarms=2
+[2026-10-21 22:15:27.233 +0700] ALERT timestamp_ms=155906 TYPE: TEMP_HIGH VALUE: 41.8 THRESHOLD: 40.0
+[2026-10-21 22:15:27.234 +0700] ALERT timestamp_ms=155906 TYPE: TEMP_SPIKE VALUE: 14.4 THRESHOLD: 5.0
+[2026-10-21 22:15:27.734 +0700] SAMPLE timestamp_ms=156406 temperature=25.8 humidity=58.0 average_temperature=32.85 average_humidity=61.49 window_count=10 alarms=1
+[2026-10-21 22:15:27.735 +0700] ALERT timestamp_ms=156406 TYPE: TEMP_SPIKE VALUE: 16.0 THRESHOLD: 5.0
+[2026-10-21 22:15:28.233 +0700] SAMPLE timestamp_ms=156906 temperature=27.7 humidity=70.3 average_temperature=32.36 average_humidity=64.31 window_count=10 alarms=0
+[2026-10-21 22:15:28.733 +0700] SAMPLE timestamp_ms=157406 temperature=20.7 humidity=56.0 average_temperature=30.11 average_humidity=64.34 window_count=10 alarms=1
+[2026-10-21 22:15:28.733 +0700] ALERT timestamp_ms=157406 TYPE: TEMP_SPIKE VALUE: 7.0 THRESHOLD: 5.0
+[2026-10-21 22:15:29.234 +0700] SAMPLE timestamp_ms=157907 temperature=44.2 humidity=74.6 average_temperature=30.65 average_humidity=68.45 window_count=10 alarms=2
+[2026-10-21 22:15:29.235 +0700] ALERT timestamp_ms=157907 TYPE: TEMP_HIGH VALUE: 44.2 THRESHOLD: 40.0
+[2026-10-21 22:15:29.236 +0700] ALERT timestamp_ms=157907 TYPE: TEMP_SPIKE VALUE: 23.5 THRESHOLD: 5.0
+[2026-10-21 22:15:29.736 +0700] SAMPLE timestamp_ms=158408 temperature=24.0 humidity=90.0 average_temperature=30.04 average_humidity=69.27 window_count=10 alarms=2
+[2026-10-21 22:15:29.736 +0700] ALERT timestamp_ms=158408 TYPE: HUMID_HIGH VALUE: 90.0 THRESHOLD: 80.0
+[2026-10-21 22:15:29.737 +0700] ALERT timestamp_ms=158408 TYPE: TEMP_SPIKE VALUE: 20.2 THRESHOLD: 5.0
+[2026-10-21 22:15:30.235 +0700] SAMPLE timestamp_ms=158908 temperature=22.1 humidity=89.5 average_temperature=28.91 average_humidity=74.97 window_count=10 alarms=1
+[2026-10-21 22:15:30.235 +0700] ALERT timestamp_ms=158908 TYPE: HUMID_HIGH VALUE: 89.5 THRESHOLD: 80.0
+[2026-10-21 22:15:30.736 +0700] SAMPLE timestamp_ms=159409 temperature=18.2 humidity=39.0 average_temperature=27.45 average_humidity=71.70 window_count=10 alarms=0
+[2026-10-21 22:15:31.724 +0700] SAMPLE timestamp_ms=160396 temperature=15.0 humidity=85.6 average_temperature=26.69 average_humidity=71.32 window_count=10 alarms=1
+[2026-10-21 22:15:31.725 +0700] ALERT timestamp_ms=160396 TYPE: HUMID_HIGH VALUE: 85.6 THRESHOLD: 80.0
+[2026-10-21 22:15:32.225 +0700] SAMPLE timestamp_ms=160896 temperature=40.2 humidity=70.4 average_temperature=27.97 average_humidity=70.10 window_count=10 alarms=2
+[2026-10-21 22:15:32.226 +0700] ALERT timestamp_ms=160896 TYPE: TEMP_HIGH VALUE: 40.2 THRESHOLD: 40.0
+[2026-10-21 22:15:32.226 +0700] ALERT timestamp_ms=160896 TYPE: TEMP_SPIKE VALUE: 25.2 THRESHOLD: 5.0
+[2026-10-21 22:15:32.724 +0700] SAMPLE timestamp_ms=161396 temperature=33.6 humidity=83.3 average_temperature=27.15 average_humidity=71.67 window_count=10 alarms=2
+[2026-10-21 22:15:32.725 +0700] ALERT timestamp_ms=161396 TYPE: HUMID_HIGH VALUE: 83.3 THRESHOLD: 80.0
+[2026-10-21 22:15:32.725 +0700] ALERT timestamp_ms=161396 TYPE: TEMP_SPIKE VALUE: 6.6 THRESHOLD: 5.0
+[2026-10-21 22:15:33.224 +0700] SAMPLE timestamp_ms=161896 temperature=41.3 humidity=55.6 average_temperature=28.70 average_humidity=71.43 window_count=10 alarms=2
+[2026-10-21 22:15:33.225 +0700] ALERT timestamp_ms=161896 TYPE: TEMP_HIGH VALUE: 41.3 THRESHOLD: 40.0
+[2026-10-21 22:15:33.226 +0700] ALERT timestamp_ms=161896 TYPE: TEMP_SPIKE VALUE: 7.7 THRESHOLD: 5.0
+[2026-10-21 22:15:33.723 +0700] SAMPLE timestamp_ms=162396 temperature=30.5 humidity=57.6 average_temperature=28.98 average_humidity=70.16 window_count=10 alarms=1
+[2026-10-21 22:15:33.723 +0700] ALERT timestamp_ms=162396 TYPE: TEMP_SPIKE VALUE: 10.8 THRESHOLD: 5.0
+[2026-10-21 22:15:34.224 +0700] SAMPLE timestamp_ms=162896 temperature=41.0 humidity=43.5 average_temperature=31.01 average_humidity=68.91 window_count=10 alarms=2
+[2026-10-21 22:15:34.225 +0700] ALERT timestamp_ms=162896 TYPE: TEMP_HIGH VALUE: 41.0 THRESHOLD: 40.0
+[2026-10-21 22:15:34.226 +0700] ALERT timestamp_ms=162896 TYPE: TEMP_SPIKE VALUE: 10.5 THRESHOLD: 5.0
+[2026-10-21 22:15:34.724 +0700] SAMPLE timestamp_ms=163396 temperature=22.4 humidity=53.9 average_temperature=28.83 average_humidity=66.84 window_count=10 alarms=1
+[2026-10-21 22:15:34.725 +0700] ALERT timestamp_ms=163396 TYPE: TEMP_SPIKE VALUE: 18.6 THRESHOLD: 5.0
+[2026-10-21 22:15:35.225 +0700] SAMPLE timestamp_ms=163897 temperature=24.6 humidity=83.0 average_temperature=28.89 average_humidity=66.14 window_count=10 alarms=1
+[2026-10-21 22:15:35.225 +0700] ALERT timestamp_ms=163897 TYPE: HUMID_HIGH VALUE: 83.0 THRESHOLD: 80.0
+[2026-10-21 22:15:35.724 +0700] SAMPLE timestamp_ms=164397 temperature=33.7 humidity=52.6 average_temperature=30.05 average_humidity=62.45 window_count=10 alarms=1
+[2026-10-21 22:15:35.726 +0700] ALERT timestamp_ms=164397 TYPE: TEMP_SPIKE VALUE: 9.1 THRESHOLD: 5.0
+[2026-10-21 22:15:36.224 +0700] SAMPLE timestamp_ms=164897 temperature=15.8 humidity=37.6 average_temperature=29.81 average_humidity=62.31 window_count=10 alarms=1
+[2026-10-21 22:15:36.224 +0700] ALERT timestamp_ms=164897 TYPE: TEMP_SPIKE VALUE: 17.9 THRESHOLD: 5.0
+[2026-10-21 22:15:36.726 +0700] SAMPLE timestamp_ms=165398 temperature=32.0 humidity=30.8 average_temperature=31.51 average_humidity=56.83 window_count=10 alarms=1
+[2026-10-21 22:15:36.727 +0700] ALERT timestamp_ms=165398 TYPE: TEMP_SPIKE VALUE: 16.2 THRESHOLD: 5.0
+[2026-10-21 22:15:37.225 +0700] SAMPLE timestamp_ms=165898 temperature=27.1 humidity=37.5 average_temperature=30.20 average_humidity=53.54 window_count=10 alarms=0
+[2026-10-21 22:15:37.727 +0700] SAMPLE timestamp_ms=166399 temperature=43.8 humidity=54.7 average_temperature=31.22 average_humidity=50.68 window_count=10 alarms=2
+[2026-10-21 22:15:37.727 +0700] ALERT timestamp_ms=166399 TYPE: TEMP_HIGH VALUE: 43.8 THRESHOLD: 40.0
+[2026-10-21 22:15:37.728 +0700] ALERT timestamp_ms=166399 TYPE: TEMP_SPIKE VALUE: 16.7 THRESHOLD: 5.0
+[2026-10-21 22:15:38.226 +0700] SAMPLE timestamp_ms=166899 temperature=42.8 humidity=36.9 average_temperature=31.37 average_humidity=48.81 window_count=10 alarms=1
+[2026-10-21 22:15:38.226 +0700] ALERT timestamp_ms=166899 TYPE: TEMP_HIGH VALUE: 42.8 THRESHOLD: 40.0
+[2026-10-21 22:15:38.727 +0700] SAMPLE timestamp_ms=167399 temperature=17.2 humidity=76.2 average_temperature=30.04 average_humidity=50.67 window_count=10 alarms=1
+[2026-10-21 22:15:38.728 +0700] ALERT timestamp_ms=167399 TYPE: TEMP_SPIKE VALUE: 25.6 THRESHOLD: 5.0
+[2026-10-21 22:15:39.227 +0700] SAMPLE timestamp_ms=167899 temperature=33.6 humidity=52.0 average_temperature=29.30 average_humidity=51.52 window_count=10 alarms=1
+[2026-10-21 22:15:39.228 +0700] ALERT timestamp_ms=167899 TYPE: TEMP_SPIKE VALUE: 16.4 THRESHOLD: 5.0
+[2026-10-21 22:15:39.727 +0700] SAMPLE timestamp_ms=168400 temperature=17.4 humidity=61.3 average_temperature=28.80 average_humidity=52.26 window_count=10 alarms=1
+[2026-10-21 22:15:39.728 +0700] ALERT timestamp_ms=168400 TYPE: TEMP_SPIKE VALUE: 16.2 THRESHOLD: 5.0
+[2026-10-21 22:15:40.227 +0700] SAMPLE timestamp_ms=168900 temperature=16.5 humidity=74.9 average_temperature=27.99 average_humidity=51.45 window_count=10 alarms=0
+[2026-10-21 22:15:40.728 +0700] SAMPLE timestamp_ms=169400 temperature=25.2 humidity=63.2 average_temperature=27.14 average_humidity=52.51 window_count=10 alarms=1
+[2026-10-21 22:15:40.729 +0700] ALERT timestamp_ms=169400 TYPE: TEMP_SPIKE VALUE: 8.7 THRESHOLD: 5.0
+[2026-10-21 22:15:41.226 +0700] SAMPLE timestamp_ms=169900 temperature=32.3 humidity=47.0 average_temperature=28.79 average_humidity=53.45 window_count=10 alarms=1
+[2026-10-21 22:15:41.227 +0700] ALERT timestamp_ms=169900 TYPE: TEMP_SPIKE VALUE: 7.1 THRESHOLD: 5.0
+[2026-10-21 22:15:41.728 +0700] SAMPLE timestamp_ms=170400 temperature=17.3 humidity=87.8 average_temperature=27.32 average_humidity=59.15 window_count=10 alarms=2
+[2026-10-21 22:15:41.728 +0700] ALERT timestamp_ms=170400 TYPE: HUMID_HIGH VALUE: 87.8 THRESHOLD: 80.0
+[2026-10-21 22:15:41.729 +0700] ALERT timestamp_ms=170400 TYPE: TEMP_SPIKE VALUE: 15.0 THRESHOLD: 5.0
+[2026-10-21 22:15:42.228 +0700] SAMPLE timestamp_ms=170900 temperature=41.8 humidity=56.9 average_temperature=28.79 average_humidity=61.09 window_count=10 alarms=2
+[2026-10-21 22:15:42.228 +0700] ALERT timestamp_ms=170900 TYPE: TEMP_HIGH VALUE: 41.8 THRESHOLD: 40.0
+[2026-10-21 22:15:42.228 +0700] ALERT timestamp_ms=170900 TYPE: TEMP_SPIKE VALUE: 24.5 THRESHOLD: 5.0
+[2026-10-21 22:15:42.728 +0700] SAMPLE timestamp_ms=171400 temperature=21.4 humidity=86.7 average_temperature=26.55 average_humidity=64.29 window_count=10 alarms=2
+[2026-10-21 22:15:42.728 +0700] ALERT timestamp_ms=171400 TYPE: HUMID_HIGH VALUE: 86.7 THRESHOLD: 80.0
+[2026-10-21 22:15:42.729 +0700] ALERT timestamp_ms=171400 TYPE: TEMP_SPIKE VALUE: 20.4 THRESHOLD: 5.0
+[2026-10-21 22:15:43.228 +0700] SAMPLE timestamp_ms=171901 temperature=35.5 humidity=41.2 average_temperature=25.82 average_humidity=64.72 window_count=10 alarms=1
+[2026-10-21 22:15:43.228 +0700] ALERT timestamp_ms=171901 TYPE: TEMP_SPIKE VALUE: 14.1 THRESHOLD: 5.0
+[2026-10-21 22:15:43.728 +0700] SAMPLE timestamp_ms=172401 temperature=16.6 humidity=59.2 average_temperature=25.76 average_humidity=63.02 window_count=10 alarms=1
+[2026-10-21 22:15:43.729 +0700] ALERT timestamp_ms=172401 TYPE: TEMP_SPIKE VALUE: 18.9 THRESHOLD: 5.0
+[2026-10-21 22:15:44.229 +0700] SAMPLE timestamp_ms=172901 temperature=39.2 humidity=83.6 average_temperature=26.32 average_humidity=66.18 window_count=10 alarms=2
+[2026-10-21 22:15:44.229 +0700] ALERT timestamp_ms=172901 TYPE: HUMID_HIGH VALUE: 83.6 THRESHOLD: 80.0
+[2026-10-21 22:15:44.229 +0700] ALERT timestamp_ms=172901 TYPE: TEMP_SPIKE VALUE: 22.6 THRESHOLD: 5.0
+[2026-10-21 22:15:44.728 +0700] SAMPLE timestamp_ms=173401 temperature=29.9 humidity=67.1 average_temperature=27.57 average_humidity=66.76 window_count=10 alarms=1
+[2026-10-21 22:15:44.728 +0700] ALERT timestamp_ms=173401 TYPE: TEMP_SPIKE VALUE: 9.3 THRESHOLD: 5.0
+[2026-10-21 22:15:45.229 +0700] SAMPLE timestamp_ms=173902 temperature=30.9 humidity=55.3 average_temperature=29.01 average_humidity=64.80 window_count=10 alarms=0
+[2026-10-21 22:15:45.730 +0700] SAMPLE timestamp_ms=174403 temperature=20.2 humidity=72.7 average_temperature=28.51 average_humidity=65.75 window_count=10 alarms=1
+[2026-10-21 22:15:45.731 +0700] ALERT timestamp_ms=174403 TYPE: TEMP_SPIKE VALUE: 10.7 THRESHOLD: 5.0
+[2026-10-21 22:15:46.229 +0700] SAMPLE timestamp_ms=174903 temperature=37.0 humidity=46.9 average_temperature=28.98 average_humidity=65.74 window_count=10 alarms=1
+[2026-10-21 22:15:46.230 +0700] ALERT timestamp_ms=174903 TYPE: TEMP_SPIKE VALUE: 16.8 THRESHOLD: 5.0
+[2026-10-21 22:15:46.730 +0700] SAMPLE timestamp_ms=175403 temperature=34.8 humidity=56.6 average_temperature=30.73 average_humidity=62.62 window_count=10 alarms=0
+[2026-10-21 22:15:47.231 +0700] SAMPLE timestamp_ms=175903 temperature=24.4 humidity=52.2 average_temperature=28.99 average_humidity=62.15 window_count=10 alarms=1
+[2026-10-21 22:15:47.231 +0700] ALERT timestamp_ms=175903 TYPE: TEMP_SPIKE VALUE: 10.4 THRESHOLD: 5.0
+[2026-10-21 22:15:47.729 +0700] SAMPLE timestamp_ms=176403 temperature=17.1 humidity=79.2 average_temperature=28.56 average_humidity=61.40 window_count=10 alarms=1
+[2026-10-21 22:15:47.730 +0700] ALERT timestamp_ms=176403 TYPE: TEMP_SPIKE VALUE: 7.3 THRESHOLD: 5.0
+[2026-10-21 22:15:48.230 +0700] SAMPLE timestamp_ms=176903 temperature=34.6 humidity=77.7 average_temperature=28.47 average_humidity=65.05 window_count=10 alarms=1
+[2026-10-21 22:15:48.231 +0700] ALERT timestamp_ms=176903 TYPE: TEMP_SPIKE VALUE: 17.5 THRESHOLD: 5.0
+[2026-10-21 22:15:48.731 +0700] SAMPLE timestamp_ms=177403 temperature=34.7 humidity=50.7 average_temperature=30.28 average_humidity=64.20 window_count=10 alarms=0
+[2026-10-21 22:15:49.230 +0700] SAMPLE timestamp_ms=177903 temperature=21.5 humidity=57.5 average_temperature=28.51 average_humidity=61.59 window_count=10 alarms=1
+[2026-10-21 22:15:49.230 +0700] ALERT timestamp_ms=177903 TYPE: TEMP_SPIKE VALUE: 13.2 THRESHOLD: 5.0
+[2026-10-21 22:15:49.730 +0700] SAMPLE timestamp_ms=178403 temperature=27.7 humidity=88.6 average_temperature=28.29 average_humidity=63.74 window_count=10 alarms=2
+[2026-10-21 22:15:49.730 +0700] ALERT timestamp_ms=178403 TYPE: HUMID_HIGH VALUE: 88.6 THRESHOLD: 80.0
+[2026-10-21 22:15:49.731 +0700] ALERT timestamp_ms=178403 TYPE: TEMP_SPIKE VALUE: 6.2 THRESHOLD: 5.0
+[2026-10-21 22:15:50.230 +0700] SAMPLE timestamp_ms=178904 temperature=16.7 humidity=82.5 average_temperature=26.87 average_humidity=66.46 window_count=10 alarms=2
+[2026-10-21 22:15:50.231 +0700] ALERT timestamp_ms=178904 TYPE: HUMID_HIGH VALUE: 82.5 THRESHOLD: 80.0
+[2026-10-21 22:15:50.231 +0700] ALERT timestamp_ms=178904 TYPE: TEMP_SPIKE VALUE: 11.0 THRESHOLD: 5.0
+[2026-10-21 22:15:50.732 +0700] SAMPLE timestamp_ms=179405 temperature=43.4 humidity=48.6 average_temperature=29.19 average_humidity=64.05 window_count=10 alarms=2
+[2026-10-21 22:15:50.733 +0700] ALERT timestamp_ms=179405 TYPE: TEMP_HIGH VALUE: 43.4 THRESHOLD: 40.0
+[2026-10-21 22:15:50.733 +0700] ALERT timestamp_ms=179405 TYPE: TEMP_SPIKE VALUE: 26.7 THRESHOLD: 5.0
+[2026-10-21 22:15:51.232 +0700] SAMPLE timestamp_ms=179905 temperature=37.8 humidity=66.0 average_temperature=29.27 average_humidity=65.96 window_count=10 alarms=1
+[2026-10-21 22:15:51.233 +0700] ALERT timestamp_ms=179905 TYPE: TEMP_SPIKE VALUE: 5.6 THRESHOLD: 5.0
+[2026-10-21 22:15:51.732 +0700] SAMPLE timestamp_ms=180405 temperature=28.7 humidity=33.3 average_temperature=28.66 average_humidity=63.63 window_count=10 alarms=1
+[2026-10-21 22:15:51.733 +0700] ALERT timestamp_ms=180405 TYPE: TEMP_SPIKE VALUE: 9.1 THRESHOLD: 5.0
+[2026-10-21 22:15:52.234 +0700] SAMPLE timestamp_ms=180906 temperature=29.1 humidity=76.1 average_temperature=29.13 average_humidity=66.02 window_count=10 alarms=0
+[2026-10-21 22:15:52.733 +0700] SAMPLE timestamp_ms=181406 temperature=31.9 humidity=82.6 average_temperature=30.61 average_humidity=66.36 window_count=10 alarms=1
+[2026-10-21 22:15:52.733 +0700] ALERT timestamp_ms=181406 TYPE: HUMID_HIGH VALUE: 82.6 THRESHOLD: 80.0
+[2026-10-21 22:15:53.233 +0700] SAMPLE timestamp_ms=181906 temperature=32.2 humidity=37.1 average_temperature=30.37 average_humidity=62.30 window_count=10 alarms=0
+[2026-10-21 22:15:53.734 +0700] SAMPLE timestamp_ms=182407 temperature=31.3 humidity=66.7 average_temperature=30.03 average_humidity=63.90 window_count=10 alarms=0
+[2026-10-21 22:15:54.234 +0700] SAMPLE timestamp_ms=182907 temperature=25.0 humidity=62.1 average_temperature=30.38 average_humidity=64.36 window_count=10 alarms=1
+[2026-10-21 22:15:54.234 +0700] ALERT timestamp_ms=182907 TYPE: TEMP_SPIKE VALUE: 6.3 THRESHOLD: 5.0
+[2026-10-21 22:15:54.735 +0700] SAMPLE timestamp_ms=183408 temperature=27.0 humidity=65.4 average_temperature=30.31 average_humidity=62.04 window_count=10 alarms=0
+[2026-10-21 22:15:55.236 +0700] SAMPLE timestamp_ms=183909 temperature=16.4 humidity=40.4 average_temperature=30.28 average_humidity=57.83 window_count=10 alarms=1
+[2026-10-21 22:15:55.237 +0700] ALERT timestamp_ms=183909 TYPE: TEMP_SPIKE VALUE: 10.6 THRESHOLD: 5.0
+[2026-10-21 22:15:56.225 +0700] SAMPLE timestamp_ms=184896 temperature=37.2 humidity=89.2 average_temperature=29.66 average_humidity=61.89 window_count=10 alarms=2
+[2026-10-21 22:15:56.226 +0700] ALERT timestamp_ms=184896 TYPE: HUMID_HIGH VALUE: 89.2 THRESHOLD: 80.0
+[2026-10-21 22:15:56.227 +0700] ALERT timestamp_ms=184896 TYPE: TEMP_SPIKE VALUE: 20.8 THRESHOLD: 5.0
+[2026-10-21 22:15:56.724 +0700] SAMPLE timestamp_ms=185396 temperature=33.7 humidity=44.9 average_temperature=29.25 average_humidity=59.78 window_count=10 alarms=0
+[2026-10-21 22:15:57.223 +0700] SAMPLE timestamp_ms=185896 temperature=35.2 humidity=53.5 average_temperature=29.90 average_humidity=61.80 window_count=10 alarms=0
+[2026-10-21 22:15:57.723 +0700] SAMPLE timestamp_ms=186396 temperature=35.8 humidity=39.4 average_temperature=30.57 average_humidity=58.13 window_count=10 alarms=0
+[2026-10-21 22:15:58.223 +0700] SAMPLE timestamp_ms=186896 temperature=35.3 humidity=60.4 average_temperature=30.91 average_humidity=55.91 window_count=10 alarms=0
+[2026-10-21 22:15:58.723 +0700] SAMPLE timestamp_ms=187396 temperature=25.7 humidity=61.4 average_temperature=30.26 average_humidity=58.34 window_count=10 alarms=1
+[2026-10-21 22:15:58.723 +0700] ALERT timestamp_ms=187396 TYPE: TEMP_SPIKE VALUE: 9.6 THRESHOLD: 5.0
+[2026-10-21 22:15:59.224 +0700] SAMPLE timestamp_ms=187896 temperature=35.9 humidity=60.2 average_temperature=30.72 average_humidity=57.69 window_count=10 alarms=1
+[2026-10-21 22:15:59.225 +0700] ALERT timestamp_ms=187896 TYPE: TEMP_SPIKE VALUE: 10.2 THRESHOLD: 5.0
+[2026-10-21 22:15:59.723 +0700] SAMPLE timestamp_ms=188396 temperature=38.4 humidity=71.0 average_temperature=32.06 average_humidity=58.58 window_count=10 alarms=0
+[2026-10-21 22:16:00.223 +0700] SAMPLE timestamp_ms=188896 temperature=36.9 humidity=67.0 average_temperature=33.05 average_humidity=58.74 window_count=10 alarms=0
+[2026-10-21 22:16:00.723 +0700] SAMPLE timestamp_ms=189396 temperature=35.2 humidity=58.2 average_temperature=34.93 average_humidity=60.52 window_count=10 alarms=0
+[2026-10-21 22:16:01.223 +0700] SAMPLE timestamp_ms=189896 temperature=16.0 humidity=50.7 average_temperature=32.81 average_humidity=56.67 window_count=10 alarms=1
+[2026-10-21 22:16:01.224 +0700] ALERT timestamp_ms=189896 TYPE: TEMP_SPIKE VALUE: 19.2 THRESHOLD: 5.0
+[2026-10-21 22:16:01.723 +0700] SAMPLE timestamp_ms=190396 temperature=20.7 humidity=47.4 average_temperature=31.51 average_humidity=56.92 window_count=10 alarms=0
+[2026-10-21 22:16:02.222 +0700] SAMPLE timestamp_ms=190896 temperature=37.3 humidity=37.2 average_temperature=31.72 average_humidity=55.29 window_count=10 alarms=1
+[2026-10-21 22:16:02.223 +0700] ALERT timestamp_ms=190896 TYPE: TEMP_SPIKE VALUE: 16.6 THRESHOLD: 5.0
+[2026-10-21 22:16:02.722 +0700] SAMPLE timestamp_ms=191396 temperature=24.1 humidity=44.3 average_temperature=30.55 average_humidity=55.78 window_count=10 alarms=1
+[2026-10-21 22:16:02.723 +0700] ALERT timestamp_ms=191396 TYPE: TEMP_SPIKE VALUE: 13.2 THRESHOLD: 5.0
+[2026-10-21 22:16:03.223 +0700] SAMPLE timestamp_ms=191896 temperature=30.9 humidity=83.2 average_temperature=30.11 average_humidity=58.06 window_count=10 alarms=2
+[2026-10-21 22:16:03.224 +0700] ALERT timestamp_ms=191896 TYPE: HUMID_HIGH VALUE: 83.2 THRESHOLD: 80.0
+[2026-10-21 22:16:03.224 +0700] ALERT timestamp_ms=191896 TYPE: TEMP_SPIKE VALUE: 6.8 THRESHOLD: 5.0
+[2026-10-21 22:16:03.722 +0700] SAMPLE timestamp_ms=192396 temperature=38.2 humidity=47.5 average_temperature=31.36 average_humidity=56.67 window_count=10 alarms=1
+[2026-10-21 22:16:03.723 +0700] ALERT timestamp_ms=192396 TYPE: TEMP_SPIKE VALUE: 7.3 THRESHOLD: 5.0
+[2026-10-21 22:16:04.223 +0700] SAMPLE timestamp_ms=192896 temperature=18.2 humidity=62.9 average_temperature=29.59 average_humidity=56.94 window_count=10 alarms=1
+[2026-10-21 22:16:04.223 +0700] ALERT timestamp_ms=192896 TYPE: TEMP_SPIKE VALUE: 20.0 THRESHOLD: 5.0
+[2026-10-21 22:16:04.722 +0700] SAMPLE timestamp_ms=193396 temperature=38.6 humidity=64.9 average_temperature=29.61 average_humidity=56.33 window_count=10 alarms=1
+[2026-10-21 22:16:04.723 +0700] ALERT timestamp_ms=193396 TYPE: TEMP_SPIKE VALUE: 20.4 THRESHOLD: 5.0
+[2026-10-21 22:16:05.223 +0700] SAMPLE timestamp_ms=193896 temperature=24.7 humidity=60.7 average_temperature=28.39 average_humidity=55.70 window_count=10 alarms=1
+[2026-10-21 22:16:05.223 +0700] ALERT timestamp_ms=193896 TYPE: TEMP_SPIKE VALUE: 13.9 THRESHOLD: 5.0
+[2026-10-21 22:16:05.723 +0700] SAMPLE timestamp_ms=194396 temperature=43.5 humidity=71.1 average_temperature=29.22 average_humidity=56.99 window_count=10 alarms=2
+[2026-10-21 22:16:05.723 +0700] ALERT timestamp_ms=194396 TYPE: TEMP_HIGH VALUE: 43.5 THRESHOLD: 40.0
+[2026-10-21 22:16:05.724 +0700] ALERT timestamp_ms=194396 TYPE: TEMP_SPIKE VALUE: 18.8 THRESHOLD: 5.0
+[2026-10-21 22:16:06.223 +0700] SAMPLE timestamp_ms=194896 temperature=31.5 humidity=59.5 average_temperature=30.77 average_humidity=57.87 window_count=10 alarms=1
+[2026-10-21 22:16:06.223 +0700] ALERT timestamp_ms=194896 TYPE: TEMP_SPIKE VALUE: 12.0 THRESHOLD: 5.0
+[2026-10-21 22:16:06.724 +0700] SAMPLE timestamp_ms=195396 temperature=15.0 humidity=37.0 average_temperature=30.20 average_humidity=56.83 window_count=10 alarms=1
+[2026-10-21 22:16:06.725 +0700] ALERT timestamp_ms=195396 TYPE: TEMP_SPIKE VALUE: 16.5 THRESHOLD: 5.0
+[2026-10-21 22:16:07.225 +0700] SAMPLE timestamp_ms=195896 temperature=42.3 humidity=60.1 average_temperature=30.70 average_humidity=59.12 window_count=10 alarms=2
+[2026-10-21 22:16:07.225 +0700] ALERT timestamp_ms=195896 TYPE: TEMP_HIGH VALUE: 42.3 THRESHOLD: 40.0
+[2026-10-21 22:16:07.226 +0700] ALERT timestamp_ms=195896 TYPE: TEMP_SPIKE VALUE: 27.3 THRESHOLD: 5.0
+[2026-10-21 22:16:07.724 +0700] SAMPLE timestamp_ms=196396 temperature=20.5 humidity=44.7 average_temperature=30.34 average_humidity=59.16 window_count=10 alarms=1
+[2026-10-21 22:16:07.725 +0700] ALERT timestamp_ms=196396 TYPE: TEMP_SPIKE VALUE: 21.8 THRESHOLD: 5.0
+[2026-10-21 22:16:08.224 +0700] SAMPLE timestamp_ms=196896 temperature=33.0 humidity=41.8 average_temperature=30.55 average_humidity=55.02 window_count=10 alarms=1
+[2026-10-21 22:16:08.225 +0700] ALERT timestamp_ms=196896 TYPE: TEMP_SPIKE VALUE: 12.5 THRESHOLD: 5.0
+[2026-10-21 22:16:08.724 +0700] SAMPLE timestamp_ms=197396 temperature=31.4 humidity=88.2 average_temperature=29.87 average_humidity=59.09 window_count=10 alarms=1
+[2026-10-21 22:16:08.724 +0700] ALERT timestamp_ms=197396 TYPE: HUMID_HIGH VALUE: 88.2 THRESHOLD: 80.0
+[2026-10-21 22:16:09.224 +0700] SAMPLE timestamp_ms=197896 temperature=36.9 humidity=86.4 average_temperature=31.74 average_humidity=61.44 window_count=10 alarms=2
+[2026-10-21 22:16:09.224 +0700] ALERT timestamp_ms=197896 TYPE: HUMID_HIGH VALUE: 86.4 THRESHOLD: 80.0
+[2026-10-21 22:16:09.225 +0700] ALERT timestamp_ms=197896 TYPE: TEMP_SPIKE VALUE: 5.5 THRESHOLD: 5.0
+[2026-10-21 22:16:09.722 +0700] SAMPLE timestamp_ms=198396 temperature=26.6 humidity=64.5 average_temperature=30.54 average_humidity=61.40 window_count=10 alarms=1
+[2026-10-21 22:16:09.723 +0700] ALERT timestamp_ms=198396 TYPE: TEMP_SPIKE VALUE: 10.3 THRESHOLD: 5.0
+[2026-10-21 22:16:10.222 +0700] SAMPLE timestamp_ms=198896 temperature=40.9 humidity=49.8 average_temperature=32.16 average_humidity=60.31 window_count=10 alarms=2
+[2026-10-21 22:16:10.223 +0700] ALERT timestamp_ms=198896 TYPE: TEMP_HIGH VALUE: 40.9 THRESHOLD: 40.0
+[2026-10-21 22:16:10.223 +0700] ALERT timestamp_ms=198896 TYPE: TEMP_SPIKE VALUE: 14.3 THRESHOLD: 5.0
+[2026-10-21 22:16:10.722 +0700] SAMPLE timestamp_ms=199396 temperature=28.6 humidity=37.8 average_temperature=30.67 average_humidity=56.98 window_count=10 alarms=1
+[2026-10-21 22:16:10.723 +0700] ALERT timestamp_ms=199396 TYPE: TEMP_SPIKE VALUE: 12.3 THRESHOLD: 5.0
+[2026-10-21 22:16:11.225 +0700] SAMPLE timestamp_ms=199896 temperature=25.4 humidity=80.9 average_temperature=30.06 average_humidity=59.12 window_count=10 alarms=1
+[2026-10-21 22:16:11.226 +0700] ALERT timestamp_ms=199896 TYPE: HUMID_HIGH VALUE: 80.9 THRESHOLD: 80.0
+[2026-10-21 22:16:11.724 +0700] SAMPLE timestamp_ms=200396 temperature=39.7 humidity=57.7 average_temperature=32.53 average_humidity=61.19 window_count=10 alarms=1
+[2026-10-21 22:16:11.725 +0700] ALERT timestamp_ms=200396 TYPE: TEMP_SPIKE VALUE: 14.3 THRESHOLD: 5.0
+[2026-10-21 22:16:12.224 +0700] SAMPLE timestamp_ms=200896 temperature=39.2 humidity=80.1 average_temperature=32.22 average_humidity=63.19 window_count=10 alarms=1
+[2026-10-21 22:16:12.224 +0700] ALERT timestamp_ms=200896 TYPE: HUMID_HIGH VALUE: 80.1 THRESHOLD: 80.0
+[2026-10-21 22:16:12.727 +0700] SAMPLE timestamp_ms=201397 temperature=31.1 humidity=52.8 average_temperature=33.28 average_humidity=64.00 window_count=10 alarms=1
+[2026-10-21 22:16:12.727 +0700] ALERT timestamp_ms=201397 TYPE: TEMP_SPIKE VALUE: 8.1 THRESHOLD: 5.0
+[2026-10-21 22:16:13.226 +0700] SAMPLE timestamp_ms=201898 temperature=39.2 humidity=42.6 average_temperature=33.90 average_humidity=64.08 window_count=10 alarms=1
+[2026-10-21 22:16:13.227 +0700] ALERT timestamp_ms=201898 TYPE: TEMP_SPIKE VALUE: 8.1 THRESHOLD: 5.0
+[2026-10-21 22:16:13.727 +0700] SAMPLE timestamp_ms=202399 temperature=32.2 humidity=34.2 average_temperature=33.98 average_humidity=58.68 window_count=10 alarms=1
+[2026-10-21 22:16:13.728 +0700] ALERT timestamp_ms=202399 TYPE: TEMP_SPIKE VALUE: 7.0 THRESHOLD: 5.0
+[2026-10-21 22:16:14.228 +0700] SAMPLE timestamp_ms=202900 temperature=35.9 humidity=39.7 average_temperature=33.88 average_humidity=54.01 window_count=10 alarms=0
+[2026-10-21 22:16:14.729 +0700] SAMPLE timestamp_ms=203400 temperature=23.8 humidity=48.7 average_temperature=33.60 average_humidity=52.43 window_count=10 alarms=1
+[2026-10-21 22:16:14.729 +0700] ALERT timestamp_ms=203400 TYPE: TEMP_SPIKE VALUE: 12.1 THRESHOLD: 5.0
+[2026-10-21 22:16:15.228 +0700] SAMPLE timestamp_ms=203900 temperature=41.0 humidity=78.3 average_temperature=33.61 average_humidity=55.28 window_count=10 alarms=2
+[2026-10-21 22:16:15.229 +0700] ALERT timestamp_ms=203900 TYPE: TEMP_HIGH VALUE: 41.0 THRESHOLD: 40.0
+[2026-10-21 22:16:15.229 +0700] ALERT timestamp_ms=203900 TYPE: TEMP_SPIKE VALUE: 17.2 THRESHOLD: 5.0
+[2026-10-21 22:16:15.330 +0700] PROCESSOR stopped: processed=118
+[2026-10-21 22:16:15.332 +0700] ALERT stopped: TEMP_HIGH=16 HUMID_HIGH=25 TEMP_SPIKE=77
+[2026-10-21 22:16:15.332 +0700] LOGGER stopped
+
+=== EXPORT END sms_60s.log ===
+
+=== EXPORT BEGIN sms_memory_5s.txt ===
+Name:	sms_app
+Pid:	81
+VmSize:	    4632 kB
+VmLck:	    4620 kB
+VmRSS:	    3480 kB
+Threads:	5
+
+=== EXPORT END sms_memory_5s.txt ===
+
+=== EXPORT BEGIN sms_memory_30s.txt ===
+Name:	sms_app
+Pid:	81
+VmSize:	    4632 kB
+VmLck:	    4620 kB
+VmRSS:	    3480 kB
+Threads:	5
+
+=== EXPORT END sms_memory_30s.txt ===
+
+=== EXPORT BEGIN sms_memory_55s.txt ===
+Name:	sms_app
+Pid:	81
+VmSize:	    4632 kB
+VmLck:	    4620 kB
+VmRSS:	    3480 kB
+Threads:	5
+
+=== EXPORT END sms_memory_55s.txt ===
+
+=== EXPORT BEGIN sms_stats_before.txt ===
+read_count=0
+has_sample=0
+last_temperature=0.0
+last_humidity=0.0
+interval_ms=100
+uptime_seconds=0
+
+=== EXPORT END sms_stats_before.txt ===
+
+=== EXPORT BEGIN sms_stats_5s.txt ===
+read_count=10
+has_sample=1
+last_temperature=22.7
+last_humidity=35.2
+interval_ms=500
+uptime_seconds=5
+
+=== EXPORT END sms_stats_5s.txt ===
+
+=== EXPORT BEGIN sms_stats_30s.txt ===
+read_count=59
+has_sample=1
+last_temperature=30.9
+last_humidity=55.3
+interval_ms=500
+uptime_seconds=30
+
+=== EXPORT END sms_stats_30s.txt ===
+
+=== EXPORT BEGIN sms_stats_55s.txt ===
+read_count=108
+has_sample=1
+last_temperature=40.9
+last_humidity=49.8
+interval_ms=500
+uptime_seconds=55
+
+=== EXPORT END sms_stats_55s.txt ===
+
+=== EXPORT BEGIN sms_stats_after.txt ===
+read_count=118
+has_sample=1
+last_temperature=41.0
+last_humidity=78.3
+interval_ms=500
+uptime_seconds=61
+
+=== EXPORT END sms_stats_after.txt ===
+
+=== EXPORT BEGIN sms_maps_5s.txt ===
+00010000-00015000 r-xp 00000000 00:02 200        /usr/bin/sms_app
+00015000-00016000 r--p 00004000 00:02 200        /usr/bin/sms_app
+00016000-00017000 rw-p 00005000 00:02 200        /usr/bin/sms_app
+00017000-00038000 rw-p 00000000 00:00 0          [heap]
+76bbf000-76bc0000 ---p 00000000 00:00 0 
+76bc0000-76c21000 rw-p 00000000 00:00 0 
+76c21000-76d01000 ---p 00000000 00:00 0 
+76d01000-76d41000 rw-p 00000000 00:00 0 
+76d41000-76d42000 ---p 00000000 00:00 0 
+76d42000-76d82000 rw-p 00000000 00:00 0 
+76d82000-76d83000 ---p 00000000 00:00 0 
+76d83000-76e87000 rw-p 00000000 00:00 0 
+76e87000-76f89000 r-xp 00000000 00:02 188        /lib/libc.so.6
+76f89000-76f8b000 r--p 00101000 00:02 188        /lib/libc.so.6
+76f8b000-76f8c000 rw-p 00103000 00:02 188        /lib/libc.so.6
+76f8c000-76f96000 rw-p 00000000 00:00 0 
+76f96000-76fd6000 r-xp 00000000 00:02 185        /lib/libm.so.6
+76fd6000-76fd7000 r--p 0003f000 00:02 185        /lib/libm.so.6
+76fd7000-76fd8000 rw-p 00040000 00:02 185        /lib/libm.so.6
+76fd8000-76fda000 rw-p 00000000 00:00 0 
+76fda000-76ff6000 r-xp 00000000 00:02 189        /lib/ld-linux-armhf.so.3
+76ff6000-76ff8000 r--p 0001b000 00:02 189        /lib/ld-linux-armhf.so.3
+76ff8000-76ff9000 rw-p 0001d000 00:02 189        /lib/ld-linux-armhf.so.3
+7eedc000-7eefd000 rw-p 00000000 00:00 0          [stack]
+7ef50000-7ef51000 r-xp 00000000 00:00 0          [sigpage]
+7ef51000-7ef52000 r--p 00000000 00:00 0          [vvar]
+7ef52000-7ef53000 r-xp 00000000 00:00 0          [vdso]
+ffff0000-ffff1000 r-xp 00000000 00:00 0          [vectors]
+
+=== EXPORT END sms_maps_5s.txt ===
+/ # python3 - <<'PY'
+> from pathlib import Path
+> import re
+> 
+> folder = Path.home() / "assignment02/logs"
+> source = folder / "qemu_application_stage1.txt"
+> 
+> text = source.read_text(errors="replace")
+> text = re.sub(r"\x1b\[[0-?]*[ -/]*[@-~]", "", text)
+> text = text.replace("\r", "")
+> 
+> expected = {
+>     "sms_60s_output.txt",
+>     "sms_60s.log",
+>     "sms_memory_5s.txt",
+>     "sms_memory_30s.txt",
+>     "sms_memory_55s.txt",
+>     "sms_stats_before.txt",
+>     "sms_stats_5s.txt",
+>     "sms_stats_30s.txt",
+>     "sms_stats_55s.txt",
+>     "sms_stats_after.txt",
+>     "sms_maps_5s.txt",
+> }
+> 
+> pattern = (
+>     r"^=== EXPORT BEGIN ([A-Za-z0-9_.]+) ===\n"
+>     r"(.*?)"
+>     r"^=== EXPORT END \1 ===[ \t]*$"
+> )
+> 
+> found = dict(re.findall(pattern, text, re.MULTILINE | re.DOTALL))
+> missing = expected - found.keys()
+> 
+> if missing:
+>     raise SystemExit(
+>         "Chua du du lieu export: " + ", ".join(sorted(missing))
+>     )
+> 
+> destination = folder / "qemu_stage1"
+> destination.mkdir(exist_ok=True)
+> 
+> for name in sorted(expected):
+>     content = found[name]
+>     if content.endswith("\n\n"):
+>         content = content[:-1]
+>     (destination / name).write_text(content)
+>     print("Da luu:", name)
+> 
+> print("=== SAVED ALL 11 FILES ===")
+> print("Thu muc:", destination)
+> PY
+-/bin/sh: python3: not found
+/ # python3 - <<'PY'
+> from pathlib import Path
+> import re
+> 
+> folder = Path.home() / "assignment02/logs"
+> source = folder / "qemu_application_stage1.txt"
+> 
+> text = source.read_text(errors="replace")
+> text = re.sub(r"\x1b\[[0-?]*[ -/]*[@-~]", "", text)
+> text = text.replace("\r", "")
+> 
+> expected = {
+>     "sms_60s_output.txt",
+>     "sms_60s.log",
+>     "sms_memory_5s.txt",
+>     "sms_memory_30s.txt",
+>     "sms_memory_55s.txt",
+>     "sms_stats_before.txt",
+>     "sms_stats_5s.txt",
+>     "sms_stats_30s.txt",
+>     "sms_stats_55s.txt",
+>     "sms_stats_after.txt",
+>     "sms_maps_5s.txt",
+> }
+> 
+> pattern = (
+>     r"^=== EXPORT BEGIN ([A-Za-z0-9_.]+) ===\n"
+>     r"(.*?)"
+>     r"^=== EXPORT END \1 ===[ \t]*$"
+> )
+> 
+> found = dict(re.findall(pattern, text, re.MULTILINE | re.DOTALL))
+> missing = expected - found.keys()
+> 
+> if missing:
+>     raise SystemExit(
+>         "Chua du du lieu export: " + ", ".join(sorted(missing))
+>     )
+> 
+> destination = folder / "qemu_stage1"
+> destination.mkdir(exist_ok=True)
+> 
+> for name in sorted(expected):
+>     content = found[name]
+>     if content.endswith("\n\n"):
+>         content = content[:-1]
+>     (destination / name).write_text(content)
+>     print("Da luu:", name)
+> 
+> print("=== SAVED ALL 11 FILES ===")
+> print("Thu muc:", destination)
+> PY
+-/bin/sh: python3: not found
+/ # QEMU: Terminated
+
+Script done on 2026-10-21 22:23:19+07:00 [COMMAND_EXIT_CODE="0"]

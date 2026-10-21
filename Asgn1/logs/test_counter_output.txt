@@ -1,0 +1,93 @@
+=== COUNTER SCRIPT START ===
+
+counter_driver: loading out-of-tree module taints kernel.
+
+counter_driver: loaded, major=10, minor=125
+
+crw-------    1 root     0          10, 125 Oct 21 05:55 /dev/counter
+
+[1] Initial state
+
+counter=0
+
+total_reads=0
+
+total_writes=0
+
+[2] Three reads and EOF
+
+counter_driver: read 2 bytes, counter=1
+
+read=0; expected=0
+
+counter_driver: read 2 bytes, counter=2
+
+read=1; expected=1
+
+counter_driver: read 2 bytes, counter=3
+
+read=2; expected=2
+
+counter=3
+
+total_reads=3
+
+total_writes=0
+
+[3] Write 10
+
+counter_driver: write value=10, total_writes=1
+
+counter=10
+
+total_reads=3
+
+total_writes=1
+
+counter_driver: read 3 bytes, counter=11
+
+read=10; expected=10
+
+counter=11
+
+total_reads=4
+
+total_writes=1
+
+[4] Reject negative and invalid input
+
+OK: negative input rejected
+
+OK: text input rejected
+
+counter=11
+
+total_reads=4
+
+total_writes=1
+
+[5] Reset to zero
+
+counter_driver: write value=0, total_writes=2
+
+counter=0
+
+total_reads=4
+
+total_writes=2
+
+counter_driver: read 2 bytes, counter=1
+
+read=0; expected=0
+
+counter=1
+
+total_reads=5
+
+total_writes=2
+
+[6] Unload and cleanup
+
+counter_driver: unloaded
+
+=== COUNTER SCRIPT PASSED ===

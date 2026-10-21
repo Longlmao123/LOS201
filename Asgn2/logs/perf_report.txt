@@ -1,0 +1,443 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 59  of event 'cpu-clock'
+# Event count (approx.): 59059059
+#
+# Overhead  Command       Shared Object      Symbol                               
+# ........  ............  .................  .....................................
+#
+    11.86%  sms_app_host  libc.so.6          [.] __syscall_cancel_arch_end
+            |          
+             --3.39%--__syscall_cancel_arch (inlined)
+                       __internal_syscall_cancel (inlined)
+                       __syscall_cancel
+                       __sigtimedwait
+                       wait_for_stop (inlined)
+                       main
+                       __libc_start_call_main
+                       __libc_start_main_impl (inlined)
+                       _start
+
+     8.47%  sms_app_host  [kernel.kallsyms]  [k] _raw_spin_unlock_irqrestore
+            |
+            ---_raw_spin_unlock_irqrestore
+               |          
+               |--5.08%--try_to_wake_up
+               |          wake_up_q
+               |          do_mq_timedsend
+               |          __x64_sys_mq_timedsend
+               |          x64_sys_call
+               |          do_syscall_64
+               |          entry_SYSCALL_64_after_hwframe
+               |          
+               |--1.69%--hrtimer_start_range_ns
+               |          do_nanosleep
+               |          hrtimer_nanosleep
+               |          common_nsleep_timens
+               |          __x64_sys_clock_nanosleep
+               |          x64_sys_call
+               |          do_syscall_64
+               |          entry_SYSCALL_64_after_hwframe
+               |          
+                --1.69%--__wake_up
+                          fsnotify_insert_event
+                          fanotify_handle_event
+                          send_to_group
+                          fsnotify
+                          __fsnotify_parent
+                          vfs_write
+                          ksys_write
+                          __x64_sys_write
+                          x64_sys_call
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+
+     6.78%  sms_app_host  [kernel.kallsyms]  [k] finish_task_switch.isra.0
+            |
+            ---finish_task_switch.isra.0
+               __schedule
+               schedule
+               |          
+               |--3.39%--schedule_hrtimeout_range_clock
+               |          |          
+               |          |--1.69%--schedule_hrtimeout_range
+               |          |          do_sigtimedwait.isra.0
+               |          |          __x64_sys_rt_sigtimedwait
+               |          |          x64_sys_call
+               |          |          do_syscall_64
+               |          |          entry_SYSCALL_64_after_hwframe
+               |          |          __syscall_cancel_arch (inlined)
+               |          |          __internal_syscall_cancel (inlined)
+               |          |          __syscall_cancel
+               |          |          __sigtimedwait
+               |          |          wait_for_stop (inlined)
+               |          |          main
+               |          |          __libc_start_call_main
+               |          |          __libc_start_main_impl (inlined)
+               |          |          _start
+               |          |          
+               |           --1.69%--wq_sleep
+               |                     do_mq_timedreceive
+               |                     __x64_sys_mq_timedreceive
+               |                     x64_sys_call
+               |                     do_syscall_64
+               |                     entry_SYSCALL_64_after_hwframe
+               |          
+                --3.39%--do_nanosleep
+                          hrtimer_nanosleep
+                          common_nsleep_timens
+                          __x64_sys_clock_nanosleep
+                          x64_sys_call
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+
+     5.08%  sms_app_host  [kernel.kallsyms]  [k] get_timespec64
+            |
+            ---get_timespec64
+               |          
+               |--3.39%--x64_sys_call
+               |          do_syscall_64
+               |          entry_SYSCALL_64_after_hwframe
+               |          |          
+               |           --1.69%--__syscall_cancel_arch (inlined)
+               |                     __internal_syscall_cancel (inlined)
+               |                     __syscall_cancel
+               |                     __sigtimedwait
+               |                     wait_for_stop (inlined)
+               |                     main
+               |                     __libc_start_call_main
+               |                     __libc_start_main_impl (inlined)
+               |                     _start
+               |          
+                --1.69%--__x64_sys_mq_timedreceive
+                          x64_sys_call
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+
+     5.08%  sms_app_host  libc.so.6          [.] __syscall_cancel
+            |          
+            |--3.39%--__internal_syscall_cancel (inlined)
+            |          __syscall_cancel
+            |          __sigtimedwait
+            |          wait_for_stop (inlined)
+            |          main
+            |          __libc_start_call_main
+            |          __libc_start_main_impl (inlined)
+            |          _start
+            |          
+             --1.69%--__syscall_cancel
+                       __sigtimedwait
+                       wait_for_stop (inlined)
+                       main
+                       __libc_start_call_main
+                       __libc_start_main_impl (inlined)
+                       _start
+
+     3.39%  sms_app_host  [kernel.kallsyms]  [k] schedule_hrtimeout_range_clock
+            |
+            ---schedule_hrtimeout_range_clock
+               |          
+               |--1.69%--do_mq_timedreceive
+               |          __x64_sys_mq_timedreceive
+               |          x64_sys_call
+               |          do_syscall_64
+               |          entry_SYSCALL_64_after_hwframe
+               |          
+                --1.69%--wq_sleep
+                          do_mq_timedreceive
+                          __x64_sys_mq_timedreceive
+                          x64_sys_call
+                          do_syscall_64
+                          entry_SYSCALL_64_after_hwframe
+
+     3.39%  sms_app_host  libc.so.6          [.] __errno_location
+            |
+            ---__errno_location
+               wait_for_stop (inlined)
+               main
+               __libc_start_call_main
+               __libc_start_main_impl (inlined)
+               _start
+
+     3.39%  sms_app_host  libc.so.6          [.] __vfscanf_internal
+     3.39%  sms_app_host  libc.so.6          [.] clock_nanosleep@GLIBC_2.2.5
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] __kmalloc_node_noprof
+            |
+            ---__kmalloc_node_noprof
+               load_msg
+               do_mq_timedsend
+               __x64_sys_mq_timedsend
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] __x64_sys_clock_nanosleep
+            |
+            ---__x64_sys_clock_nanosleep
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] _copy_from_user
+            |
+            ---_copy_from_user
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __syscall_cancel_arch (inlined)
+               __internal_syscall_cancel (inlined)
+               __syscall_cancel
+               __sigtimedwait
+               wait_for_stop (inlined)
+               main
+               __libc_start_call_main
+               __libc_start_main_impl (inlined)
+               _start
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] _raw_spin_unlock_irq
+            |
+            ---_raw_spin_unlock_irq
+               run_timer_softirq
+               handle_softirqs
+               __irq_exit_rcu
+               irq_exit_rcu
+               sysvec_apic_timer_interrupt
+               asm_sysvec_apic_timer_interrupt
+               mod_memcg_lruvec_state
+               drain_obj_stock
+               refill_obj_stock
+               __memcg_slab_free_hook
+               kfree
+               free_msg
+               do_mq_timedreceive
+               __x64_sys_mq_timedreceive
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] common_nsleep_timens
+            |
+            ---common_nsleep_timens
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] do_sigtimedwait.isra.0
+            |
+            ---do_sigtimedwait.isra.0
+               __x64_sys_rt_sigtimedwait
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __syscall_cancel_arch (inlined)
+               __internal_syscall_cancel (inlined)
+               __syscall_cancel
+               __sigtimedwait
+               wait_for_stop (inlined)
+               main
+               __libc_start_call_main
+               __libc_start_main_impl (inlined)
+               _start
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] drain_obj_stock
+            |
+            ---drain_obj_stock
+               refill_obj_stock
+               obj_cgroup_charge_account
+               __memcg_slab_post_alloc_hook
+               __kmalloc_node_noprof
+               load_msg
+               do_mq_timedsend
+               __x64_sys_mq_timedsend
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] ext4_do_update_inode.isra.0
+            |
+            ---ext4_do_update_inode.isra.0
+               ext4_mark_iloc_dirty
+               __ext4_mark_inode_dirty
+               ext4_dirty_inode
+               __mark_inode_dirty
+               file_update_time_flags
+               file_modified
+               ext4_buffered_write_iter
+               ext4_file_write_iter
+               vfs_write
+               ksys_write
+               __x64_sys_write
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] futex_do_wait
+            |
+            ---futex_do_wait
+               futex_wait
+               do_futex
+               __x64_sys_futex
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] generic_encode_ino32_fh
+            |
+            ---generic_encode_ino32_fh
+               exportfs_encode_inode_fh
+               fanotify_alloc_name_event.constprop.0
+               fanotify_alloc_event
+               fanotify_handle_event
+               send_to_group
+               fsnotify
+               __fsnotify_parent
+               vfs_write
+               ksys_write
+               __x64_sys_write
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] hrtimer_nanosleep
+            |
+            ---hrtimer_nanosleep
+               common_nsleep_timens
+               __x64_sys_clock_nanosleep
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] jbd2_journal_dirty_metadata
+            |
+            ---jbd2_journal_dirty_metadata
+               __ext4_handle_dirty_metadata
+               ext4_do_update_inode.isra.0
+               ext4_mark_iloc_dirty
+               __ext4_mark_inode_dirty
+               ext4_dirty_inode
+               __mark_inode_dirty
+               file_update_time_flags
+               file_modified
+               ext4_buffered_write_iter
+               ext4_file_write_iter
+               vfs_write
+               ksys_write
+               __x64_sys_write
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] kfree
+            |
+            ---kfree
+               security_msg_msg_free
+               free_msg
+               do_mq_timedreceive
+               __x64_sys_mq_timedreceive
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] lockref_get_not_zero
+            |
+            ---lockref_get_not_zero
+               __fsnotify_parent
+               vfs_write
+               ksys_write
+               __x64_sys_write
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] mas_walk
+            |
+            ---mas_walk
+               lock_vma_under_rcu
+               madvise_walk_vmas
+               madvise_do_behavior
+               do_madvise
+               __x64_sys_madvise
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] mod_memcg_state
+            |
+            ---mod_memcg_state
+               obj_cgroup_uncharge_pages
+               refill_obj_stock
+               __memcg_slab_free_hook
+               kfree
+               free_msg
+               do_mq_timedreceive
+               __x64_sys_mq_timedreceive
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] msg_get
+            |
+            ---msg_get
+               do_mq_timedreceive
+               __x64_sys_mq_timedreceive
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] wq_sleep
+            |
+            ---wq_sleep
+               do_mq_timedreceive
+               __x64_sys_mq_timedreceive
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+
+     1.69%  sms_app_host  [kernel.kallsyms]  [k] x64_sys_call
+            |
+            ---x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __syscall_cancel_arch (inlined)
+               __internal_syscall_cancel (inlined)
+               __syscall_cancel
+               __sigtimedwait
+               wait_for_stop (inlined)
+               main
+               __libc_start_call_main
+               __libc_start_main_impl (inlined)
+               _start
+
+     1.69%  sms_app_host  libc.so.6          [.] __GI___nptl_deallocate_stack
+            |
+            ---__nptl_deallocate_stack (inlined)
+               __pthread_clockjoin_ex
+               join_worker
+               main
+               __libc_start_call_main
+               __libc_start_main_impl (inlined)
+               _start
+
+     1.69%  sms_app_host  libc.so.6          [.] __internal_syscall_cancel
+     1.69%  sms_app_host  libc.so.6          [.] __printf_buffer
+     1.69%  sms_app_host  libc.so.6          [.] __strchrnul_avx2
+     1.69%  sms_app_host  libc.so.6          [.] __syscall_cancel_arch
+     1.69%  sms_app_host  libc.so.6          [.] __tzfile_compute
+     1.69%  sms_app_host  libc.so.6          [.] _itoa_word
+     1.69%  sms_app_host  libc.so.6          [.] pthread_mutex_lock@@GLIBC_2.2.5
+     1.69%  sms_app_host  libc.so.6          [.] pthread_mutex_unlock@@GLIBC_2.2.5
+     1.69%  sms_app_host  sms_app_host       [.] main
+            |
+            ---wait_for_stop (inlined)
+               main
+               __libc_start_call_main
+               __libc_start_main_impl (inlined)
+               _start
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

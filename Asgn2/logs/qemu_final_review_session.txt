@@ -1,0 +1,432 @@
+Script started on 2026-10-22 01:17:06+07:00 [COMMAND="qemu-system-arm -M vexpress-a9 -cpu cortex-a9 -m 512M -smp 2 -nographic -kernel /home/long/assignment02/output/zImage -dtb /home/long/assignment02/output/vexpress-v2p-ca9.dtb -initrd /home/long/assignment02/output/initramfs_asgn2.cpio.gz -append 'console=ttyAMA0,115200 rdinit=/sbin/init mem=512M'" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="97" LINES="50"]
+Booting Linux on physical CPU 0x0
+Linux version 5.15.0 (long@long-ASUS-TUF-Gaming-F15-FX507ZC4-FX507ZC4) (arm-none-linux-gnueabihf-gcc (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 13.2.1 20231009, GNU ld (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 2.41.0.20231009) #2 SMP Wed Oct 21 16:42:43 +07 2026
+CPU: ARMv7 Processor [410fc090] revision 0 (ARMv7), cr=10c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+OF: fdt: Machine model: V2P-CA9
+Memory policy: Data cache writealloc
+Reserved memory: created DMA memory pool at 0x4c000000, size 8 MiB
+OF: reserved mem: initialized node vram@4c000000, compatible id shared-dma-pool
+cma: Reserved 16 MiB at 0x7f000000
+Zone ranges:
+  Normal   [mem 0x0000000060000000-0x000000007fffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000060000000-0x000000007fffffff]
+Initmem setup node 0 [mem 0x0000000060000000-0x000000007fffffff]
+percpu: Embedded 15 pages/cpu s30412 r8192 d22836 u61440
+Built 1 zonelists, mobility grouping on.  Total pages: 130048
+Kernel command line: console=ttyAMA0,115200 rdinit=/sbin/init mem=512M
+printk: log_buf_len individual max cpu contribution: 4096 bytes
+printk: log_buf_len total cpu_extra contributions: 12288 bytes
+printk: log_buf_len min size: 16384 bytes
+printk: log_buf_len: 32768 bytes
+printk: early log buf free: 14896(90%)
+Dentry cache hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Inode-cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+Memory: 482364K/524288K available (8192K kernel code, 594K rwdata, 1768K rodata, 1024K init, 150K bss, 25540K reserved, 16384K cma-reserved)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+trace event string verifier disabled
+rcu: Hierarchical RCU implementation.
+rcu: 	RCU event tracing is enabled.
+rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+L2C: platform modifies aux control register: 0x02020000 -> 0x02420000
+L2C: DT/platform modifies aux control register: 0x02020000 -> 0x02420000
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 dynamic clock gating disabled, standby mode disabled
+L2C-310 cache controller enabled, 8 ways, 128 kB
+L2C-310: CACHE_ID 0x410000c8, AUX_CTRL 0x46420001
+random: get_random_bytes called from start_kernel+0x4fc/0x6b0 with crng_init=0
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+clocksource: arm,sp804: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+Failed to initialize '/bus@40000000/motherboard-bus@40000000/iofpga@7,00000000/timer@12000': -22
+smp_twd: clock not found -2
+Console: colour dummy device 80x30
+Calibrating local timer... 95.78MHz.
+Calibrating delay loop... 1948.05 BogoMIPS (lpj=9740288)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+CPU: Testing write buffer coherency: ok
+CPU0: Spectre v2: using BPIALL workaround
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x60100000 - 0x60100060
+rcu: Hierarchical SRCU implementation.
+smp: Bringing up secondary CPUs ...
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU1: Spectre v2: using BPIALL workaround
+CPU2: failed to boot: -38
+CPU3: failed to boot: -38
+smp: Brought up 1 node, 2 CPUs
+SMP: Total of 2 processors activated (3928.88 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 0
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+NET: Registered PF_NETLINK/PF_ROUTE protocol family
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor ladder
+hw-breakpoint: debug architecture 0x4 unsupported.
+Serial: AMBA PL011 UART driver
+irq: type mismatch, failed to map hwirq-75 for interrupt-controller@1e001000!
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource arm,sp804
+NET: Registered PF_INET protocol family
+IP idents hash table entries: 8192 (order: 4, 65536 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes, linear)
+TCP established hash table entries: 4096 (order: 2, 16384 bytes, linear)
+TCP bind hash table entries: 4096 (order: 3, 32768 bytes, linear)
+TCP: Hash tables configured (established 4096 bind 4096)
+UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+NET: Registered PF_UNIX/PF_LOCAL protocol family
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Unpacking initramfs...
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+workingset: timestamp_bits=30 max_order=17 bucket_order=0
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+9p: Installing v9fs 9p2000 file system support
+io scheduler mq-deadline registered
+io scheduler kyber registered
+sii902x 0-0060: supply iovcc not found, using dummy regulator
+sii902x 0-0060: supply cvcc12 not found, using dummy regulator
+Freeing initrd memory: 8516K
+physmap-flash 40000000.flash: physmap platform flash device: [mem 0x40000000-0x43ffffff]
+40000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+physmap-flash 40000000.flash: physmap platform flash device: [mem 0x44000000-0x47ffffff]
+40000000.flash: Found 2 x16 devices at 0x0 in 32-bit bank. Manufacturer ID 0x000000 Chip ID 0x000000
+Intel/Sharp Extended Query Table at 0x0031
+Using buffer write method
+Concatenating MTD devices:
+(0): "40000000.flash"
+(1): "40000000.flash"
+into device "40000000.flash"
+physmap-flash 48000000.psram: physmap platform flash device: [mem 0x48000000-0x49ffffff]
+libphy: Fixed MDIO Bus: probed
+libphy: smsc911x-mdio: probed
+smsc911x 4e000000.ethernet eth0: MAC Address: 52:54:00:12:34:56
+isp1760 4f000000.usb: isp1760 bus width: 32, oc: digital
+isp1760 4f000000.usb: NXP ISP1760 USB Host Controller
+isp1760 4f000000.usb: new USB bus registered, assigned bus number 1
+isp1760 4f000000.usb: Scratch test failed. 0x00000000
+isp1760 4f000000.usb: can't setup: -19
+isp1760 4f000000.usb: USB bus 1 deregistered
+usbcore: registered new interface driver usb-storage
+ledtrig-cpu: registered to indicate activity on CPUs
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+NET: Registered PF_PACKET protocol family
+9pnet: Installing 9P2000 support
+Registering SWP/SWPB emulation handler
+aaci-pl041 10004000.aaci: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+aaci-pl041 10004000.aaci: FIFO 512 entries
+mmci-pl18x 10005000.mmci: Got CD GPIO
+mmci-pl18x 10005000.mmci: Got WP GPIO
+mmci-pl18x 10005000.mmci: mmc0: PL181 manf 41 rev0 at 0x10005000 irq 33,34 (pio)
+10009000.uart: ttyAMA0 at MMIO 0x10009000 (irq = 37, base_baud = 0) is a PL011 rev1
+printk: console [ttyAMA0] enabled
+1000a000.uart: ttyAMA1 at MMIO 0x1000a000 (irq = 38, base_baud = 0) is a PL011 rev1
+1000b000.uart: ttyAMA2 at MMIO 0x1000b000 (irq = 39, base_baud = 0) is a PL011 rev1
+1000c000.uart: ttyAMA3 at MMIO 0x1000c000 (irq = 40, base_baud = 0) is a PL011 rev1
+rtc-pl031 10017000.rtc: registered as rtc0
+rtc-pl031 10017000.rtc: setting system clock to 2026-10-21T18:17:09 UTC (1792606629)
+amba 10020000.clcd: Fixing up cyclic dependency with 0-0039
+drm-clcd-pl111 10020000.clcd: DVI muxed to daughterboard 1 (core tile) CLCD
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+sii902x 0-0039: supply iovcc not found, using dummy regulator
+sii902x 0-0039: supply cvcc12 not found, using dummy regulator
+i2c i2c-0: Added multiplexed i2c bus 2
+drm-clcd-pl111 1001f000.clcd: assigned reserved memory node vram@4c000000
+drm-clcd-pl111 1001f000.clcd: using device-specific reserved memory
+drm-clcd-pl111 1001f000.clcd: core tile graphics present
+drm-clcd-pl111 1001f000.clcd: this device will be deactivated
+drm-clcd-pl111 1001f000.clcd: Versatile Express init failed - -19
+drm-clcd-pl111 10020000.clcd: DVI muxed to daughterboard 1 (core tile) CLCD
+drm-clcd-pl111 10020000.clcd: initializing Versatile Express PL111
+drm-clcd-pl111 10020000.clcd: found bridge on endpoint 0
+drm-clcd-pl111 10020000.clcd: Using non-panel bridge
+[drm] Initialized pl111 1.0.0 20170317 for 10020000.clcd on minor 0
+input: AT Raw Set 2 keyboard as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10006000.kmi/serio0/input/input0
+Console: switching to colour frame buffer device 128x48
+drm-clcd-pl111 10020000.clcd: [drm] fb0: pl111 frame buffer device
+ALSA device list:
+  #0: ARM AC'97 Interface PL041 rev0 at 0x10004000, irq 32
+Freeing unused kernel image (initmem) memory: 1024K
+Run /sbin/init as init process
+[ ASGN-02 ] Starting initialization
+[ ASGN-02 ] Initialization complete
+[ ASGN-02 ] Drivers will be loaded by test scripts
+
+Please press Enter to activate this console. input: ImExPS/2 Generic Explorer Mouse as /devices/platform/bus@40000000/bus@40000000:motherboard-bus@40000000/bus@40000000:motherboard-bus@40000000:iofpga@7,00000000/10007000.kmi/serio1/input/input2
+random: fast init done
+
+/ # (
+> set -e
+> 
+> insmod /lib/modules/$(uname -r)/sms_sensor_driver.ko
+> 
+> cat /proc/sms_stats > /tmp/sms_final_stats_before.txt
+> 
+> sms_app --fifo -i 500 -d 60 \
+>     --log /tmp/sms_final.log \
+>     > /tmp/sms_final_output.txt 2>&1 &
+> 
+> app_pid=$!
+> trap 'kill -TERM "$app_pid" 2>/dev/null || true' EXIT
+> 
+> sleep 5
+> cat /proc/$app_pid/status > /tmp/sms_final_memory_5s.txt
+> cat /proc/$app_pid/maps > /tmp/sms_final_maps_5s.txt
+> 
+> sleep 25
+> cat /proc/$app_pid/status > /tmp/sms_final_memory_30s.txt
+> 
+> sleep 25
+> cat /proc/$app_pid/status > /tmp/sms_final_memory_55s.txt
+> 
+> if wait "$app_pid"; then
+>     app_status=0
+> else
+>     app_status=$?
+> fi
+> trap - EXIT
+> 
+> cat /proc/sms_stats > /tmp/sms_final_stats_after.txt
+> 
+> echo "=== FINAL ARM RESULT ==="
+> echo "APP_EXIT_CODE=$app_status"
+> head -n 5 /tmp/sms_final_output.txt
+> tail -n 28 /tmp/sms_final_output.txt
+> 
+> echo "=== DRIVER STATS ==="
+> cat /tmp/sms_final_stats_after.txt
+> 
+> echo "=== SENSOR FILE LOG ==="
+> grep 'SENSOR' /tmp/sms_final.log
+> )
+sms_sensor_driver: loading out-of-tree module taints kernel.
+sms_sensor: device and procfs registered
+sms_sensor: interval set to 500 ms
+
+=== FINAL ARM RESULT ===
+APP_EXIT_CODE=0
+[MAIN] mlockall OK
+[MAIN] mode=DRIVER policy=FIFO interval=500 ms duration=60 s log=/tmp/sms_final.log
+[SENSOR] policy=FIFO priority=50 mode=DRIVER
+[ALERT][18770] TYPE: TEMP_HIGH VALUE: 40.7 THRESHOLD: 40.0
+[ALERT][18770] TYPE: TEMP_SPIKE VALUE: 21.7 THRESHOLD: 5.0
+[ALERT][76814] TYPE: TEMP_SPIKE VALUE: 13.9 THRESHOLD: 5.0
+[MAIN] duration reached
+[SENSOR] stopped: samples=119 skipped_periods=0
+[PROCESSOR] stopped: processed=119
+[ALERT] stopped: TEMP_HIGH=25 HUMID_HIGH=17 TEMP_SPIKE=77
+[LOGGER] stopped
+[JITTER] mode=DRIVER policy=FIFO interval_ms=500 samples=119 file=/tmp/sms_final.log.jitter.csv
+[MAIN] exit_code=0
+
+=== SMS SUMMARY ===
+mode=DRIVER policy=FIFO interval_ms=500
+uptime_ms=60030
+samples_read=119
+sensor_read_errors=0
+sensor_eagain_retries=1709
+sensor_interrupted_reads=0
+sensor_deferred_samples=0
+samples_processed=119
+total_produced=119
+total_consumed=119
+overflow_count=0
+buffer_remaining=0
+TEMP_HIGH=25
+HUMID_HIGH=17
+TEMP_SPIKE=77
+jitter_samples=119 capacity=100000
+fatal_error=0
+=== SMS END ===
+=== DRIVER STATS ===
+read_count=119
+has_sample=1
+last_temperature=20.9
+last_humidity=77.0
+interval_ms=500
+uptime_seconds=60
+=== SENSOR FILE LOG ===
+[2026-10-21 18:17:24.042 +0000] SENSOR started: policy=FIFO priority=50 mode=DRIVER interval_ms=500
+[2026-10-21 18:18:23.961 +0000] SENSOR stopped: samples=119 skipped_periods=0
+/ # 
+/ # (
+> set -e
+> 
+> tar -czf /tmp/final_arm_results.tar.gz -C /tmp \
+>     sms_final_output.txt \
+>     sms_final.log \
+>     sms_final.log.jitter.csv \
+>     sms_final_stats_before.txt \
+>     sms_final_stats_after.txt \
+>     sms_final_memory_5s.txt \
+>     sms_final_memory_30s.txt \
+>     sms_final_memory_55s.txt \
+>     sms_final_maps_5s.txt
+> 
+> echo "=== FINAL ARM ARCHIVE BEGIN ==="
+> base64 /tmp/final_arm_results.tar.gz
+> echo "=== FINAL ARM ARCHIVE END ==="
+> )
+=== FINAL ARM ARCHIVE BEGIN ===
+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
+/h/+pzdaANAAAA==
+=== FINAL ARM ARCHIVE END ===
+/ # QEMU: Terminated
+
+Script done on 2026-10-22 01:22:59+07:00 [COMMAND_EXIT_CODE="0"]

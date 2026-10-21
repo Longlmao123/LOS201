@@ -1,0 +1,40 @@
+[MAIN] MOCK diagnostics: memory lock disabled
+[MAIN] mode=MOCK policy=OTHER interval=500 ms duration=5 s log=/tmp/sms_jitter_check.log
+[SENSOR] policy=OTHER priority=0 mode=MOCK
+[ALERT][42870519] TYPE: TEMP_SPIKE VALUE: 13.7 THRESHOLD: 5.0
+[ALERT][42871019] TYPE: TEMP_HIGH VALUE: 42.4 THRESHOLD: 40.0
+[ALERT][42871019] TYPE: TEMP_SPIKE VALUE: 13.7 THRESHOLD: 5.0
+[ALERT][42871519] TYPE: TEMP_SPIKE VALUE: 16.4 THRESHOLD: 5.0
+[ALERT][42872019] TYPE: TEMP_SPIKE VALUE: 13.7 THRESHOLD: 5.0
+[ALERT][42872519] TYPE: TEMP_SPIKE VALUE: 16.4 THRESHOLD: 5.0
+[ALERT][42873019] TYPE: TEMP_SPIKE VALUE: 13.7 THRESHOLD: 5.0
+[ALERT][42873519] TYPE: TEMP_SPIKE VALUE: 16.4 THRESHOLD: 5.0
+[ALERT][42874019] TYPE: HUMID_HIGH VALUE: 83.4 THRESHOLD: 80.0
+[ALERT][42874019] TYPE: TEMP_SPIKE VALUE: 13.7 THRESHOLD: 5.0
+[ALERT][42874519] TYPE: TEMP_SPIKE VALUE: 16.4 THRESHOLD: 5.0
+[MAIN] duration reached
+[SENSOR] stopped: samples=10 skipped_periods=0
+[PROCESSOR] stopped: processed=10
+[ALERT] stopped: TEMP_HIGH=1 HUMID_HIGH=1 TEMP_SPIKE=9
+[LOGGER] stopped
+[JITTER] mode=MOCK policy=OTHER interval_ms=500 samples=10 file=/tmp/sms_jitter_check.log.jitter.csv
+[MAIN] exit_code=0
+
+=== SMS SUMMARY ===
+mode=MOCK policy=OTHER interval_ms=500
+samples_read=10
+sensor_read_errors=0
+sensor_eagain_retries=0
+sensor_interrupted_reads=0
+sensor_deferred_samples=0
+samples_processed=10
+total_produced=10
+total_consumed=10
+overflow_count=0
+buffer_remaining=0
+TEMP_HIGH=1
+HUMID_HIGH=1
+TEMP_SPIKE=9
+jitter_samples=10 capacity=100000
+fatal_error=0
+=== SMS END ===

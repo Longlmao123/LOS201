@@ -1,0 +1,30 @@
+set pagination off
+set confirm off
+set print pretty on
+set debuginfod enabled off
+break processor_analyze
+run
+printf "\n=== GDB SCENARIO B: INJECT 45 C ===\n"
+print *sample
+set variable sample->temperature = 45.0
+set scheduler-locking on
+next
+set scheduler-locking off
+finish
+print result
+print ctx->shared_buffer.head
+print ctx->shared_buffer.tail
+print ctx->shared_buffer.size
+info threads
+thread apply all bt
+disable 1
+break alert_count if type == ALARM_TEMP_HIGH
+continue
+printf "\n=== ALERT RECEIVED TEMP_HIGH ===\n"
+print type
+print ctx->temp_high_count
+finish
+print ctx->temp_high_count
+disable breakpoints
+continue
+quit

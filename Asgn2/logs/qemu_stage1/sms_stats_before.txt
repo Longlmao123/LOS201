@@ -1,0 +1,14 @@
+
+read_count=0
+
+has_sample=0
+
+last_temperature=0.0
+
+last_humidity=0.0
+
+interval_ms=100
+
+uptime_seconds=0
+
+

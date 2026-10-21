@@ -1,0 +1,391 @@
+=== ASGN1 TEST START ===
+
+[1] Load module
+
+asgn1_driver: initializing module
+
+asgn1_driver: /proc/asgn1_info created
+
+asgn1_driver: loaded, major=241
+
+asgn1_driver 16384 0 - Live 0x7f000000 (O)
+
+crw-------    1 root     0         241,   0 Oct 21 05:58 /dev/asgn1
+
+[2] GET_VERSION
+
+asgn1_driver: device opened (count=1)
+
+asgn1_driver: ioctl cmd=0x80404703
+
+asgn1_driver: GET_VERSION result=0
+
+asgn1_driver: device closed
+
+version=asgn1_driver v1.0 - SE201095
+
+[3] Default echo mode
+
+asgn1_driver: device opened (count=2)
+
+asgn1_driver: ioctl cmd=0x5401
+
+asgn1_driver: unknown ioctl command
+
+asgn1_driver: write 3 bytes, mode=1, buffer_len=3, write_count=1
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=3)
+
+asgn1_driver: read 3 bytes, read_count=1
+
+asgn1_driver: device closed
+
+Expected: [ABC]
+
+Actual:   [ABC]
+
+asgn1_driver: device opened (count=4)
+
+asgn1_driver: ioctl cmd=0x80144701
+
+asgn1_driver: GET_STATS result=0
+
+asgn1_driver: device closed
+
+open_count=4
+
+write_count=1
+
+read_count=1
+
+buffer_len=3
+
+last_write_size=3
+
+
+
+[CHUP ANH 2] Load module, version, default echo and stats
+
+Chup xong thi nhan Enter: 
+
+[4] Kernel mode
+
+asgn1_driver: device opened (count=5)
+
+asgn1_driver: ioctl cmd=0x40044702
+
+asgn1_driver: SET_MODE mode=0
+
+SET_MODE OK: 0 (kernel)
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=6)
+
+asgn1_driver: write 3 bytes, mode=0, buffer_len=11, write_count=2
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=7)
+
+asgn1_driver: read 11 bytes, read_count=2
+
+asgn1_driver: device closed
+
+Expected: [[KERNEL]XYZ]
+
+Actual:   [[KERNEL]XYZ]
+
+asgn1_driver: device opened (count=8)
+
+asgn1_driver: ioctl cmd=0x80144701
+
+asgn1_driver: GET_STATS result=0
+
+asgn1_driver: device closed
+
+open_count=8
+
+write_count=2
+
+read_count=2
+
+buffer_len=11
+
+last_write_size=3
+
+
+
+[CHUP ANH 3] Kernel mode and statistics
+
+Chup xong thi nhan Enter: 
+
+[5] Echo mode
+
+asgn1_driver: device opened (count=9)
+
+asgn1_driver: ioctl cmd=0x40044702
+
+asgn1_driver: SET_MODE mode=1
+
+SET_MODE OK: 1 (echo)
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=10)
+
+asgn1_driver: write 5 bytes, mode=1, buffer_len=5, write_count=3
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=11)
+
+asgn1_driver: read 5 bytes, read_count=3
+
+asgn1_driver: device closed
+
+Expected: [HELLO]
+
+Actual:   [HELLO]
+
+asgn1_driver: device opened (count=12)
+
+asgn1_driver: ioctl cmd=0x80144701
+
+asgn1_driver: GET_STATS result=0
+
+asgn1_driver: device closed
+
+open_count=12
+
+write_count=3
+
+read_count=3
+
+buffer_len=5
+
+last_write_size=5
+
+ASSIGNMENT-01 Driver Statistics
+
+===============================
+
+Driver name     : asgn1
+
+Major number    : 241
+
+Buffer size     : 1024 bytes
+
+Data length     : 5 bytes
+
+Open count      : 12
+
+Write count     : 3
+
+Read count      : 3
+
+Last write size : 5 bytes
+
+Mode            : 1 (echo)
+
+Last data       : [HELLO]
+
+
+
+[CHUP ANH 4] Echo mode and procfs statistics
+
+Chup xong thi nhan Enter: 
+
+[6] RESET_BUFFER
+
+asgn1_driver: device opened (count=13)
+
+asgn1_driver: ioctl cmd=0x4700
+
+asgn1_driver: RESET_BUFFER completed
+
+RESET_BUFFER OK
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=14)
+
+asgn1_driver: device closed
+
+Read after reset: []
+
+asgn1_driver: device opened (count=15)
+
+asgn1_driver: ioctl cmd=0x80144701
+
+asgn1_driver: GET_STATS result=0
+
+asgn1_driver: device closed
+
+open_count=15
+
+write_count=0
+
+read_count=0
+
+buffer_len=0
+
+last_write_size=0
+
+ASSIGNMENT-01 Driver Statistics
+
+===============================
+
+Driver name     : asgn1
+
+Major number    : 241
+
+Buffer size     : 1024 bytes
+
+Data length     : 0 bytes
+
+Open count      : 15
+
+Write count     : 0
+
+Read count      : 0
+
+Last write size : 0 bytes
+
+Mode            : 1 (echo)
+
+Last data       : (empty)
+
+
+
+[CHUP ANH 5] Empty buffer and zero read/write counters
+
+Chup xong thi nhan Enter: 
+
+[7] Unload module
+
+asgn1_driver: module unloaded
+
+Module removed; procfs and sysfs cleaned up
+
+[8] Kernel log
+
+asgn1_driver: initializing module
+
+asgn1_driver: /proc/asgn1_info created
+
+asgn1_driver: loaded, major=241
+
+asgn1_driver: device opened (count=1)
+
+asgn1_driver: ioctl cmd=0x80404703
+
+asgn1_driver: GET_VERSION result=0
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=2)
+
+asgn1_driver: ioctl cmd=0x5401
+
+asgn1_driver: unknown ioctl command
+
+asgn1_driver: write 3 bytes, mode=1, buffer_len=3, write_count=1
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=3)
+
+asgn1_driver: read 3 bytes, read_count=1
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=4)
+
+asgn1_driver: ioctl cmd=0x80144701
+
+asgn1_driver: GET_STATS result=0
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=5)
+
+asgn1_driver: ioctl cmd=0x40044702
+
+asgn1_driver: SET_MODE mode=0
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=6)
+
+asgn1_driver: write 3 bytes, mode=0, buffer_len=11, write_count=2
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=7)
+
+asgn1_driver: read 11 bytes, read_count=2
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=8)
+
+asgn1_driver: ioctl cmd=0x80144701
+
+asgn1_driver: GET_STATS result=0
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=9)
+
+asgn1_driver: ioctl cmd=0x40044702
+
+asgn1_driver: SET_MODE mode=1
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=10)
+
+asgn1_driver: write 5 bytes, mode=1, buffer_len=5, write_count=3
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=11)
+
+asgn1_driver: read 5 bytes, read_count=3
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=12)
+
+asgn1_driver: ioctl cmd=0x80144701
+
+asgn1_driver: GET_STATS result=0
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=13)
+
+asgn1_driver: ioctl cmd=0x4700
+
+asgn1_driver: RESET_BUFFER completed
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=14)
+
+asgn1_driver: device closed
+
+asgn1_driver: device opened (count=15)
+
+asgn1_driver: ioctl cmd=0x80144701
+
+asgn1_driver: GET_STATS result=0
+
+asgn1_driver: device closed
+
+asgn1_driver: module unloaded
+
+=== ASGN1 TEST PASSED ===

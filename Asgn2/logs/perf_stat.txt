@@ -1,0 +1,16 @@
+# started on Wed Oct 21 23:39:51 2026
+
+
+ Performance counter stats for './sms_app_host --mock --other -i 500 -d 30 --log /home/long/assignment02/logs/perf_stat_sms.log':
+
+             40.49 msec task-clock                                                            
+               843      context-switches                                                      
+                51      cpu-migrations                                                        
+                82      page-faults                                                           
+
+      30.104841743 seconds time elapsed
+
+       0.010496000 seconds user
+       0.053796000 seconds sys
+
+

@@ -1,0 +1,48 @@
+===== LAB03 GDB REMOTE DEBUG SESSION =====
+0x76fdee80 in _start () from /home/locvhm/embedded_lab3/rootfs/initramfs/lib/ld-linux-armhf.so.3
+
+===== MAIN =====
+Breakpoint 1 at 0x400732: file buggy_app.c, line 40.
+
+Breakpoint 1, main (argc=1, argv=0x7efffe94) at buggy_app.c:40
+40	{
+#0  main (argc=1, argv=0x7efffe94) at buggy_app.c:40
+
+===== BUG 1: ARRAY OUT OF BOUNDS =====
+Breakpoint 2 at 0x40068c: file buggy_app.c, line 11.
+
+Breakpoint 2, process_data (data=0x7efffcf0, len=5) at buggy_app.c:11
+11	        sum += data[i];
+$1 = 5
+$2 = 5
+$3 = {10, 20, 30, 40, 50}
+$4 = 381455360
+$5 = (int *) 0x7efffd00
+$6 = (int *) 0x7efffd04
+#0  process_data (data=0x7efffcf0, len=5) at buggy_app.c:11
+#1  0x00400774 in main (argc=1, argv=0x7efffe94) at buggy_app.c:47
+
+===== BUG 2: USE AFTER FREE =====
+Breakpoint 3 at 0x4006ee: file buggy_app.c, line 26.
+
+Breakpoint 3, create_message (text=0x400940 "Hello Embedded Linux") at buggy_app.c:26
+26	    return buf;
+$7 = 0x422010 "\"\004"
+0x422010:	"\"\004"
+#0  create_message (text=0x400940 "Hello Embedded Linux") at buggy_app.c:26
+#1  0x00400788 in main (argc=1, argv=0x7efffe94) at buggy_app.c:51
+
+===== BUG 3: INTEGER OVERFLOW =====
+Breakpoint 4 at 0x40070c: file buggy_app.c, line 34.
+
+Breakpoint 4, calculate (a=100000, b=100000) at buggy_app.c:34
+34	    printf("calculate(%d, %d) = %d\n", a, b, result);
+$8 = 100000
+$9 = 100000
+$10 = 10000000000
+$11 = 1410065408
+#0  calculate (a=100000, b=100000) at buggy_app.c:34
+#1  0x004007b4 in main (argc=1, argv=0x7efffe94) at buggy_app.c:57
+
+===== PROGRAM FINISH =====
+[Inferior 1 (process 68) exited normally]

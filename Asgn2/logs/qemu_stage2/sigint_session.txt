@@ -1,0 +1,337 @@
+=== SIGINT TEST BEGIN ===
+
+/ # 
+
+/ # sms_app --fifo -i 500 -d 0 -v --log /tmp/sms_sigint.log
+
+[MAIN] mlockall OK
+
+[MAIN] mode=DRIVER policy=FIFO interval=500 ms duration=0 s log=/tmp/sms_sigint.log
+
+[SENSOR] policy=FIFO priority=50 mode=DRIVER
+
+sms_sensor: interval set to 500 ms
+
+[ALERT][308566] TYPE: TEMP_HIGH VALUE: 43.8 THRESHOLD: 40.0
+
+[SENSOR] 308566,43.8,37.5
+
+[PROCESSOR] timestamp_ms=308566 avg_temp=43.80 avg_humidity=37.50 alarms=1
+
+[SENSOR] 309066,29.4,33.8
+
+[ALERT][309066] TYPE: TEMP_SPIKE VALUE: 14.4 THRESHOLD: 5.0
+
+[PROCESSOR] timestamp_ms=309066 avg_temp=36.60 avg_humidity=35.65 alarms=1
+
+[SENSOR] 309566,18.9,37.6
+
+[PROCESSOR] timestamp_ms=309566 avg_temp=30.70 avg_humidity=36.30 alarms=1
+
+[ALERT][309566] TYPE: TEMP_SPIKE VALUE: 10.5 THRESHOLD: 5.0
+
+[SENSOR] 310066,21.7,43.6
+
+[PROCESSOR] timestamp_ms=310066 avg_temp=28.45 avg_humidity=38.12 alarms=0
+
+[SENSOR] 310566,27.0,42.0
+
+[ALERT][310566] TYPE: TEMP_SPIKE VALUE: 5.3 THRESHOLD: 5.0
+
+[PROCESSOR] timestamp_ms=310566 avg_temp=28.16 avg_humidity=38.90 alarms=1
+
+[SENSOR] 311066,15.4,32.5
+
+[PROCESSOR] timestamp_ms=311066 avg_temp=26.03 avg_humidity=37.83 alarms=1
+
+[ALERT][311066] TYPE: TEMP_SPIKE VALUE: 11.6 THRESHOLD: 5.0
+
+[SENSOR] 311566,43.1,76.3
+
+[PROCESSOR] timestamp_ms=311566 avg_temp=28.47 avg_humidity=43.33 alarms=2
+
+[ALERT][311566] TYPE: TEMP_HIGH VALUE: 43.1 THRESHOLD: 40.0
+
+[ALERT][311566] TYPE: TEMP_SPIKE VALUE: 27.7 THRESHOLD: 5.0
+
+[SENSOR] 312066,27.9,46.3
+
+[PROCESSOR] timestamp_ms=312066 avg_temp=28.40 avg_humidity=43.70 alarms=1
+
+[ALERT][312066] TYPE: TEMP_SPIKE VALUE: 15.2 THRESHOLD: 5.0
+
+[SENSOR] 312566,39.7,83.1
+
+[PROCESSOR] timestamp_ms=312566 avg_temp=29.66 avg_humidity=48.08 alarms=2
+
+[ALERT][312566] TYPE: HUMID_HIGH VALUE: 83.1 THRESHOLD: 80.0
+
+[ALERT][312566] TYPE: TEMP_SPIKE VALUE: 11.8 THRESHOLD: 5.0
+
+[SENSOR] 313067,18.0,42.2
+
+[PROCESSOR] timestamp_ms=313067 avg_temp=28.49 avg_humidity=47.49 alarms=1
+
+[ALERT][313067] TYPE: TEMP_SPIKE VALUE: 21.7 THRESHOLD: 5.0
+
+[SENSOR] 313568,43.8,52.4
+
+[PROCESSOR] timestamp_ms=313568 avg_temp=28.49 avg_humidity=48.98 alarms=2
+
+[ALERT][313568] TYPE: TEMP_HIGH VALUE: 43.8 THRESHOLD: 40.0
+
+[ALERT][313568] TYPE: TEMP_SPIKE VALUE: 25.8 THRESHOLD: 5.0
+
+[SENSOR] 314068,29.5,62.2
+
+[PROCESSOR] timestamp_ms=314068 avg_temp=28.50 avg_humidity=51.82 alarms=1
+
+[ALERT][314068] TYPE: TEMP_SPIKE VALUE: 14.3 THRESHOLD: 5.0
+
+[SENSOR] 314568,41.1,36.3
+
+[PROCESSOR] timestamp_ms=314568 avg_temp=30.72 avg_humidity=51.69 alarms=2
+
+[ALERT][314568] TYPE: TEMP_HIGH VALUE: 41.1 THRESHOLD: 40.0
+
+[ALERT][314568] TYPE: TEMP_SPIKE VALUE: 11.6 THRESHOLD: 5.0
+
+[SENSOR] 315068,24.9,67.9
+
+[PROCESSOR] timestamp_ms=315068 avg_temp=31.04 avg_humidity=54.12 alarms=1
+
+[ALERT][315068] TYPE: TEMP_SPIKE VALUE: 16.2 THRESHOLD: 5.0
+
+[SENSOR] 315568,17.0,48.5
+
+[PROCESSOR] timestamp_ms=315568 avg_temp=30.04 avg_humidity=54.77 alarms=1
+
+[ALERT][315568] TYPE: TEMP_SPIKE VALUE: 7.9 THRESHOLD: 5.0
+
+[SENSOR] 316068,27.6,79.6
+
+[PROCESSOR] timestamp_ms=316068 avg_temp=31.26 avg_humidity=59.48 alarms=1
+
+[ALERT][316068] TYPE: TEMP_SPIKE VALUE: 10.6 THRESHOLD: 5.0
+
+[SENSOR] 316569,35.1,37.5
+
+[PROCESSOR] timestamp_ms=316569 avg_temp=30.46 avg_humidity=55.60 alarms=1
+
+[ALERT][316569] TYPE: TEMP_SPIKE VALUE: 7.5 THRESHOLD: 5.0
+
+[SENSOR] 317070,31.4,33.6
+
+[PROCESSOR] timestamp_ms=317070 avg_temp=30.81 avg_humidity=54.33 alarms=0
+
+[SENSOR] 317571,45.0,89.2
+
+[ALERT][317571] TYPE: TEMP_HIGH VALUE: 45.0 THRESHOLD: 40.0
+
+[PROCESSOR] timestamp_ms=317571 avg_temp=31.34 avg_humidity=54.94 alarms=3
+
+[ALERT][317571] TYPE: HUMID_HIGH VALUE: 89.2 THRESHOLD: 80.0
+
+[ALERT][317571] TYPE: TEMP_SPIKE VALUE: 13.6 THRESHOLD: 5.0
+
+[SENSOR] 318071,17.6,75.5
+
+[PROCESSOR] timestamp_ms=318071 avg_temp=31.30 avg_humidity=58.27 alarms=1
+
+[ALERT][318071] TYPE: TEMP_SPIKE VALUE: 27.4 THRESHOLD: 5.0
+
+[SENSOR] 318572,17.0,64.5
+
+[PROCESSOR] timestamp_ms=318572 avg_temp=28.62 avg_humidity=59.48 alarms=0
+
+[SENSOR] 319072,36.7,73.4
+
+[ALERT][319072] TYPE: TEMP_SPIKE VALUE: 19.7 THRESHOLD: 5.0
+
+[PROCESSOR] timestamp_ms=319072 avg_temp=29.34 avg_humidity=60.60 alarms=1
+
+[SENSOR] 319573,26.0,51.1
+
+[PROCESSOR] timestamp_ms=319573 avg_temp=27.83 avg_humidity=62.08 alarms=1
+
+[ALERT][319573] TYPE: TEMP_SPIKE VALUE: 10.7 THRESHOLD: 5.0
+
+[SENSOR] 320073,43.5,48.7
+
+[PROCESSOR] timestamp_ms=320073 avg_temp=29.69 avg_humidity=60.16 alarms=2
+
+[ALERT][320073] TYPE: TEMP_HIGH VALUE: 43.5 THRESHOLD: 40.0
+
+[ALERT][320073] TYPE: TEMP_SPIKE VALUE: 17.5 THRESHOLD: 5.0
+
+[SENSOR] 320574,36.5,75.7
+
+[PROCESSOR] timestamp_ms=320574 avg_temp=31.64 avg_humidity=62.88 alarms=1
+
+[ALERT][320574] TYPE: TEMP_SPIKE VALUE: 7.0 THRESHOLD: 5.0
+
+[SENSOR] 321074,24.7,67.3
+
+[PROCESSOR] timestamp_ms=321074 avg_temp=31.35 avg_humidity=61.65 alarms=1
+
+[ALERT][321074] TYPE: TEMP_SPIKE VALUE: 11.8 THRESHOLD: 5.0
+
+[SENSOR] 321574,30.5,52.9
+
+[PROCESSOR] timestamp_ms=321574 avg_temp=30.89 avg_humidity=63.19 alarms=1
+
+[ALERT][321574] TYPE: TEMP_SPIKE VALUE: 5.8 THRESHOLD: 5.0
+
+[SENSOR] 322074,40.8,66.3
+
+[PROCESSOR] timestamp_ms=322074 avg_temp=31.83 avg_humidity=66.46 alarms=2
+
+[ALERT][322074] TYPE: TEMP_HIGH VALUE: 40.8 THRESHOLD: 40.0
+
+[ALERT][322074] TYPE: TEMP_SPIKE VALUE: 10.3 THRESHOLD: 5.0
+
+[SENSOR] 322575,23.2,76.1
+
+[PROCESSOR] timestamp_ms=322575 avg_temp=29.65 avg_humidity=65.15 alarms=1
+
+[ALERT][322575] TYPE: TEMP_SPIKE VALUE: 17.6 THRESHOLD: 5.0
+
+[SENSOR] 323076,23.0,56.3
+
+[PROCESSOR] timestamp_ms=323076 avg_temp=30.19 avg_humidity=63.23 alarms=0
+
+[SENSOR] 323577,34.1,87.1
+
+[PROCESSOR] timestamp_ms=323577 avg_temp=31.90 avg_humidity=65.49 alarms=2
+
+[ALERT][323577] TYPE: HUMID_HIGH VALUE: 87.1 THRESHOLD: 80.0
+
+[ALERT][323577] TYPE: TEMP_SPIKE VALUE: 11.1 THRESHOLD: 5.0
+
+[SENSOR] 324077,24.4,88.1
+
+[PROCESSOR] timestamp_ms=324077 avg_temp=30.67 avg_humidity=66.96 alarms=2
+
+[ALERT][324077] TYPE: HUMID_HIGH VALUE: 88.1 THRESHOLD: 80.0
+
+[ALERT][324077] TYPE: TEMP_SPIKE VALUE: 9.7 THRESHOLD: 5.0
+
+[SENSOR] 324577,37.5,82.4
+
+[PROCESSOR] timestamp_ms=324577 avg_temp=31.82 avg_humidity=70.09 alarms=2
+
+[ALERT][324577] TYPE: HUMID_HIGH VALUE: 82.4 THRESHOLD: 80.0
+
+[ALERT][324577] TYPE: TEMP_SPIKE VALUE: 13.1 THRESHOLD: 5.0
+
+[SENSOR] 325078,36.3,79.4
+
+[PROCESSOR] timestamp_ms=325078 avg_temp=31.10 avg_humidity=73.16 alarms=0
+
+[SENSOR] 325578,19.7,73.2
+
+[PROCESSOR] timestamp_ms=325578 avg_temp=29.42 avg_humidity=72.91 alarms=1
+
+[ALERT][325578] TYPE: TEMP_SPIKE VALUE: 16.6 THRESHOLD: 5.0
+
+[SENSOR] 326079,30.4,54.2
+
+[PROCESSOR] timestamp_ms=326079 avg_temp=29.99 avg_humidity=71.60 alarms=1
+
+[ALERT][326079] TYPE: TEMP_SPIKE VALUE: 10.7 THRESHOLD: 5.0
+
+[SENSOR] 326580,43.3,84.1
+
+[PROCESSOR] timestamp_ms=326580 avg_temp=31.27 avg_humidity=74.72 alarms=3
+
+[ALERT][326580] TYPE: TEMP_HIGH VALUE: 43.3 THRESHOLD: 40.0
+
+[ALERT][326580] TYPE: HUMID_HIGH VALUE: 84.1 THRESHOLD: 80.0
+
+[ALERT][326580] TYPE: TEMP_SPIKE VALUE: 12.9 THRESHOLD: 5.0
+
+^C[MAIN] received signal 2
+
+[SENSOR] stopped: samples=37 skipped_periods=0
+
+[PROCESSOR] stopped: processed=37
+
+[ALERT] stopped: TEMP_HIGH=8 HUMID_HIGH=6 TEMP_SPIKE=31
+
+[LOGGER] stopped
+
+
+
+=== SMS SUMMARY ===
+
+mode=DRIVER policy=FIFO interval_ms=500
+
+samples_read=37
+
+sensor_read_errors=0
+
+sensor_eagain_retries=111
+
+sensor_interrupted_reads=0
+
+sensor_deferred_samples=0
+
+samples_processed=37
+
+total_produced=37
+
+total_consumed=37
+
+overflow_count=0
+
+buffer_remaining=0
+
+TEMP_HIGH=8
+
+HUMID_HIGH=6
+
+TEMP_SPIKE=31
+
+jitter_samples=37 capacity=100000
+
+fatal_error=0
+
+=== SMS END ===
+
+[MAIN] exit_code=0
+
+/ # sigint_result=$?
+
+/ # 
+
+/ # echo "SIGINT_EXIT_CODE=$sigint_result" \
+
+>     | tee /tmp/sms_sigint_result.txt
+
+SIGINT_EXIT_CODE=0
+
+/ # 
+
+/ # tail -n 8 /tmp/sms_sigint.log
+
+[2026-10-21 15:38:54.477 +0000] ALERT timestamp_ms=326079 TYPE: TEMP_SPIKE VALUE: 10.7 THRESHOLD: 5.0
+
+[2026-10-21 15:38:54.978 +0000] SAMPLE timestamp_ms=326580 temperature=43.3 humidity=84.1 average_temperature=31.27 average_humidity=74.72 window_count=10 alarms=3
+
+[2026-10-21 15:38:54.980 +0000] ALERT timestamp_ms=326580 TYPE: TEMP_HIGH VALUE: 43.3 THRESHOLD: 40.0
+
+[2026-10-21 15:38:54.981 +0000] ALERT timestamp_ms=326580 TYPE: HUMID_HIGH VALUE: 84.1 THRESHOLD: 80.0
+
+[2026-10-21 15:38:54.982 +0000] ALERT timestamp_ms=326580 TYPE: TEMP_SPIKE VALUE: 12.9 THRESHOLD: 5.0
+
+[2026-10-21 15:38:55.463 +0000] PROCESSOR stopped: processed=37
+
+[2026-10-21 15:38:55.466 +0000] ALERT stopped: TEMP_HIGH=8 HUMID_HIGH=6 TEMP_SPIKE=31
+
+[2026-10-21 15:38:55.467 +0000] LOGGER stopped
+
+/ # 
+
+/ # echo "=== SIGINT TEST END ==="
+
+=== SIGINT TEST END ===

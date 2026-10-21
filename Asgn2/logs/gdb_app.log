@@ -1,0 +1,7 @@
+[2026-10-21 23:04:43.838 +0700] LOGGER started
+[2026-10-21 23:04:43.839 +0700] ALERT started
+[2026-10-21 23:04:43.839 +0700] PROCESSOR started
+[2026-10-21 23:19:02.687 +0700] SAMPLE timestamp_ms=39888210 temperature=15.0 humidity=30.0 average_temperature=15.00 average_humidity=30.00 window_count=1 alarms=0
+[2026-10-21 23:19:02.687 +0700] PROCESSOR stopped: processed=1
+[2026-10-21 23:19:02.687 +0700] ALERT stopped: TEMP_HIGH=0 HUMID_HIGH=0 TEMP_SPIKE=0
+[2026-10-21 23:19:02.688 +0700] LOGGER stopped

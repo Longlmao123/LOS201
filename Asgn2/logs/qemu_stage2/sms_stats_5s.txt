@@ -1,0 +1,14 @@
+
+read_count=9
+
+has_sample=1
+
+last_temperature=28.5
+
+last_humidity=30.5
+
+interval_ms=500
+
+uptime_seconds=5
+
+

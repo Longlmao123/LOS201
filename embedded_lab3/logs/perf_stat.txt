@@ -1,0 +1,23 @@
+=== Perf Target App - LAB-03 ===
+[1] CPU-intensive computation...
+    Result: 11433083166.074631
+[2] Linear search (1000 times)...
+[3] I/O intensive (write 10000 lines)...
+Done.
+
+ Performance counter stats for './perf_target':
+
+             23,07 msec task-clock                                                            
+       104.712.852      cycles                                                                
+       375.723.714      instructions                                                          
+        52.005.068      branches                                                              
+            10.469      branch-misses                                                         
+            74.538      cache-references                                                      
+            37.123      cache-misses                                                          
+
+       0,023564949 seconds time elapsed
+
+       0,022592000 seconds user
+       0,001026000 seconds sys
+
+
