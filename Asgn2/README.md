@@ -1,6 +1,4 @@
-from pathlib import Path
-
-content = r"""# LOS201 — Sensor Monitoring System / Assignment 02
+# LOS201 — Sensor Monitoring System / Assignment 02
 
 [Back to Main Page](../README.md) · [Application Source](app/) · [Driver](driver/) · [Logs](logs/) · [PDF Report](bao_cao/SE201095_PhamTranGiaLong_Asgn02_BaoCao.pdf)
 
@@ -20,6 +18,9 @@ The driver generates a sample when the application performs a read and the minim
 - [Lessons Learned and Fixes](#lessons-learned-and-fixes)
 - [Final GDB Session](#final-gdb-session)
 - [Report and Submission Status](#report-and-submission-status)
+
+- [Troubleshooting](#troubleshooting)
+- [References](#references)
 
 ## Architecture
 
@@ -329,8 +330,3 @@ These two categories of tests complement each other.
 - [clock_nanosleep](https://man7.org/linux/man-pages/man2/clock_nanosleep.2.html)
 - [Condition variables](https://man7.org/linux/man-pages/man3/pthread_cond_wait.3.html)
 - [PREEMPT_RT](https://docs.kernel.org/core-api/real-time/theory.html)
-"""
-
-path = Path("/mnt/data/README_Assignment02_EN.md")
-path.write_text(content, encoding="utf-8")
-print(path)
