@@ -1,6 +1,6 @@
 # Assignment 01 — IOCTL and Miscellaneous Device Drivers
 
-[Back to Main Page](../README.md) · [Task 1](task1_ioctl/) · [Task 2](task2_misc/) · [Logs](logs/) · [PDF Report](bao_cao/SE201095_PhamTranGiaLong_Asgn01_BaoCao.pdf)
+[Back to Main Page](../README.md) · [Task 1](task1_ioctl/) · [Task 2](task2_misc/) · [Logs](logs/) · [PDF Report](report/SE201095_PhamTranGiaLong_Asgn01_BaoCao.pdf)
 
 Assignment 01 extends the character-driver concepts from Lab 02 by introducing an **IOCTL interface**, a userspace control application, and a **counter driver implemented with miscdevice**.
 
@@ -39,7 +39,7 @@ This README is written as both a project overview and a practical implementation
 | [task2_misc/counter_driver.c](task2_misc/counter_driver.c) | Miscdevice counter driver and procfs interface |
 | [task2_misc/test_counter.sh](task2_misc/test_counter.sh) | Task 2 test script |
 | [logs/](logs/) | Test outputs and kernel logs |
-| [bao_cao/](bao_cao/) | Design analysis and PDF report |
+| [report/](report/) | Design analysis and PDF report |
 
 ### Environment Used
 
@@ -743,7 +743,7 @@ Before considering Assignment 01 complete:
 | [Task 1 Output](logs/test_asgn1_output.txt) | IOCTL commands, read/write operations, Task 1 results |
 | [Counter Output](logs/test_counter_output.txt) | Counter state, invalid input handling, cleanup |
 | [Kernel Log](logs/dmesg_full.txt) | Kernel module activity and kernel messages |
-| [PDF Report](bao_cao/SE201095_PhamTranGiaLong_Asgn01_BaoCao.pdf) | Design explanation and analysis |
+| [PDF Report](report/SE201095_PhamTranGiaLong_Asgn01_BaoCao.pdf) | Design explanation and analysis |
 
 Recorded test evidence shows that both scripts reached `PASSED` and returned exit status `0`.
 

@@ -1,6 +1,6 @@
 # LOS201 — Sensor Monitoring System / Assignment 02
 
-[Back to Main Page](../README.md) · [Application Source](app/) · [Driver](driver/) · [Logs](logs/) · [PDF Report](bao_cao/SE201095_PhamTranGiaLong_Asgn02_BaoCao.pdf)
+[Back to Main Page](../README.md) · [Application Source](app/) · [Driver](driver/) · [Logs](logs/) · [PDF Report](report/SE201095_PhamTranGiaLong_Asgn02_BaoCao.pdf)
 
 Assignment 02 implements a simulated **temperature and humidity monitoring system** on Linux ARMv7 in QEMU.
 
@@ -155,7 +155,7 @@ Temperature change > 5 °C
 | [logs/](logs/) | Experimental results |
 | [scripts/](scripts/) | GDB automation scripts |
 | [docs/images/](docs/images/) | Architecture and result figures |
-| [bao_cao/](bao_cao/) | PDF report |
+| [report/](report/) | PDF report |
 
 ---
 
